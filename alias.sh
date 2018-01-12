@@ -1,5 +1,5 @@
 #***************************[bash]*******************************************
-# 2018 01 05
+# 2018 01 11
 
 # repositories (github)
 alias git_clone_bash_repo="_repo_git_clone ${REPO_BASH_REPO[*]}"
@@ -7,7 +7,13 @@ alias git_pull_bash_repo="_repo_git_pull \"${REPO_BASH_REPO[0]}\""
 alias git_push_bash_repo="_repo_git_push \"${REPO_BASH_REPO[0]}\""
 alias git_status_bash_repo="_repo_git_st \"${REPO_BASH_REPO[0]}\""
 
-# network (github)
+# config functions (github)
+alias git_clone_bash_config="_repo_git_clone ${REPO_BASH_CONFIG[*]}"
+alias git_pull_bash_config="_repo_git_pull \"${REPO_BASH_CONFIG[0]}\""
+alias git_push_bash_config="_repo_git_push \"${REPO_BASH_CONFIG[0]}\""
+alias git_status_bash_config="_repo_git_st \"${REPO_BASH_CONFIG[0]}\""
+
+# network functions (github)
 alias git_clone_bash_network="_repo_git_clone ${REPO_BASH_NETWORK[*]}"
 alias git_pull_bash_network="_repo_git_pull \"${REPO_BASH_NETWORK[0]}\""
 alias git_push_bash_network="_repo_git_push \"${REPO_BASH_NETWORK[0]}\""
@@ -171,11 +177,12 @@ alias git_push_ros_github_nearfieldmap="_repo_git_push \"${REPO_ROS_GITHUB_NEARF
 alias git_status_ros_github_nearfieldmap="_repo_git_st \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
 
 #***************************[git global]**************************************
-# 2018 01 08
+# 2018 01 11
 
 function repo_pull_all() {
 
     git_pull_bash_repo
+    git_pull_bash_config
     git_pull_bash_network
     git_pull_bash_multimedia
     git_pull_bash_roboag
@@ -200,6 +207,7 @@ function repo_pull_all() {
 function repo_status_all() {
 
     git_status_bash_repo
+    git_status_bash_config
     git_status_bash_network
     git_status_bash_multimedia
     git_status_bash_roboag

@@ -13,7 +13,7 @@ export REPO_ROOT_GITHUB_URL="https://github.com/peterweissig/"
 
 
 #***************************[bash]********************************************
-# 2018 01 05
+# 2018 01 11
 
 # paths
 export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
@@ -22,7 +22,11 @@ export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
 export REPO_BASH_REPO=("${REPO_BASH_PATH}repo/" \
   "${REPO_ROOT_GITHUB_URL}bash_repo.git")
 
-# network (github)
+# config functions (github)
+export REPO_BASH_CONFIG=("${REPO_BASH_PATH}config/" \
+  "${REPO_ROOT_GITHUB_URL}bash_config.git")
+
+# network functions (github)
 export REPO_BASH_NETWORK=("${REPO_BASH_PATH}network/" \
   "${REPO_ROOT_GITHUB_URL}bash_network.git")
 
