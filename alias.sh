@@ -34,7 +34,7 @@ alias git_status_bash_roboag="_repo_git_st \"${REPO_BASH_ROBOAG[0]}\""
 
 
 #***************************[robo]*******************************************
-# 2018 01 08
+# 2018 01 11
 
 # robolib (github)
 alias git_clone_robo_lib="_repo_git_clone ${REPO_ROBO_LIB[*]}"
@@ -46,13 +46,6 @@ alias git_status_robo_lib="_repo_git_st \"${REPO_ROBO_LIB[0]}\""
 alias git_clone_robo_pololu="_repo_git_clone ${REPO_ROBO_POLOLU[*]}"
 alias git_pull_robo_pololu="_repo_git_pull \"${REPO_ROBO_POLOLU[0]}\""
 alias git_status_robo_pololu="_repo_git_st \"${REPO_ROBO_POLOLU[0]}\""
-
-
-# bash roboag (github)
-alias git_clone_robo_roboag_bash="_repo_git_clone ${REPO_ROBO_ROBOAG_BASH[*]}"
-alias git_pull_robo_roboag_bash="_repo_git_pull \"${REPO_ROBO_ROBOAG_BASH[0]}\""
-alias git_push_robo_roboag_bash="_repo_git_push \"${REPO_ROBO_ROBOAG_BASH[0]}\""
-alias git_status_robo_roboag_bash="_repo_git_st \"${REPO_ROBO_ROBOAG_BASH[0]}\""
 
 
 # eagle (github)
@@ -189,7 +182,6 @@ function repo_pull_all() {
 
     git_pull_robo_lib
     git_pull_robo_pololu
-    git_pull_robo_roboag_bash
 
     git_pull_eagle_config
     git_pull_eagle_keplerboard
@@ -212,7 +204,6 @@ function repo_status_all() {
     git_status_bash_multimedia
     git_status_bash_roboag
 
-    git_status_robo_roboag
     git_status_robo_lib
     git_status_robo_pololu
 
