@@ -34,7 +34,7 @@ alias git_status_bash_roboag="_repo_git_st \"${REPO_BASH_ROBOAG[0]}\""
 
 
 #***************************[robo]*******************************************
-# 2018 01 11
+# 2018 01 23
 
 # robolib (github)
 alias git_clone_robo_lib="_repo_git_clone ${REPO_ROBO_LIB[*]}"
@@ -86,10 +86,23 @@ alias git_pull_robosax_ledbox="_repo_git_pull \"${REPO_ROBOSAX_LEDBOX[0]}\""
 alias git_push_robosax_ledbox="_repo_git_push \"${REPO_ROBOSAX_LEDBOX[0]}\""
 alias git_status_robosax_ledbox="_repo_git_st \"${REPO_ROBOSAX_LEDBOX[0]}\""
 
-alias git_clone_robosax_licht="_repo_git_clone ${REPO_ROBOSAX_LICHT[*]}"
-alias git_pull_robosax_licht="_repo_git_pull \"${REPO_ROBOSAX_LICHT[0]}\""
-alias git_push_robosax_licht="_repo_git_push \"${REPO_ROBOSAX_LICHT[0]}\""
-alias git_status_robosax_licht="_repo_git_st \"${REPO_ROBOSAX_LICHT[0]}\""
+alias git_clone_robosax_licht_tht="_repo_git_clone \
+  ${REPO_ROBOSAX_LICHT_THT[*]}"
+alias git_pull_robosax_licht_tht="_repo_git_pull \
+  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
+alias git_push_robosax_licht_tht="_repo_git_push \
+  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
+alias git_status_robosax_licht_tht="_repo_git_st \
+  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
+
+alias git_clone_robosax_licht_avr="_repo_git_clone \
+  ${REPO_ROBOSAX_LICHT_AVR[*]}"
+alias git_pull_robosax_licht_avr="_repo_git_pull \
+  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
+alias git_push_robosax_licht_avr="_repo_git_push \
+  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
+alias git_status_robosax_licht_avr="_repo_git_st \
+  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
 
 alias git_clone_robosax_points="_repo_git_clone ${REPO_ROBOSAX_POINTS[*]}"
 alias git_pull_robosax_points="_repo_git_pull \"${REPO_ROBOSAX_POINTS[0]}\""
@@ -146,31 +159,47 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[ros]*********************************************
-# 2018 01 05
+# 2018 01 23
 
 # github
-alias git_clone_ros_github_parameter="_repo_git_clone ${REPO_ROS_GITHUB_PARAMETER[*]}"
-alias git_pull_ros_github_parameter="_repo_git_pull \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
-alias git_push_ros_github_parameter="_repo_git_push \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
-alias git_status_ros_github_parameter="_repo_git_st \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+alias git_clone_ros_github_parameter="_repo_git_clone \
+  ${REPO_ROS_GITHUB_PARAMETER[*]}"
+alias git_pull_ros_github_parameter="_repo_git_pull \
+  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+alias git_push_ros_github_parameter="_repo_git_push \
+  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+alias git_status_ros_github_parameter="_repo_git_st \
+  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
 
-alias git_clone_ros_github_pcdfilter="_repo_git_clone ${REPO_ROS_GITHUB_PCDFILTER[*]}"
-alias git_pull_ros_github_pcdfilter="_repo_git_pull \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
-alias git_push_ros_github_pcdfilter="_repo_git_push \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
-alias git_status_ros_github_pcdfilter="_repo_git_st \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+alias git_clone_ros_github_pcdfilter="_repo_git_clone \
+  ${REPO_ROS_GITHUB_PCDFILTER[*]}"
+alias git_pull_ros_github_pcdfilter="_repo_git_pull \
+  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+alias git_push_ros_github_pcdfilter="_repo_git_push \
+  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+alias git_status_ros_github_pcdfilter="_repo_git_st \
+  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
 
-alias git_clone_ros_github_octomap="_repo_git_clone ${REPO_ROS_GITHUB_OCTOMAP[*]}"
-alias git_pull_ros_github_octomap="_repo_git_pull \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
-alias git_push_ros_github_octomap="_repo_git_push \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
-alias git_status_ros_github_octomap="_repo_git_st \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+alias git_clone_ros_github_octomap="_repo_git_clone \
+  ${REPO_ROS_GITHUB_OCTOMAP[*]}"
+alias git_pull_ros_github_octomap="_repo_git_pull \
+  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+alias git_push_ros_github_octomap="_repo_git_push \
+  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+alias git_status_ros_github_octomap="_repo_git_st \
+  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
 
-alias git_clone_ros_github_nearfieldmap="_repo_git_clone ${REPO_ROS_GITHUB_NEARFIELDMAP[*]}"
-alias git_pull_ros_github_nearfieldmap="_repo_git_pull \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
-alias git_push_ros_github_nearfieldmap="_repo_git_push \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
-alias git_status_ros_github_nearfieldmap="_repo_git_st \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+alias git_clone_ros_github_nearfieldmap="_repo_git_clone \
+  ${REPO_ROS_GITHUB_NEARFIELDMAP[*]}"
+alias git_pull_ros_github_nearfieldmap="_repo_git_pull \
+  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+alias git_push_ros_github_nearfieldmap="_repo_git_push \
+  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+alias git_status_ros_github_nearfieldmap="_repo_git_st \
+  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
 
 #***************************[git global]**************************************
-# 2018 01 11
+# 2018 01 23
 
 function repo_pull_all() {
 
@@ -191,7 +220,8 @@ function repo_pull_all() {
     git_pull_eagle_dimmer
 
     git_pull_robosax_ledbox
-    git_pull_robosax_licht
+    git_pull_robosax_licht_tht
+    git_pull_robosax_licht_avr
     git_pull_robosax_points
 
     git_pull_cpp
@@ -215,7 +245,8 @@ function repo_status_all() {
     git_status_eagle_dimmer
 
     git_status_robosax_ledbox
-    git_status_robosax_licht
+    git_status_robosax_licht_tht
+    git_status_robosax_licht_avr
     git_status_robosax_points
 
     git_status_cpp

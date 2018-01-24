@@ -40,7 +40,7 @@ export REPO_BASH_ROBOAG=("${REPO_BASH_PATH}roboag/" \
 
 
 #***************************[robo]********************************************
-# 2018 01 08
+# 2018 01 23
 
 # paths
 export REPO_ROBO_PATH="${REPO_PATH_WORKSPACE}robo/"
@@ -87,8 +87,11 @@ export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
 export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PATH}ledbox/" \
   "https://github.com/fabiangeissler/robosax-ledbox.git")
 
-export REPO_ROBOSAX_LICHT=("${REPO_ROBOSAX_PATH}licht_tht/" \
+export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_PATH}licht_tht/" \
   "${REPO_ROOT_GITHUB_URL}eagle_robosax_licht.git")
+
+export REPO_ROBOSAX_LICHT_AVR=("${REPO_ROBOSAX_PATH}licht_avr/" \
+  "${REPO_ROOT_GITHUB_URL}avr_robosax_licht.git")
 
 export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_URL}php_robosax_punkte")
