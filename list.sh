@@ -6,18 +6,21 @@
 
 
 #***************************[server]******************************************
-# 2018 02 08
+# 2018 02 16
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
-export REPO_ROOT_GITHUB_ROBOAG="https://github.com/roboag/"
-export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/robosax/"
+
+export REPO_ROOT_GITHUB_ROBOAG="https://github.com/RoboAG/"
+export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
+
+export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
 
 
 #***************************[bash]********************************************
-# 2018 02 08
+# 2018 02 16
 
-# paths
+# path
 export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
 
 # repositories (peter)
@@ -41,10 +44,11 @@ export REPO_BASH_ROBOAG=("${REPO_BASH_PATH}roboag/" \
   "${REPO_ROOT_GITHUB_ROBOAG}bash_roboag.git")
 
 
-#***************************[robo]********************************************
-# 2018 02 08
 
-# paths
+#***************************[robo]********************************************
+# 2018 02 16
+
+# path
 export REPO_ROBO_PATH="${REPO_PATH_WORKSPACE}robo/"
 
 # robolib (roboag)
@@ -56,9 +60,9 @@ export REPO_ROBO_POLOLU=("${REPO_ROBO_PATH}pololu/" \
   "https://github.com/pololu/libpololu-avr.git")
 
 #***************************[robo/eagle]
-# 2018 02 08
+# 2018 02 16
 
-
+# path
 export REPO_ROBO_EAGLE_PATH="${REPO_ROBO_PATH}eagle/"
 
 # config (roboag)
@@ -118,7 +122,7 @@ export REPO_ROBOAG_3PI=("${REPO_ROBOAG_PATH}3pi/" \
 
 
 #***************************[projects]****************************************
-# paths
+# path
 export REPO_PROJECTS_PATH="${REPO_PATH_WORKSPACE}projects/"
 
 #***************************[projects/eagle]
@@ -181,26 +185,28 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[ros]*********************************************
-# 2018 01 05
+# 2018 02 16
 
 # paths
 export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ros/"
-
-# github
 export REPO_ROS_GITHUB_PATH="${REPO_ROS_PATH}github/"
 export REPO_ROS_GITHUB_SRC_PATH="${REPO_ROS_GITHUB_PATH}src/"
 
+# parameter (TUC-ProAut)
 export REPO_ROS_GITHUB_PARAMETER=("${REPO_ROS_GITHUB_SRC_PATH}parameter/" \
-  "${REPO_ROOT_GITHUB_PETER}ros_parameter.git")
+  "${REPO_ROOT_GITHUB_PROAUT}ros_parameter.git")
 
-export REPO_ROS_GITHUB_PCDFILTER=("${REPO_ROS_GITHUB_SRC_PATH}pcd-filter/" \
-  "${REPO_ROOT_GITHUB_PETER}ros_pcdfilter.git")
+# pcdfilter (TUC-ProAut)
+export REPO_ROS_GITHUB_PCDFILTER=("${REPO_ROS_GITHUB_SRC_PATH}pcdfilter/" \
+  "${REPO_ROOT_GITHUB_PROAUT}ros_pcdfilter.git")
 
+# octomap (TUC-ProAut)
 export REPO_ROS_GITHUB_OCTOMAP=("${REPO_ROS_GITHUB_SRC_PATH}octomap/" \
-  "${REPO_ROOT_GITHUB_PETER}ros_octomap.git")
+  "${REPO_ROOT_GITHUB_PROAUT}ros_octomap.git")
 
+# nearfield map (TUC-ProAut)
 export REPO_ROS_GITHUB_NEARFIELDMAP=( \
   "${REPO_ROS_GITHUB_SRC_PATH}nearfield_map/" \
-  "${REPO_ROOT_GITHUB_PETER}ros_nearfield_map.git")
+  "${REPO_ROOT_GITHUB_PROAUT}ros_nearfield_map.git")
 
 

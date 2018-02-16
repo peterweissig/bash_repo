@@ -252,9 +252,9 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[ros]*********************************************
-# 2018 01 30
+# 2018 02 16
 
-# github
+# parameter (TUC-ProAut)
 alias git_clone_github_ros_parameter="_repo_git_clone \
   ${REPO_ROS_GITHUB_PARAMETER[*]}"
 alias git_pull_github_ros_parameter="_repo_git_pull \
@@ -264,6 +264,7 @@ alias git_push_github_ros_parameter="_repo_git_push \
 alias git_status_github_ros_parameter="_repo_git_st \
   \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
 
+# pcdfilter (TUC-ProAut)
 alias git_clone_github_ros_pcdfilter="_repo_git_clone \
   ${REPO_ROS_GITHUB_PCDFILTER[*]}"
 alias git_pull_github_ros_pcdfilter="_repo_git_pull \
@@ -273,6 +274,7 @@ alias git_push_github_ros_pcdfilter="_repo_git_push \
 alias git_status_github_ros_pcdfilter="_repo_git_st \
   \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
 
+# octomap (TUC-ProAut)
 alias git_clone_github_ros_octomap="_repo_git_clone \
   ${REPO_ROS_GITHUB_OCTOMAP[*]}"
 alias git_pull_github_ros_octomap="_repo_git_pull \
@@ -282,6 +284,7 @@ alias git_push_github_ros_octomap="_repo_git_push \
 alias git_status_github_ros_octomap="_repo_git_st \
   \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
 
+# nearfield map (TUC-ProAut)
 alias git_clone_github_ros_nearfieldmap="_repo_git_clone \
   ${REPO_ROS_GITHUB_NEARFIELDMAP[*]}"
 alias git_pull_github_ros_nearfieldmap="_repo_git_pull \
