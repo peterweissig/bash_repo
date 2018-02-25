@@ -126,7 +126,7 @@ export REPO_ROBOAG_3PI=("${REPO_ROBOAG_PATH}3pi/" \
 export REPO_PROJECTS_PATH="${REPO_PATH_WORKSPACE}projects/"
 
 #***************************[projects/eagle]
-# 2018 02 08
+# 2018 02 25
 
 export REPO_PROJECTS_EAGLE_PATH="${REPO_PROJECTS_PATH}eagle/"
 
@@ -134,18 +134,18 @@ export REPO_PROJECTS_EAGLE_PATH="${REPO_PROJECTS_PATH}eagle/"
 export REPO_EAGLE_DMX_DRIVER=("${REPO_PROJECTS_EAGLE_PATH}dmx_driver/" \
   "${REPO_ROOT_GITHUB_PETER}eagle_dmx_driver.git")
 
-# opa (peter)
-export REPO_EAGLE_DMX_OPA=("${REPO_PROJECTS_EAGLE_PATH}dmx_opa/" \
-  "${REPO_ROOT_GITHUB_PETER}eagle_dmx_opa.git")
-
 #***************************[projects/hardware]
-# 2018 02 08
+# 2018 02 25
 
 export REPO_HARDWARE_PATH="${REPO_PROJECTS_PATH}hardware/"
 
 # audio system (peter)
 export REPO_HARDWARE_AUDIO_HOME=("${REPO_HARDWARE_PATH}audio_home/" \
   "${REPO_ROOT_GITHUB_PETER}project_audio_home.git")
+
+# opa (peter)
+export REPO_EAGLE_DMX_OPA=("${REPO_PROJECTS_EAGLE_PATH}dmx_opa/" \
+  "${REPO_ROOT_GITHUB_PETER}project_opa.git")
 
 # dimmer (peter)
 export REPO_HARDWARE_DIMMER=("${REPO_HARDWARE_PATH}dimmer/" \

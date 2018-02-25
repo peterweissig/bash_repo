@@ -1,5 +1,5 @@
 #***************************[help]********************************************
-# 2018 02 08
+# 2018 02 25
 function repo_help() {
 
     echo ""
@@ -39,10 +39,10 @@ function repo_help() {
     echo "  projects/"
     echo "      eagle/"
     echo "          dmx_driver/     [git]/peterweissig/eagle_dmx_driver.git"
-    echo "          dmx_opa/        [git]/peterweissig/eagle_dmx_opa.git"
     echo ""
     echo "      hardware/"
     echo "          audio_home/     [git]/peterweissig/project_audio_home.git"
+    echo "          dmx_opa/        [git]/peterweissig/project_opa.git"
     echo "          dimmer/         [git]/peterweissig/project_dimmer.git"
     echo ""
     echo "      c++/                [git]/peterweissig/cpp_main.git"
