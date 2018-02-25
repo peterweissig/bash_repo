@@ -159,7 +159,7 @@ alias git_status_roboag_3pi="_repo_git_st \"${REPO_ROBOAG_3PI[0]}\""
 #***************************[projects]****************************************
 
 #***************************[projects/eagle]
-# 2018 02 08
+# 2018 02 25
 
 # dmx-driver (peter)
 alias git_clone_eagle_dmx_driver="_repo_git_clone \
@@ -171,18 +171,8 @@ alias git_push_eagle_dmx_driver="_repo_git_push \
 alias git_status_eagle_dmx_driver="_repo_git_st \
   \"${REPO_EAGLE_DMX_DRIVER[0]}\""
 
-# opa (peter)
-alias git_clone_eagle_dmx_opa="_repo_git_clone \
-  ${REPO_EAGLE_DMX_OPA[*]}"
-alias git_pull_eagle_dmx_opa="_repo_git_pull \
-  \"${REPO_EAGLE_DMX_OPA[0]}\""
-alias git_push_eagle_dmx_opa="_repo_git_push \
-  \"${REPO_EAGLE_DMX_OPA[0]}\""
-alias git_status_eagle_dmx_opa="_repo_git_st \
-  \"${REPO_EAGLE_DMX_OPA[0]}\""
-
 #***************************[projects/hardware]
-# 2018 02 08
+# 2018 02 25
 
 # audio system (peter)
 alias git_clone_hardware_audio_home="_repo_git_clone \
@@ -193,6 +183,16 @@ alias git_push_hardware_audio_home="_repo_git_push \
   \"${REPO_HARDWARE_AUDIO_HOME[0]}\""
 alias git_status_hardware_audio_home="_repo_git_st \
   \"${REPO_HARDWARE_AUDIO_HOME[0]}\""
+
+# opa (peter)
+alias git_clone_hardware_dmx_opa="_repo_git_clone \
+  ${REPO_HARDWARE_DMX_OPA[*]}"
+alias git_pull_hardware_dmx_opa="_repo_git_pull \
+  \"${REPO_HARDWARE_DMX_OPA[0]}\""
+alias git_push_hardware_dmx_opa="_repo_git_push \
+  \"${REPO_HARDWARE_DMX_OPA[0]}\""
+alias git_status_hardware_dmx_opa="_repo_git_st \
+  \"${REPO_HARDWARE_DMX_OPA[0]}\""
 
 # dimmer (peter)
 alias git_clone_hardware_dimmer="_repo_git_clone \
@@ -297,7 +297,7 @@ alias git_status_github_ros_nearfieldmap="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 01 30
+# 2018 02 25
 
 function repo_pull_all() {
 
@@ -327,9 +327,9 @@ function repo_pull_all() {
 
 
     git_pull_eagle_dmx_driver
-    git_pull_eagle_dmx_opa
 
     git_pull_hardware_audio_home
+    git_pull_hardware_dmx_opa
     git_pull_hardware_dimmer
 
     git_pull_cpp
@@ -369,9 +369,9 @@ function repo_status_all() {
 
 
     git_status_eagle_dmx_driver
-    git_status_eagle_dmx_opa
 
     git_status_hardware_audio_home
+    git_status_hardware_dmx_opa
     git_status_hardware_dimmer
 
     git_status_cpp
@@ -411,9 +411,9 @@ function repo_clone_all() {
 
 
     git_clone_eagle_dmx_driver
-    git_clone_eagle_dmx_opa
 
     git_clone_hardware_audio_home
+    git_clone_hardware_dmx_opa
     git_clone_hardware_dimmer
 
     git_clone_cpp_main

@@ -144,7 +144,7 @@ export REPO_HARDWARE_AUDIO_HOME=("${REPO_HARDWARE_PATH}audio_home/" \
   "${REPO_ROOT_GITHUB_PETER}project_audio_home.git")
 
 # opa (peter)
-export REPO_EAGLE_DMX_OPA=("${REPO_PROJECTS_EAGLE_PATH}dmx_opa/" \
+export REPO_HARDWARE_DMX_OPA=("${REPO_HARDWARE_PATH}dmx_opa/" \
   "${REPO_ROOT_GITHUB_PETER}project_opa.git")
 
 # dimmer (peter)
