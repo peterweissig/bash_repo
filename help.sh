@@ -29,6 +29,7 @@ function repo_help() {
     echo "      roboag/"
     echo "          gluecksrad/     [git]/roboag/projekt_gluecksrad.git"
     echo "          3pi/            [git]/roboag/projekt_3pi.git"
+    echo "          filebrowser_php/ [git]/roboag/php_filebrowser.git"
     echo ""
     echo "      robosax/"
     echo "          ledbox/         [git]/robosax/projekt_ledbox"
