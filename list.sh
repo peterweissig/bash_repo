@@ -107,7 +107,7 @@ export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte")
 
 #***************************[robo/roboag]
-# 2018 02 08
+# 2018 02 25
 
 export REPO_ROBOAG_PATH="${REPO_ROBO_PATH}roboag/"
 
@@ -118,6 +118,10 @@ export REPO_ROBOAG_GLUECKSRAD=("${REPO_ROBOAG_PATH}gluecksrad/" \
 # 3pi modification (roboag)
 export REPO_ROBOAG_3PI=("${REPO_ROBOAG_PATH}3pi/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_3pi.git")
+
+# php filebrowser (roboag)
+export REPO_ROBOAG_FILEBROWSER_PHP=("${REPO_ROBOAG_PATH}filebrowser_php/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")
 
 
 

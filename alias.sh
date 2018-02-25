@@ -136,7 +136,7 @@ alias git_push_robosax_points="_repo_git_push \"${REPO_ROBOSAX_POINTS[0]}\""
 alias git_status_robosax_points="_repo_git_st \"${REPO_ROBOSAX_POINTS[0]}\""
 
 #***************************[robo/roboag]
-# 2018 02 08
+# 2018 02 25
 
 # gluecksrad (roboag)
 alias git_clone_roboag_gluecksrad="_repo_git_clone \
@@ -153,6 +153,16 @@ alias git_clone_roboag_3pi="_repo_git_clone ${REPO_ROBOAG_3PI[*]}"
 alias git_pull_roboag_3pi="_repo_git_pull \"${REPO_ROBOAG_3PI[0]}\""
 alias git_push_roboag_3pi="_repo_git_push \"${REPO_ROBOAG_3PI[0]}\""
 alias git_status_roboag_3pi="_repo_git_st \"${REPO_ROBOAG_3PI[0]}\""
+
+# php filebrowser (roboag)
+alias git_clone_roboag_filebrowser_php="_repo_git_clone \
+  ${REPO_ROBOAG_FILEBROWSER_PHP[*]}"
+alias git_pull_roboag_filebrowser_php="_repo_git_pull \
+  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
+alias git_push_roboag_filebrowser_php="_repo_git_push \
+  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
+alias git_status_roboag_filebrowser_php="_repo_git_st \
+  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
 
 
 
@@ -319,6 +329,7 @@ function repo_pull_all() {
 
     git_pull_roboag_gluecksrad
     git_pull_roboag_3pi
+    git_pull_roboag_filebrowser_php
 
     git_pull_robosax_ledbox
     git_pull_robosax_licht_tht
@@ -361,6 +372,7 @@ function repo_status_all() {
 
     git_status_roboag_gluecksrad
     git_status_roboag_3pi
+    git_status_roboag_filebrowser_php
 
     git_status_robosax_ledbox
     git_status_robosax_licht_tht
@@ -403,6 +415,7 @@ function repo_clone_all() {
 
     git_clone_roboag_gluecksrad
     git_clone_roboag_3pi
+    git_clone_roboag_filebrowser_php
 
     git_clone_robosax_ledbox
     git_clone_robosax_licht_tht
