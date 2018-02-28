@@ -1,5 +1,5 @@
 #***************************[help]********************************************
-# 2018 02 25
+# 2018 02 28
 function repo_help() {
 
     echo ""
@@ -35,6 +35,7 @@ function repo_help() {
     echo "          ledbox/         [git]/robosax/projekt_ledbox"
     echo "          licht_tht/      [git]/robosax/eagle_licht.git"
     echo "          licht_avr/      [git]/robosax/avr_licht.git"
+    echo "          anzeige_tht/    [git]/robosax/eagle_anzeige.git"
     echo "          punkte/         [git]/robosax/php_punkte.git"
     echo ""
     echo "  projects/"

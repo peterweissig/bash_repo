@@ -86,7 +86,7 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2018 02 08
+# 2018 02 28
 
 export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
 
@@ -94,13 +94,17 @@ export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
 export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PATH}ledbox/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
 
-# licht-tht software (robosax)
+# licht-tht circuit (robosax)
 export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_PATH}licht_tht/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git")
 
-# licht-tht circuit (robosax)
+# licht-tht software (robosax)
 export REPO_ROBOSAX_LICHT_AVR=("${REPO_ROBOSAX_PATH}licht_avr/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}avr_licht.git")
+
+# anzeige circuit (robosax)
+export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_PATH}anzeige_tht/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git")
 
 # punkte (robosax)
 export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PATH}punkte/" \

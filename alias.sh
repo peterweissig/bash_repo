@@ -101,7 +101,7 @@ alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
 #***************************[robo/robosax]
-# 2018 02 08
+# 2018 02 28
 
 # led-box (robosax) - original repo is from fabiangeissler
 alias git_clone_robosax_ledbox="_repo_git_clone ${REPO_ROBOSAX_LEDBOX[*]}"
@@ -109,7 +109,7 @@ alias git_pull_robosax_ledbox="_repo_git_pull \"${REPO_ROBOSAX_LEDBOX[0]}\""
 alias git_push_robosax_ledbox="_repo_git_push \"${REPO_ROBOSAX_LEDBOX[0]}\""
 alias git_status_robosax_ledbox="_repo_git_st \"${REPO_ROBOSAX_LEDBOX[0]}\""
 
-# licht-tht software (robosax)
+# licht-tht circuit (robosax)
 alias git_clone_robosax_licht_tht="_repo_git_clone \
   ${REPO_ROBOSAX_LICHT_THT[*]}"
 alias git_pull_robosax_licht_tht="_repo_git_pull \
@@ -119,7 +119,7 @@ alias git_push_robosax_licht_tht="_repo_git_push \
 alias git_status_robosax_licht_tht="_repo_git_st \
   \"${REPO_ROBOSAX_LICHT_THT[0]}\""
 
-# licht-tht circuit (robosax)
+# licht-tht software (robosax)
 alias git_clone_robosax_licht_avr="_repo_git_clone \
   ${REPO_ROBOSAX_LICHT_AVR[*]}"
 alias git_pull_robosax_licht_avr="_repo_git_pull \
@@ -128,6 +128,16 @@ alias git_push_robosax_licht_avr="_repo_git_push \
   \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
 alias git_status_robosax_licht_avr="_repo_git_st \
   \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
+
+# anzeige-tht circuit (robosax)
+alias git_clone_robosax_anzeige_tht="_repo_git_clone \
+  ${REPO_ROBOSAX_ANZEIGE_THT[*]}"
+alias git_pull_robosax_anzeige_tht="_repo_git_pull \
+  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
+alias git_push_robosax_anzeige_tht="_repo_git_push \
+  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
+alias git_status_robosax_anzeige_tht="_repo_git_st \
+  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
 
 # punkte (robosax)
 alias git_clone_robosax_points="_repo_git_clone ${REPO_ROBOSAX_POINTS[*]}"
@@ -307,7 +317,7 @@ alias git_status_github_ros_nearfieldmap="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 02 25
+# 2018 02 28
 
 function repo_pull_all() {
 
@@ -334,6 +344,7 @@ function repo_pull_all() {
     git_pull_robosax_ledbox
     git_pull_robosax_licht_tht
     git_pull_robosax_licht_avr
+    git_pull_robosax_anzeige_tht
     git_pull_robosax_points
 
 
@@ -377,6 +388,7 @@ function repo_status_all() {
     git_status_robosax_ledbox
     git_status_robosax_licht_tht
     git_status_robosax_licht_avr
+    git_status_robosax_anzeige_tht
     git_status_robosax_points
 
 
@@ -420,6 +432,7 @@ function repo_clone_all() {
     git_clone_robosax_ledbox
     git_clone_robosax_licht_tht
     git_clone_robosax_licht_avr
+    git_clone_robosax_anzeige_tht
     git_clone_robosax_points
 
 
