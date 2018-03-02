@@ -272,47 +272,47 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[ros]*********************************************
-# 2018 02 16
+# 2018 03 01
 
 # parameter (TUC-ProAut)
 alias git_clone_github_ros_parameter="_repo_git_clone \
-  ${REPO_ROS_GITHUB_PARAMETER[*]}"
+  ${REPO_ROS_PROAUT_PARAMETER[*]}"
 alias git_pull_github_ros_parameter="_repo_git_pull \
-  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
 alias git_push_github_ros_parameter="_repo_git_push \
-  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
 alias git_status_github_ros_parameter="_repo_git_st \
-  \"${REPO_ROS_GITHUB_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
 
 # pcdfilter (TUC-ProAut)
 alias git_clone_github_ros_pcdfilter="_repo_git_clone \
-  ${REPO_ROS_GITHUB_PCDFILTER[*]}"
+  ${REPO_ROS_PROAUT_PCDFILTER[*]}"
 alias git_pull_github_ros_pcdfilter="_repo_git_pull \
-  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
 alias git_push_github_ros_pcdfilter="_repo_git_push \
-  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
 alias git_status_github_ros_pcdfilter="_repo_git_st \
-  \"${REPO_ROS_GITHUB_PCDFILTER[0]}\""
+  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
 
 # octomap (TUC-ProAut)
 alias git_clone_github_ros_octomap="_repo_git_clone \
-  ${REPO_ROS_GITHUB_OCTOMAP[*]}"
+  ${REPO_ROS_PROAUT_OCTOMAP[*]}"
 alias git_pull_github_ros_octomap="_repo_git_pull \
-  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
 alias git_push_github_ros_octomap="_repo_git_push \
-  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
 alias git_status_github_ros_octomap="_repo_git_st \
-  \"${REPO_ROS_GITHUB_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
 
 # nearfield map (TUC-ProAut)
 alias git_clone_github_ros_nearfieldmap="_repo_git_clone \
-  ${REPO_ROS_GITHUB_NEARFIELDMAP[*]}"
+  ${REPO_ROS_PROAUT_NEARFIELDMAP[*]}"
 alias git_pull_github_ros_nearfieldmap="_repo_git_pull \
-  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
 alias git_push_github_ros_nearfieldmap="_repo_git_push \
-  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
 alias git_status_github_ros_nearfieldmap="_repo_git_st \
-  \"${REPO_ROS_GITHUB_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
 
 
 

@@ -18,10 +18,12 @@ export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
 
 #***************************[bash]********************************************
-# 2018 02 16
+# 2018 03 01
 
 # path
-export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
+if [ "$REPO_BASH_PATH" == "" ]; then
+    export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
+fi
 
 # repositories (peter)
 export REPO_BASH_REPO=("${REPO_BASH_PATH}repo/" \
@@ -46,10 +48,12 @@ export REPO_BASH_ROBOAG=("${REPO_BASH_PATH}roboag/" \
 
 
 #***************************[robo]********************************************
-# 2018 02 16
+# 2018 03 01
 
 # path
-export REPO_ROBO_PATH="${REPO_PATH_WORKSPACE}robo/"
+if [ "$REPO_ROBO_PATH" == "" ]; then
+    export REPO_ROBO_PATH="${REPO_PATH_WORKSPACE}robo/"
+fi
 
 # robolib (roboag)
 export REPO_ROBO_LIB=("${REPO_ROBO_PATH}library/" \
@@ -60,10 +64,12 @@ export REPO_ROBO_POLOLU=("${REPO_ROBO_PATH}pololu/" \
   "https://github.com/pololu/libpololu-avr.git")
 
 #***************************[robo/eagle]
-# 2018 02 16
+# 2018 03 01
 
 # path
-export REPO_ROBO_EAGLE_PATH="${REPO_ROBO_PATH}eagle/"
+if [ "$REPO_ROBO_EAGLE_PATH" == "" ]; then
+    export REPO_ROBO_EAGLE_PATH="${REPO_ROBO_PATH}eagle/"
+fi
 
 # config (roboag)
 export REPO_ROBO_EAGLE_CONFIG=("${REPO_ROBO_EAGLE_PATH}config/" \
@@ -86,34 +92,55 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2018 02 28
+# 2018 03 01
 
-export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
+#paths
+if [ "$REPO_ROBOSAX_PATH" == "" ]; then
+    export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
+fi
+if [ "$REPO_ROBOSAX_EAGLE_PATH" == "" ]; then
+    export REPO_ROBOSAX_EAGLE_PATH="${REPO_ROBOSAX_PATH}"
+fi
+if [ "$REPO_ROBOSAX_AVR_PATH" == "" ]; then
+    export REPO_ROBOSAX_AVR_PATH="${REPO_ROBOSAX_PATH}"
+fi
+if [ "$REPO_ROBOSAX_PROJECT_PATH" == "" ]; then
+    export REPO_ROBOSAX_PROJECT_PATH="${REPO_ROBOSAX_PATH}"
+fi
+if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
+    export REPO_ROBOSAX_PHP_PATH="${REPO_ROBOSAX_PATH}"
+fi
 
 # led-box (robosax) - original repo is from fabiangeissler
-export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PATH}ledbox/" \
+export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
 
 # licht-tht circuit (robosax)
-export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_PATH}licht_tht/" \
+export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_EAGLE_PATH}licht_tht/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git")
 
 # licht-tht software (robosax)
-export REPO_ROBOSAX_LICHT_AVR=("${REPO_ROBOSAX_PATH}licht_avr/" \
+export REPO_ROBOSAX_LICHT_AVR=("${REPO_ROBOSAX_AVR_PATH}licht_avr/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}avr_licht.git")
 
 # anzeige circuit (robosax)
-export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_PATH}anzeige_tht/" \
+export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_EAGLE_PATH}anzeige_tht/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git")
 
 # punkte (robosax)
-export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PATH}punkte/" \
+export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte")
 
 #***************************[robo/roboag]
-# 2018 02 25
+# 2018 03 01
 
-export REPO_ROBOAG_PATH="${REPO_ROBO_PATH}roboag/"
+# path
+if [ "$REPO_ROBOAG_PATH" == "" ]; then
+    export REPO_ROBOAG_PATH="${REPO_ROBO_PATH}roboag/"
+fi
+if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
+    export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PATH}"
+fi
 
 # gluecksrad (roboag)
 export REPO_ROBOAG_GLUECKSRAD=("${REPO_ROBOAG_PATH}gluecksrad/" \
@@ -124,28 +151,39 @@ export REPO_ROBOAG_3PI=("${REPO_ROBOAG_PATH}3pi/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_3pi.git")
 
 # php filebrowser (roboag)
-export REPO_ROBOAG_FILEBROWSER_PHP=("${REPO_ROBOAG_PATH}filebrowser_php/" \
+export REPO_ROBOAG_FILEBROWSER_PHP=( \
+  "${REPO_ROBOAG_PHP_PATH}filebrowser_php/" \
   "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")
 
 
 
 #***************************[projects]****************************************
+# 2018 03 01
+
 # path
-export REPO_PROJECTS_PATH="${REPO_PATH_WORKSPACE}projects/"
+if [ "$REPO_PROJECTS_PATH" == "" ]; then
+    export REPO_PROJECTS_PATH="${REPO_PATH_WORKSPACE}projects/"
+fi
 
 #***************************[projects/eagle]
-# 2018 02 25
+# 2018 03 01
 
-export REPO_PROJECTS_EAGLE_PATH="${REPO_PROJECTS_PATH}eagle/"
+# path
+if [ "$REPO_PROJECTS_EAGLE_PATH" == "" ]; then
+    export REPO_PROJECTS_EAGLE_PATH="${REPO_PROJECTS_PATH}eagle/"
+fi
 
 # dmx-driver (peter)
 export REPO_EAGLE_DMX_DRIVER=("${REPO_PROJECTS_EAGLE_PATH}dmx_driver/" \
   "${REPO_ROOT_GITHUB_PETER}eagle_dmx_driver.git")
 
 #***************************[projects/hardware]
-# 2018 02 25
+# 2018 03 01
 
-export REPO_HARDWARE_PATH="${REPO_PROJECTS_PATH}hardware/"
+# path
+if [ "$REPO_HARDWARE_PATH" == "" ]; then
+    export REPO_HARDWARE_PATH="${REPO_PROJECTS_PATH}hardware/"
+fi
 
 # audio system (peter)
 export REPO_HARDWARE_AUDIO_HOME=("${REPO_HARDWARE_PATH}audio_home/" \
@@ -160,11 +198,15 @@ export REPO_HARDWARE_DIMMER=("${REPO_HARDWARE_PATH}dimmer/" \
   "${REPO_ROOT_GITHUB_PETER}project_dimmer.git")
 
 #***************************[projects/c++]
-# 2018 02 08
+# 2018 03 01
 
 # paths
-export REPO_CPP_PATH="${REPO_PROJECTS_PATH}c++/"
-export REPO_CPP_SRC_PATH="${REPO_CPP_PATH}src/"
+if [ "$REPO_CPP_PATH" == "" ]; then
+    export REPO_CPP_PATH="${REPO_PROJECTS_PATH}c++/"
+fi
+if [ "$REPO_CPP_SRC_PATH" == "" ]; then
+    export REPO_CPP_SRC_PATH="${REPO_CPP_PATH}src/"
+fi
 
 # main (peter)
 export REPO_CPP_MAIN=("${REPO_CPP_PATH}" \
@@ -193,28 +235,34 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[ros]*********************************************
-# 2018 02 16
+# 2018 03 01
 
 # paths
-export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ros/"
-export REPO_ROS_GITHUB_PATH="${REPO_ROS_PATH}github/"
-export REPO_ROS_GITHUB_SRC_PATH="${REPO_ROS_GITHUB_PATH}src/"
+if [ "$REPO_ROS_PATH" == "" ]; then
+    export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ros/"
+fi
+if [ "$REPO_ROS_PROAUT_PATH" == "" ]; then
+    export REPO_ROS_PROAUT_PATH="${REPO_ROS_PATH}ProAut/"
+fi
+if [ "$REPO_ROS_PROAUT_SRC_PATH" == "" ]; then
+    export REPO_ROS_PROAUT_SRC_PATH="${REPO_ROS_PROAUT_PATH}src/"
+fi
 
 # parameter (TUC-ProAut)
-export REPO_ROS_GITHUB_PARAMETER=("${REPO_ROS_GITHUB_SRC_PATH}parameter/" \
+export REPO_ROS_PROAUT_PARAMETER=("${REPO_ROS_PROAUT_SRC_PATH}parameter/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_parameter.git")
 
 # pcdfilter (TUC-ProAut)
-export REPO_ROS_GITHUB_PCDFILTER=("${REPO_ROS_GITHUB_SRC_PATH}pcdfilter/" \
+export REPO_ROS_PROAUT_PCDFILTER=("${REPO_ROS_PROAUT_SRC_PATH}pcdfilter/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_pcdfilter.git")
 
 # octomap (TUC-ProAut)
-export REPO_ROS_GITHUB_OCTOMAP=("${REPO_ROS_GITHUB_SRC_PATH}octomap/" \
+export REPO_ROS_PROAUT_OCTOMAP=("${REPO_ROS_PROAUT_SRC_PATH}octomap/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_octomap.git")
 
 # nearfield map (TUC-ProAut)
-export REPO_ROS_GITHUB_NEARFIELDMAP=( \
-  "${REPO_ROS_GITHUB_SRC_PATH}nearfield_map/" \
+export REPO_ROS_PROAUT_NEARFIELDMAP=( \
+  "${REPO_ROS_PROAUT_SRC_PATH}nearfield_map/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_nearfield_map.git")
 
 
