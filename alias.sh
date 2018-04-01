@@ -146,7 +146,13 @@ alias git_push_robosax_points="_repo_git_push \"${REPO_ROBOSAX_POINTS[0]}\""
 alias git_status_robosax_points="_repo_git_st \"${REPO_ROBOSAX_POINTS[0]}\""
 
 #***************************[robo/roboag]
-# 2018 02 25
+# 2018 04 01
+
+# display (roboag)
+alias git_clone_roboag_display="_repo_git_clone ${REPO_ROBOAG_DISPLAY[*]}"
+alias git_pull_roboag_display="_repo_git_pull \"${REPO_ROBOAG_DISPLAY[0]}\""
+alias git_push_roboag_display="_repo_git_push \"${REPO_ROBOAG_DISPLAY[0]}\""
+alias git_status_roboag_display="_repo_git_st \"${REPO_ROBOAG_DISPLAY[0]}\""
 
 # gluecksrad (roboag)
 alias git_clone_roboag_gluecksrad="_repo_git_clone \
@@ -317,7 +323,7 @@ alias git_status_github_ros_nearfieldmap="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 02 28
+# 2018 04 01
 
 function repo_pull_all() {
 
@@ -337,6 +343,7 @@ function repo_pull_all() {
     git_pull_robo_eagle_logic
     git_pull_robo_eagle_vtgMon
 
+    git_pull_roboag_display
     git_pull_roboag_gluecksrad
     git_pull_roboag_3pi
     git_pull_roboag_filebrowser_php
@@ -381,6 +388,7 @@ function repo_status_all() {
     git_status_robo_eagle_logic
     git_status_robo_eagle_vtgMon
 
+    git_status_roboag_display
     git_status_roboag_gluecksrad
     git_status_roboag_3pi
     git_status_roboag_filebrowser_php
@@ -425,6 +433,7 @@ function repo_clone_all() {
     git_clone_robo_eagle_logic
     git_clone_robo_eagle_vtgMon
 
+    git_clone_roboag_display
     git_clone_roboag_gluecksrad
     git_clone_roboag_3pi
     git_clone_roboag_filebrowser_php

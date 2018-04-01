@@ -132,7 +132,7 @@ export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte")
 
 #***************************[robo/roboag]
-# 2018 03 01
+# 2018 04 01
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
@@ -141,6 +141,10 @@ fi
 if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
     export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PATH}"
 fi
+
+# display (roboag)
+export REPO_ROBOAG_DISPLAY=("${REPO_ROBOAG_PATH}rotierendes_display/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_display.git")
 
 # gluecksrad (roboag)
 export REPO_ROBOAG_GLUECKSRAD=("${REPO_ROBOAG_PATH}gluecksrad/" \

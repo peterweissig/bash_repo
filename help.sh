@@ -1,5 +1,5 @@
 #***************************[help]********************************************
-# 2018 02 28
+# 2018 04 1
 function repo_help() {
 
     echo ""
@@ -27,6 +27,7 @@ function repo_help() {
     echo "          vtgMon/         [git]/roboag/eagle_voltageMonitoring.git"
     echo ""
     echo "      roboag/"
+    echo "          rotierendes_display/ [git]/roboag/projekt_display.git"
     echo "          gluecksrad/     [git]/roboag/projekt_gluecksrad.git"
     echo "          3pi/            [git]/roboag/projekt_3pi.git"
     echo "          filebrowser_php/ [git]/roboag/php_filebrowser.git"
