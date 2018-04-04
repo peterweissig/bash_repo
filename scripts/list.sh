@@ -11,6 +11,7 @@
 # 2018 02 16
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
+export REPO_ROOT_GITHUB_FABIAN="https://github.com/fabiangeissler/"
 
 export REPO_ROOT_GITHUB_ROBOAG="https://github.com/RoboAG/"
 export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
@@ -94,7 +95,7 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2018 03 01
+# 2018 04 04
 
 #paths
 if [ "$REPO_ROBOSAX_PATH" == "" ]; then
@@ -113,9 +114,14 @@ if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
     export REPO_ROBOSAX_PHP_PATH="${REPO_ROBOSAX_PATH}"
 fi
 
-# led-box (robosax) - original repo is from fabiangeissler
+# spielfeld drawings (robosax)
+export REPO_ROBOSAX_SPIELFELD=("${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}cad_spielfeld.git")
+
+# led-box (fabian) - original repo is from fabian geissler
 export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
+  "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git")
+#  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
 
 # licht-tht circuit (robosax)
 export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_EAGLE_PATH}licht_tht/" \
