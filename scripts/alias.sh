@@ -335,7 +335,7 @@ alias git_status_github_ros_nearfieldmap="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 04 04
+# 2018 05 03
 
 function repo_pull_all() {
 
@@ -427,6 +427,8 @@ function repo_status_all() {
     git_status_github_ros_pcdfilter
     git_status_github_ros_octomap
     git_status_github_ros_nearfieldmap
+
+    repo_additional_dirs_status
 }
 
 function repo_clone_all() {

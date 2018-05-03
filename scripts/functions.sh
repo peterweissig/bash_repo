@@ -40,7 +40,7 @@ function _repo_svn_up() {
     fi
 
     if [ -d "$1" ] && [ -d "$1/.svn" ]; then
-        svn update "$1"
+        svn update -q "$1"
     fi
 }
 
@@ -91,7 +91,7 @@ function repo_svn_diff() {
 }
 
 #***************************[git]*********************************************
-# 2018 01 05
+# 2018 05 03
 
 function _repo_git_clone() {
 
@@ -137,8 +137,12 @@ function _repo_git_pull() {
         REPO_NAME="$2"
     fi
 
-    echo "### pulling $REPO_NAME ###"
-    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
+    respond="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" \
+      git fetch --tags)"
+    if [ "$respond" != "" ]; then
+        echo "### pulling $REPO_NAME ###"
+        GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
+    fi
 }
 
 function _repo_git_push() {
@@ -193,9 +197,98 @@ function _repo_git_st() {
     fi
 
     temp_text="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u)"
-    if [ "$temp_text" != "" ]; then
+
+    if [ "$(echo "$temp_text" | wc -l)" != 3 ] || \
+      [ "$(echo "$temp_text" | \
+      grep "nichts zu committen, Arbeitsverzeichnis unverändert" | \
+      wc -w)" != 5 ]; then
         echo ""
         echo "### $REPO_NAME ###"
-        echo "$temp_text"
+        GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
     fi
+}
+
+#***************************[local repos]*************************************
+# 2018 05 03
+
+function _repo_additional_dirs_load() {
+
+    if [ $# -gt 0 ]; then
+        echo "Error - _repo_additional_dirs_load needs 0 parameters"
+
+        return -1
+    fi
+
+    if [ ! -e "$REPO_FILE_ADDITIONAL_GIT" ]; then
+        export REPO_ADDITIONAL_DIRS_GIT=()
+        return
+    fi
+
+    # load paths
+    readarray -t REPO_ADDITIONAL_DIRS_GIT < "$REPO_FILE_ADDITIONAL_GIT"
+    for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
+        if [ ! -d ${REPO_ADDITIONAL_DIRS_GIT[$i]} ]; then
+            echo -n "warning: found non-existing dir in "
+            echo "$REPO_FILE_ADDITIONAL_GIT"
+            echo "  (${REPO_ADDITIONAL_DIRS_GIT[$i]})"
+        fi
+    done
+}
+
+function repo_additional_dirs_add() {
+
+    if [ $# -gt 1 ]; then
+        echo "Error - repo_additional_dirs_add needs 0-1 parameter"
+        echo "       [#1:]locale path"
+
+        return -1
+    fi
+
+    # local path or load from command line
+    if [ $# -lt 1 ]; then
+        path="$(pwd)"
+    else
+        path="$1"
+    fi
+
+    # check path
+    if [ ! -d "$path" ]; then
+        return
+    fi
+
+    # store path with trailing '/'
+    path="$(cd "$path"; pwd)/"
+
+    # set up as git repo
+    if [ ! -d "$path.git" ]; then
+        git init "$path"
+    fi
+
+    # check if already loaded
+    for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
+        if [ "$path" == "${REPO_ADDITIONAL_DIRS_GIT[$i]}" ]; then
+            echo -n "warning: dir already exists in "
+            echo "$REPO_FILE_ADDITIONAL_GIT"
+            echo "  (${REPO_ADDITIONAL_DIRS_GIT[$i]})"
+
+            return -2
+        fi
+    done
+
+    echo "$path" >> $REPO_FILE_ADDITIONAL_GIT
+    REPO_ADDITIONAL_DIRS_GIT+=("$path")
+}
+
+function repo_additional_dirs_status() {
+
+    if [ $# -gt 0 ]; then
+        echo "Error - repo_additional_dirs_status needs 0 parameters"
+
+        return -1
+    fi
+
+    # check status of additional dirs
+    for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
+        _repo_git_st "${REPO_ADDITIONAL_DIRS_GIT[$i]}/"
+    done
 }
