@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[help]********************************************
-# 2018 04 04
+# 2018 05 16
 function repo_help() {
 
     echo ""
@@ -35,10 +35,12 @@ function repo_help() {
     echo "          filebrowser_php/ [git]/roboag/php_filebrowser.git"
     echo ""
     echo "      robosax/"
-    echo "          spielfeld/      [git]/robosax/cad_spielfeld"
-    echo "          ledbox/         [git]/fabiangeissler/robosax-ledbox"
+    echo "          spielfeld/      [git]/robosax/cad_spielfeld.git"
+    echo "          ledbox/         [git]/fabiangeissler/robosax-ledbox.git"
     echo "          licht_tht/      [git]/robosax/eagle_licht.git"
     echo "          licht_avr/      [git]/robosax/avr_licht.git"
+    echo "          spielfeld_tht/  [git]/robosax/eagle_spielfeld.git"
+    echo "          spielfeld_avr/  [git]/robosax/avr_spielfeld.git"
     echo "          anzeige_tht/    [git]/robosax/eagle_anzeige.git"
     echo "          punkte/         [git]/robosax/php_punkte.git"
     echo ""

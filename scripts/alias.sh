@@ -103,7 +103,7 @@ alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
 #***************************[robo/robosax]
-# 2018 04 04
+# 2018 05 16
 
 # spielfeld drawings (robosax)
 alias git_clone_robosax_spielfeld="_repo_git_clone \
@@ -140,6 +140,26 @@ alias git_push_robosax_licht_avr="_repo_git_push \
   \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
 alias git_status_robosax_licht_avr="_repo_git_st \
   \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
+
+# spielfeld-tht circuit (robosax)
+alias git_clone_robosax_spielfeld_tht="_repo_git_clone \
+  ${REPO_ROBOSAX_SPIELFELD_THT[*]}"
+alias git_pull_robosax_spielfeld_tht="_repo_git_pull \
+  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
+alias git_push_robosax_spielfeld_tht="_repo_git_push \
+  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
+alias git_status_robosax_spielfeld_tht="_repo_git_st \
+  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
+
+# spielfeld-tht software (robosax)
+alias git_clone_robosax_spielfeld_avr="_repo_git_clone \
+  ${REPO_ROBOSAX_SPIELFELD_AVR[*]}"
+alias git_pull_robosax_spielfeld_avr="_repo_git_pull \
+  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
+alias git_push_robosax_spielfeld_avr="_repo_git_push \
+  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
+alias git_status_robosax_spielfeld_avr="_repo_git_st \
+  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
 
 # anzeige-tht circuit (robosax)
 alias git_clone_robosax_anzeige_tht="_repo_git_clone \
@@ -335,7 +355,7 @@ alias git_status_github_ros_nearfieldmap="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 05 03
+# 2018 05 16
 
 function repo_pull_all() {
 
@@ -364,6 +384,8 @@ function repo_pull_all() {
     git_pull_robosax_ledbox
     git_pull_robosax_licht_tht
     git_pull_robosax_licht_avr
+    git_pull_robosax_spielfeld_tht
+    git_pull_robosax_spielfeld_avr
     git_pull_robosax_anzeige_tht
     git_pull_robosax_points
 
@@ -410,6 +432,8 @@ function repo_status_all() {
     git_status_robosax_ledbox
     git_status_robosax_licht_tht
     git_status_robosax_licht_avr
+    git_status_robosax_spielfeld_tht
+    git_status_robosax_spielfeld_avr
     git_status_robosax_anzeige_tht
     git_status_robosax_points
 
@@ -458,6 +482,8 @@ function repo_clone_all() {
     git_clone_robosax_ledbox
     git_clone_robosax_licht_tht
     git_clone_robosax_licht_avr
+    git_clone_robosax_spielfeld_tht
+    git_clone_robosax_spielfeld_avr
     git_clone_robosax_anzeige_tht
     git_clone_robosax_points
 

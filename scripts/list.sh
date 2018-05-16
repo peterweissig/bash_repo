@@ -95,7 +95,7 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2018 04 04
+# 2018 16 05
 
 #paths
 if [ "$REPO_ROBOSAX_PATH" == "" ]; then
@@ -130,6 +130,15 @@ export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_EAGLE_PATH}licht_tht/" \
 # licht-tht software (robosax)
 export REPO_ROBOSAX_LICHT_AVR=("${REPO_ROBOSAX_AVR_PATH}licht_avr/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}avr_licht.git")
+
+# spielfeld circuit (robosax)
+export REPO_ROBOSAX_SPIELFELD_THT=( \
+  "${REPO_ROBOSAX_EAGLE_PATH}spielfeld_tht/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_spielfeld.git")
+
+# spielfeld software (robosax)
+export REPO_ROBOSAX_SPIELFELD_AVR=("${REPO_ROBOSAX_AVR_PATH}spielfeld_avr/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}avr_spielfeld.git")
 
 # anzeige circuit (robosax)
 export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_EAGLE_PATH}anzeige_tht/" \
