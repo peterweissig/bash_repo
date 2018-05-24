@@ -91,7 +91,7 @@ function repo_svn_diff() {
 }
 
 #***************************[git]*********************************************
-# 2018 05 03
+# 2018 05 24
 
 function _repo_git_clone() {
 
@@ -137,12 +137,12 @@ function _repo_git_pull() {
         REPO_NAME="$2"
     fi
 
-    respond="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" \
-      git fetch --tags)"
-    if [ "$respond" != "" ]; then
+    #respond="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" \
+    #  git fetch --tags)"
+    #if [ "$respond" != "" ]; then
         echo "### pulling $REPO_NAME ###"
         GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
-    fi
+    #fi
 }
 
 function _repo_git_push() {
@@ -198,14 +198,14 @@ function _repo_git_st() {
 
     temp_text="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u)"
 
-    if [ "$(echo "$temp_text" | wc -l)" != 3 ] || \
-      [ "$(echo "$temp_text" | \
-      grep "nichts zu committen, Arbeitsverzeichnis unverändert" | \
-      wc -w)" != 5 ]; then
+    #if [ "$(echo "$temp_text" | wc -l)" != 3 ] || \
+    #  [ "$(echo "$temp_text" | \
+    #  grep "nichts zu committen, Arbeitsverzeichnis unverändert" | \
+    #  wc -w)" != 5 ]; then
         echo ""
         echo "### $REPO_NAME ###"
         GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
-    fi
+    #fi
 }
 
 #***************************[local repos]*************************************
