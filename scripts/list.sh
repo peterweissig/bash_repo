@@ -262,28 +262,54 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 if [ "$REPO_ROS_PATH" == "" ]; then
     export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ros/"
 fi
-if [ "$REPO_ROS_PROAUT_PATH" == "" ]; then
-    export REPO_ROS_PROAUT_PATH="${REPO_ROS_PATH}ProAut/"
+
+#***************************[ros-tools-pa]
+# 2018 06 19
+
+# paths
+if [ "$REPO_ROS_TOOLS_PATH" == "" ]; then
+    export REPO_ROS_TOOLS_PATH="${REPO_ROS_PATH}ros-tools-pa/"
 fi
-if [ "$REPO_ROS_PROAUT_SRC_PATH" == "" ]; then
-    export REPO_ROS_PROAUT_SRC_PATH="${REPO_ROS_PROAUT_PATH}src/"
-fi
+export REPO_ROS_TOOLS_SRC_PATH="${REPO_ROS_TOOLS_PATH}src/"
 
 # parameter (TUC-ProAut)
-export REPO_ROS_PROAUT_PARAMETER=("${REPO_ROS_PROAUT_SRC_PATH}parameter/" \
+export REPO_ROS_PROAUT_PARAMETER=( \
+  "${REPO_ROS_TOOLS_SRC_PATH}parameter_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_parameter.git")
 
 # pcdfilter (TUC-ProAut)
-export REPO_ROS_PROAUT_PCDFILTER=("${REPO_ROS_PROAUT_SRC_PATH}pcdfilter/" \
+export REPO_ROS_PROAUT_PCDFILTER=( \
+  "${REPO_ROS_TOOLS_SRC_PATH}pcdfilter_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_pcdfilter.git")
 
 # octomap (TUC-ProAut)
-export REPO_ROS_PROAUT_OCTOMAP=("${REPO_ROS_PROAUT_SRC_PATH}octomap/" \
+export REPO_ROS_PROAUT_OCTOMAP=( \
+  "${REPO_ROS_TOOLS_SRC_PATH}octomap_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_octomap.git")
 
 # nearfield map (TUC-ProAut)
 export REPO_ROS_PROAUT_NEARFIELDMAP=( \
-  "${REPO_ROS_PROAUT_SRC_PATH}nearfield_map/" \
+  "${REPO_ROS_TOOLS_SRC_PATH}nearfield_map_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_nearfield_map.git")
 
+# odometry (TUC-ProAut)
+export REPO_ROS_PROAUT_ODOMETRY=( \
+  "${REPO_ROS_TOOLS_SRC_PATH}odometry_pa/" \
+  "${REPO_ROOT_GITHUB_PROAUT}ros_odometry.git")
+
+
+
+#***************************[ros-sensors-pa]
+# 2018 06 19
+
+# paths
+if [ "$REPO_ROS_SENSORS_PATH" == "" ]; then
+    export REPO_ROS_SENSORS_PATH="${REPO_ROS_PATH}ros-sensors-pa/"
+fi
+export REPO_ROS_SENSORS_SRC_PATH="${REPO_ROS_SENSORS_PATH}src/"
+
+# radar (TUC-ProAut)
+export REPO_ROS_PROAUT_RADAR=( \
+  "${REPO_ROS_SENSORS_SRC_PATH}radar_pa/" \
+  "${REPO_ROOT_GITHUB_PROAUT}ros_radar.git")
 

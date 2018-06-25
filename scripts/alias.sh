@@ -310,52 +310,78 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[ros]*********************************************
-# 2018 03 01
+
+#***************************[ros-tools-pa]
+# 2018 06 19
 
 # parameter (TUC-ProAut)
-alias git_clone_github_ros_parameter="_repo_git_clone \
+alias git_clone_ros_parameter="_repo_git_clone \
   ${REPO_ROS_PROAUT_PARAMETER[*]}"
-alias git_pull_github_ros_parameter="_repo_git_pull \
+alias git_pull_ros_parameter="_repo_git_pull \
   \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
-alias git_push_github_ros_parameter="_repo_git_push \
+alias git_push_ros_parameter="_repo_git_push \
   \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
-alias git_status_github_ros_parameter="_repo_git_st \
+alias git_status_ros_parameter="_repo_git_st \
   \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
 
 # pcdfilter (TUC-ProAut)
-alias git_clone_github_ros_pcdfilter="_repo_git_clone \
+alias git_clone_ros_pcdfilter="_repo_git_clone \
   ${REPO_ROS_PROAUT_PCDFILTER[*]}"
-alias git_pull_github_ros_pcdfilter="_repo_git_pull \
+alias git_pull_ros_pcdfilter="_repo_git_pull \
   \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
-alias git_push_github_ros_pcdfilter="_repo_git_push \
+alias git_push_ros_pcdfilter="_repo_git_push \
   \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
-alias git_status_github_ros_pcdfilter="_repo_git_st \
+alias git_status_ros_pcdfilter="_repo_git_st \
   \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
 
 # octomap (TUC-ProAut)
-alias git_clone_github_ros_octomap="_repo_git_clone \
+alias git_clone_ros_octomap="_repo_git_clone \
   ${REPO_ROS_PROAUT_OCTOMAP[*]}"
-alias git_pull_github_ros_octomap="_repo_git_pull \
+alias git_pull_ros_octomap="_repo_git_pull \
   \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
-alias git_push_github_ros_octomap="_repo_git_push \
+alias git_push_ros_octomap="_repo_git_push \
   \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
-alias git_status_github_ros_octomap="_repo_git_st \
+alias git_status_ros_octomap="_repo_git_st \
   \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
 
 # nearfield map (TUC-ProAut)
-alias git_clone_github_ros_nearfieldmap="_repo_git_clone \
+alias git_clone_ros_nearfieldmap="_repo_git_clone \
   ${REPO_ROS_PROAUT_NEARFIELDMAP[*]}"
-alias git_pull_github_ros_nearfieldmap="_repo_git_pull \
+alias git_pull_ros_nearfieldmap="_repo_git_pull \
   \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
-alias git_push_github_ros_nearfieldmap="_repo_git_push \
+alias git_push_ros_nearfieldmap="_repo_git_push \
   \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
-alias git_status_github_ros_nearfieldmap="_repo_git_st \
+alias git_status_ros_nearfieldmap="_repo_git_st \
   \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
+
+# odometry (TUC-ProAut)
+alias git_clone_ros_odometry="_repo_git_clone \
+  ${REPO_ROS_PROAUT_ODOMETRY[*]}"
+alias git_pull_ros_odometry="_repo_git_pull \
+  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
+alias git_push_ros_odometry="_repo_git_push \
+  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
+alias git_status_ros_odometry="_repo_git_st \
+  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
+
+
+#***************************[ros-sensors-pa]
+# 2018 06 19
+
+# radar (TUC-ProAut)
+alias git_clone_ros_radar="_repo_git_clone \
+  ${REPO_ROS_PROAUT_RADAR[*]}"
+alias git_pull_ros_radar="_repo_git_pull \
+  \"${REPO_ROS_PROAUT_RADAR[0]}\""
+alias git_push_ros_radar="_repo_git_push \
+  \"${REPO_ROS_PROAUT_RADAR[0]}\""
+alias git_status_ros_radar="_repo_git_st \
+  \"${REPO_ROS_PROAUT_RADAR[0]}\""
 
 
 
 #***************************[git global]**************************************
-# 2018 05 16
+# 2018 06 19
 
 function repo_pull_all() {
 
@@ -399,10 +425,12 @@ function repo_pull_all() {
     git_pull_cpp
 
 
-    git_pull_github_ros_parameter
-    git_pull_github_ros_pcdfilter
-    git_pull_github_ros_octomap
-    git_pull_github_ros_nearfieldmap
+    git_pull_ros_parameter
+    git_pull_ros_pcdfilter
+    git_pull_ros_octomap
+    git_pull_ros_nearfieldmap
+    git_pull_ros_odometry
+    git_pull_ros_radar
 }
 
 function repo_status_all() {
@@ -447,10 +475,13 @@ function repo_status_all() {
     git_status_cpp
 
 
-    git_status_github_ros_parameter
-    git_status_github_ros_pcdfilter
-    git_status_github_ros_octomap
-    git_status_github_ros_nearfieldmap
+    git_status_ros_parameter
+    git_status_ros_pcdfilter
+    git_status_ros_octomap
+    git_status_ros_nearfieldmap
+    git_status_ros_odometry
+    git_status_ros_radar
+
 
     repo_additional_dirs_status
 }
@@ -502,8 +533,10 @@ function repo_clone_all() {
     git_clone_cpp_xbee
 
 
-    git_clone_github_ros_parameter
-    git_clone_github_ros_pcdfilter
-    git_clone_github_ros_octomap
-    git_clone_github_ros_nearfieldmap
+    git_clone_ros_parameter
+    git_clone_ros_pcdfilter
+    git_clone_ros_octomap
+    git_clone_ros_nearfieldmap
+    git_clone_ros_odometry
+    git_clone_ros_radar
 }
