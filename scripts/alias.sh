@@ -381,10 +381,31 @@ alias git_status_ros_radar="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 06 19
+# 2018 09 03
 
 function repo_pull_all() {
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Executes \"git pull\" on all avaiable repositories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # update all repos
     git_pull_bash_repo
     git_pull_bash_config
     git_pull_bash_network
@@ -435,6 +456,27 @@ function repo_pull_all() {
 
 function repo_status_all() {
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Executes \"git status\" on all avaiable repositories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # return status of all repos
     git_status_bash_repo
     git_status_bash_config
     git_status_bash_network
@@ -488,6 +530,38 @@ function repo_status_all() {
 
 function repo_clone_all() {
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Clones all avaiable repositories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # ask user if continuing
+    echo "Cloning all avaiable repositories."
+    echo -n "Do you wish to continue (N/y)?"
+    read answer
+    if [ "$answer" != "y" ] && [ "$answer" != "Y" ] && \
+      [ "$answer" != "yes" ]; then
+
+        echo "$FUNCNAME: Aborted."
+        return
+    fi
+
+    # clone all repos
     git_clone_bash_repo
     git_clone_bash_config
     git_clone_bash_network

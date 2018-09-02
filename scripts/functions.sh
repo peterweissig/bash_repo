@@ -1,24 +1,40 @@
 #!/bin/bash
 
 #***************************[svn]*********************************************
-# 2018 01 05
+# 2018 09 03
 function _repo_svn_co() {
-    if [ $# -ne 3 ]; then
-        echo "Error - _repo_svn_co needs 2-3 parameters"
-        echo "        #1: locale path"
-        echo "        #2: server address"
-        echo "       [#3:]user name"
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> <server> [<user>]"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 2-3 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "     #2: server address (e.g. https://server.local/svn/repo/)"
+        echo "    [#3:]remote user name"
+        echo "Executes \"svn checkout\" on the given svn-repository."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
+    # check local path
     if [ ! -d "$1" ]; then
         echo "mkdir -p \"${1}\""
         mkdir -p "${1}"
     else
         if [ -d "${1}/.svn" ]; then
             echo "svn repository \"$1\" is already checked out"
-            return
+            return -2
         fi
     fi
 
@@ -32,26 +48,58 @@ function _repo_svn_co() {
 }
 
 function _repo_svn_up() {
-    if [ $# -ne 1 ]; then
-        echo "Error - _repo_svn_up needs 1 parameter"
-        echo "        #1: locale path"
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path>"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1 parameter"
+        echo "     #1: locale path (e.g. /home/egon/workspace/)"
+        echo "Executes \"svn update\" on the given svn-repository."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -ne 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
+    # check local path
     if [ -d "$1" ] && [ -d "$1/.svn" ]; then
         svn update -q "$1"
     fi
 }
 
 function _repo_svn_st() {
-    if [ $# -ne 1 ]; then
-        echo "Error - _repo_svn_st needs 1 parameter"
-        echo "        #1: locale path"
 
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path>"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1 parameter"
+        echo "     #1: locale path (e.g. /home/egon/workspace/)"
+        echo "Executes \"svn status\" on the given svn-repository."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -ne 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
+    # check local path
     if [ -d "$1" ] && [ -d "$1/.svn" ]; then
         svn stat "$1"
     fi
@@ -59,23 +107,47 @@ function _repo_svn_st() {
 
 function repo_svn_diff() {
 
-    error_temp="$(svn info >> /dev/null)"
-    if [ "$error_temp" != "" ] ; then
-        echo -n "Error - repo_svn_diff needs to be called within"
-        echo " a svn repository"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME [<local_path>]"
 
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/)"
+        echo "Shows difference between current und previous version"
+        echo "of the given svn-repository."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
-    info_temp="$(svn stat -q)"
-    if [ "$info_temp" != "" ] ; then
-        echo "Error - there are not committed changes"
-        echo ""
-        svn stat
+    # check local path
+    error_temp="$(svn info $1 >> /dev/null)"
+    if [ "$error_temp" != "" ] ; then
+        echo "$FUNCNAME: Not a svn-repository."
 
         return -2
     fi
 
+    # check for changes
+    info_temp="$(svn stat -q $1)"
+    if [ "$info_temp" != "" ] ; then
+        echo "$FUNCNAME: There are uncommitted changes."
+        echo ""
+        svn stat $1
+
+        return -3
+    fi
+
+    # create temp path
     dir_temp=~/temp/svn_diff/
     if [ -e "$dir_temp" ]; then
         echo "Remove old compare data"
@@ -83,11 +155,23 @@ function repo_svn_diff() {
     fi
     mkdir -p "$dir_temp"
 
-    cp --recursive .  "$dir_temp"
+    # copy data
+    if [ $# -lt 1 ]; then
+        cp --recursive .  "$dir_temp"
+    else
+        cp --recursive $1  "$dir_temp"
+    fi
 
-    svn up -r PREV
+    # update to an older version
+    svn up -r PREV "$dir_temp"
 
-    meld .  "$dir_temp"
+    # compare versions
+    if [ $# -lt 1 ]; then
+        meld "$dir_temp" .
+    else
+        meld "$dir_temp" $1
+    fi
+
 }
 
 #***************************[git]*********************************************
