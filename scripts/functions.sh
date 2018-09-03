@@ -2,6 +2,7 @@
 
 #***************************[svn]*********************************************
 # 2018 09 03
+
 function _repo_svn_co() {
 
     # print help
@@ -118,6 +119,7 @@ function repo_svn_diff() {
         echo "     #1: locale path (e.g. /home/egon/workspace/)"
         echo "Shows difference between current und previous version"
         echo "of the given svn-repository."
+        echo "For visualization, \"meld\" will be executed."
 
         return
     fi
@@ -128,24 +130,34 @@ function repo_svn_diff() {
         $FUNCNAME --help
         return -1
     fi
+    if [ $# -lt 1 ]; then
+        local_path="."
+    else
+        local_path="$1"
+    fi
 
     # check local path
-    error_temp="$(svn info $1 >> /dev/null)"
+    error_temp="$(svn info "$local_path" >> /dev/null)"
     if [ "$error_temp" != "" ] ; then
-        echo "$FUNCNAME: Not a svn-repository."
+        echo "$FUNCNAME: "$local_path" is not a svn-repository."
 
         return -2
     fi
 
     # check for changes
-    info_temp="$(svn stat -q $1)"
+    info_temp="$(svn stat -q "$local_path")"
     if [ "$info_temp" != "" ] ; then
         echo "$FUNCNAME: There are uncommitted changes."
         echo ""
-        svn stat $1
+        svn stat "$local_path"
 
         return -3
     fi
+        # check for errors
+        if [ $? -ne 0 ]; then
+            echo "$FUNCNAME: Stopping because of an error."
+            return -1;
+        fi
 
     # create temp path
     dir_temp=~/temp/svn_diff/
@@ -154,25 +166,33 @@ function repo_svn_diff() {
         rm -rf "$dir_temp"
     fi
     mkdir -p "$dir_temp"
+        # check for errors
+        if [ $? -ne 0 ]; then
+            echo "$FUNCNAME: Stopping because of an error."
+            return -1;
+        fi
 
     # copy data
-    if [ $# -lt 1 ]; then
-        cp --recursive .  "$dir_temp"
-    else
-        cp --recursive $1  "$dir_temp"
-    fi
+    cp --recursive "$local_path"  "$dir_temp"
+        # check for errors
+        if [ $? -ne 0 ]; then
+            echo "$FUNCNAME: Stopping because of an error."
+            return -1;
+        fi
 
     # update to an older version
-    svn up -r PREV "$dir_temp"
+    svn up -r PREV "$local_path"
+        # check for errors
+        if [ $? -ne 0 ]; then
+            echo "$FUNCNAME: Stopping because of an error."
+            return -1;
+        fi
 
     # compare versions
-    if [ $# -lt 1 ]; then
-        meld "$dir_temp" .
-    else
-        meld "$dir_temp" $1
-    fi
+    meld  "$local_path" "$dir_temp"
 
 }
+
 
 #***************************[git]*********************************************
 # 2018 05 24
@@ -291,6 +311,7 @@ function _repo_git_st() {
         GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
     #fi
 }
+
 
 #***************************[local repos]*************************************
 # 2018 05 03

@@ -1,11 +1,33 @@
 #!/bin/bash
 
-#***************************[help]********************************************
-# 2018 05 19
-function repo_help() {
+#***************************[overview]****************************************
+# 2018 09 03
 
+function repo_help_overview() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Prints an overview of all available repositories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # print overview of all repositories
     echo ""
-    echo "### repo_help ###"
+    echo "### $FUNCNAME ###"
     echo ""
     echo "structure of all listed repositories:"
     echo "  [git] == https://github.com/"
@@ -85,5 +107,28 @@ function repo_help() {
     echo "  repo_clone_all  ... copies/downloads  all repositories"
     echo "  repo_pull_all   ... updates           all repositories"
     echo "  repo_status_all ... tracks changes of all repositories"
+    echo ""
+}
+
+
+#***************************[help]********************************************
+# 2018 09 03
+
+function repo_help() {
+
+    echo ""
+    echo "### $FUNCNAME ###"
+    echo ""
+    echo "overview of all repositories"
+    echo -n "  "; repo_help_overview -h
+    echo ""
+    echo "svn"
+    echo -n "  "; repo_svn_diff -h
+    echo -n "  "; _repo_svn_co -h
+    echo -n "  "; _repo_svn_up -h
+    echo -n "  "; _repo_svn_st -h
+    echo ""
+    echo "git"
+    echo -n "  "; echo "<to be done>" # command -h
     echo ""
 }
