@@ -39,6 +39,7 @@ function _repo_svn_co() {
         fi
     fi
 
+    # svn checkout
     if [ $# -lt 3 ]; then
         echo "svn checkout \"$2\" \"$1\""
         svn checkout "$2" "$1"
@@ -71,7 +72,7 @@ function _repo_svn_up() {
         return -1
     fi
 
-    # check local path
+    # svn update
     if [ -d "$1" ] && [ -d "$1/.svn" ]; then
         svn update -q "$1"
     fi
@@ -100,7 +101,7 @@ function _repo_svn_st() {
         return -1
     fi
 
-    # check local path
+    # svn stat
     if [ -d "$1" ] && [ -d "$1/.svn" ]; then
         svn stat "$1"
     fi
@@ -195,78 +196,120 @@ function repo_svn_diff() {
 
 
 #***************************[git]*********************************************
-# 2018 05 24
+# 2018 09 03
 
 function _repo_git_clone() {
 
-    if [ $# -lt 2 ] || [ $# -gt 3 ]; then
-        echo "Error - _repo_git_clone needs 2-3 parameter"
-        echo "        #1: locale path"
-        echo "        #2: remote url"
-        echo "       [#3:]optional name of repository"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> <server> [<disp_name>]"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 2-3 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "     #2: server address (e.g. https://github.com/robo/main.git)"
+        echo "    [#3:]displayed name of repository"
+        echo "Executes \"git clone\" on the given git-repository."
 
         return
     fi
 
+    # check parameter
+    if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
     if [ $# -lt 3 ]; then
         REPO_NAME="$(basename "$1")"
     else
         REPO_NAME="$3"
     fi
 
+    # display repo name
     echo ""
     echo "### $REPO_NAME ###"
 
+    # clone repo
     echo "git clone \"$2\" \"$1\""
     git clone "$2" "$1"
 }
 
 function _repo_git_pull() {
 
-    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-        echo "Error - _repo_git_pull needs 1-2 parameter"
-        echo "        #1: locale path"
-        echo "       [#2:]optional name of repository"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> [<disp_name>]"
 
-        return -1
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1-2 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "    [#2:]displayed name of repository"
+        echo "Executes \"git pull\" on the given git-repository."
+
+        return
     fi
 
+    # check parameter
+    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+    if [ $# -lt 2 ]; then
+        REPO_NAME="$(basename "$1")"
+    else
+        REPO_NAME="$2"
+    fi
+
+    # check local path
     if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
         return
     fi
 
-    if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$1")"
-    else
-        REPO_NAME="$2"
-    fi
-
-    #respond="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" \
-    #  git fetch --tags)"
-    #if [ "$respond" != "" ]; then
-        echo "### pulling $REPO_NAME ###"
-        GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
-    #fi
+    # git pull
+    echo "### pulling $REPO_NAME ###"
+    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
 }
 
 function _repo_git_push() {
 
-    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-        echo "Error - _repo_git_push needs 1-2 parameters"
-        echo "        #1: locale path"
-        echo "       [#2:]optional name of repository"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> [<disp_name>]"
 
-        return -1
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1-2 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "    [#2:]displayed name of repository"
+        echo "Executes \"git push\" on the given git-repository."
+
+        return
     fi
 
+    # check parameter
+    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
     if [ $# -lt 2 ]; then
         REPO_NAME="$(basename "$1")"
     else
         REPO_NAME="$2"
     fi
+
+    # display repo name
     echo ""
     echo "### $REPO_NAME ###"
 
+    # check local path
     if [ ! -d "$1" ]; then
         echo "\"$1\" does not exist"
         return -2
@@ -276,40 +319,50 @@ function _repo_git_push() {
         return -3
     fi
 
+    # git push
     echo "GIT_DIR=\"$1.git\" GIT_WORK_TREE=\"$1\" git push --tags"
     GIT_DIR="$1.git" GIT_WORK_TREE="$1" git push --tags
 }
 
 function _repo_git_st() {
 
-    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-        echo "Error - _repo_git_st needs 1-2 parameter"
-        echo "        #1: locale path"
-        echo "       [#2:]optional name of repository"
 
-        return -1
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> [<disp_name>]"
+
+        return
     fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1-2 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "    [#2:]displayed name of repository"
+        echo "Executes \"git push\" on the given git-repository."
 
-    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
         return
     fi
 
+    # check parameter
+    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
     if [ $# -lt 2 ]; then
         REPO_NAME="$(basename "$1")"
     else
         REPO_NAME="$2"
     fi
 
-    temp_text="$(GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u)"
+    # check local path
+    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
+        return
+    fi
 
-    #if [ "$(echo "$temp_text" | wc -l)" != 3 ] || \
-    #  [ "$(echo "$temp_text" | \
-    #  grep "nichts zu committen, Arbeitsverzeichnis unverändert" | \
-    #  wc -w)" != 5 ]; then
-        echo ""
-        echo "### $REPO_NAME ###"
-        GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
-    #fi
+    # git status
+    echo ""
+    echo "### $REPO_NAME ###"
+    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
 }
 
 

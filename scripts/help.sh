@@ -129,6 +129,12 @@ function repo_help() {
     echo -n "  "; _repo_svn_st -h
     echo ""
     echo "git"
+    echo -n "  "; _repo_git_clone -h
+    echo -n "  "; _repo_git_pull -h
+    echo -n "  "; _repo_git_push -h
+    echo -n "  "; _repo_git_st -h
+    echo ""
+    echo "additional dirs"
     echo -n "  "; echo "<to be done>" # command -h
     echo ""
 }
