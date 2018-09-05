@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[svn]*********************************************
-# 2018 09 03
+# 2018 09 04
 
 function _repo_svn_co() {
 
@@ -138,15 +138,15 @@ function repo_svn_diff() {
     fi
 
     # check local path
-    error_temp="$(svn info "$local_path" >> /dev/null)"
+    error_temp="$(svn info "$local_path" 2>&1 > /dev/null)"
     if [ "$error_temp" != "" ] ; then
-        echo "$FUNCNAME: "$local_path" is not a svn-repository."
+        echo "$FUNCNAME: Directory is not a svn-repository."
 
         return -2
     fi
 
     # check for changes
-    info_temp="$(svn stat -q "$local_path")"
+    info_temp="$(svn stat -q "$local_path" 2>&1)"
     if [ "$info_temp" != "" ] ; then
         echo "$FUNCNAME: There are uncommitted changes."
         echo ""
@@ -191,7 +191,6 @@ function repo_svn_diff() {
 
     # compare versions
     meld  "$local_path" "$dir_temp"
-
 }
 
 
@@ -273,7 +272,7 @@ function _repo_git_pull() {
 
     # git pull
     echo "### pulling $REPO_NAME ###"
-    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git pull --tags
+    (cd $1 && git pull --tags)
 }
 
 function _repo_git_push() {
@@ -320,8 +319,8 @@ function _repo_git_push() {
     fi
 
     # git push
-    echo "GIT_DIR=\"$1.git\" GIT_WORK_TREE=\"$1\" git push --tags"
-    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git push --tags
+    echo "cd \"$1\" && git push --tags"
+    (cd "$1" && git push --tags)
 }
 
 function _repo_git_st() {
@@ -362,7 +361,7 @@ function _repo_git_st() {
     # git status
     echo ""
     echo "### $REPO_NAME ###"
-    GIT_DIR="$1.git" GIT_WORK_TREE="$1" git status -u
+    (cd "$1" && git status -u)
 }
 
 
