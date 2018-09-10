@@ -112,7 +112,7 @@ function repo_help_overview() {
 
 
 #***************************[help]********************************************
-# 2018 09 03
+# 2018 09 10
 
 function repo_help() {
 
@@ -129,10 +129,16 @@ function repo_help() {
     echo -n "  "; _repo_svn_st -h
     echo ""
     echo "git"
+    echo -n "  "; repo_git_diff -h
     echo -n "  "; _repo_git_clone -h
     echo -n "  "; _repo_git_pull -h
     echo -n "  "; _repo_git_push -h
     echo -n "  "; _repo_git_st -h
+    echo ""
+    echo "general repository functions"
+    echo -n "  "; repo_clone_all -h
+    echo -n "  "; repo_pull_all -h
+    echo -n "  "; repo_status_all -h
     echo ""
     echo "additional dirs"
     echo -n "  "; echo "<to be done>" # command -h
