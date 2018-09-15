@@ -111,16 +111,42 @@ function repo_help_overview() {
 }
 
 
-#***************************[help]********************************************
-# 2018 09 10
+#***************************[all]*********************************************
+# 2018 09 15
 
-function repo_help() {
+function repo_help_all() {
 
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Prints all available functions within repository \"repo\"."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # print overview of all repositories
     echo ""
     echo "### $FUNCNAME ###"
     echo ""
-    echo "overview of all repositories"
+    echo "help"
+    echo -n "  "; echo "repo_help"
     echo -n "  "; repo_help_overview -h
+    echo ""
+    echo "helper functions"
+    echo -n "  "; _repo_diff -h
     echo ""
     echo "svn"
     echo -n "  "; repo_svn_diff -h
@@ -134,6 +160,37 @@ function repo_help() {
     echo -n "  "; _repo_git_pull -h
     echo -n "  "; _repo_git_push -h
     echo -n "  "; _repo_git_st -h
+    echo ""
+    echo "general repository functions"
+    echo -n "  "; repo_clone_all -h
+    echo -n "  "; repo_pull_all -h
+    echo -n "  "; repo_status_all -h
+    echo ""
+    echo "specific repository functions (alias)"
+    echo -n "  "; echo "git_clone_..."
+    echo -n "  "; echo "git_pull_..."
+    echo -n "  "; echo "git_status_..."
+    echo ""
+    echo "additional dirs"
+    echo -n "  "; echo "<to be done>" # command -h
+    echo ""
+}
+
+#***************************[help]********************************************
+# 2018 09 15
+
+function repo_help() {
+
+    echo ""
+    echo "### $FUNCNAME ###"
+    echo ""
+    echo "help functions"
+    echo -n "  "; repo_help_all -h
+    echo -n "  "; repo_help_overview -h
+    echo ""
+    echo "diff"
+    echo -n "  "; repo_svn_diff -h
+    echo -n "  "; repo_git_diff -h
     echo ""
     echo "general repository functions"
     echo -n "  "; repo_clone_all -h
