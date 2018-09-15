@@ -583,22 +583,39 @@ function repo_git_diff() {
 
 
 #***************************[local repos]*************************************
-# 2018 05 03
+# 2018 09 15
 
 function _repo_additional_dirs_load() {
 
-    if [ $# -gt 0 ]; then
-        echo "Error - _repo_additional_dirs_load needs 0 parameters"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
 
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Loads all dirs stored in file"
+        echo "  \"$REPO_FILE_ADDITIONAL_GIT\""
+        echo "into variable \"REPO_ADDITIONAL_DIRS_GIT\"."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
+    # check if file exists
     if [ ! -e "$REPO_FILE_ADDITIONAL_GIT" ]; then
         export REPO_ADDITIONAL_DIRS_GIT=()
         return
     fi
 
-    # load paths
+    # load dirs
     readarray -t REPO_ADDITIONAL_DIRS_GIT < "$REPO_FILE_ADDITIONAL_GIT"
     for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
         if [ ! -d ${REPO_ADDITIONAL_DIRS_GIT[$i]} ]; then
@@ -611,10 +628,24 @@ function _repo_additional_dirs_load() {
 
 function repo_additional_dirs_add() {
 
-    if [ $# -gt 1 ]; then
-        echo "Error - repo_additional_dirs_add needs 0-1 parameter"
-        echo "       [#1:]locale path"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME [<local_path>]"
 
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "    [#1:]locale path (e.g. /home/egon/workspace/)"
+        echo "Adds the given path to the locally versioned git repositories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
@@ -634,9 +665,15 @@ function repo_additional_dirs_add() {
     path="$(cd "$path"; pwd)/"
 
     # set up as git repo
-    if [ ! -d "$path.git" ]; then
+    if [ ! -d "${path}.git" ]; then
         git init "$path"
     fi
+        # check for errors
+        if [ $? -ne 0 ]; then
+            echo "$FUNCNAME: Stopping because of an error."
+            return -1;
+        fi
+
 
     # check if already loaded
     for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
@@ -655,14 +692,28 @@ function repo_additional_dirs_add() {
 
 function repo_additional_dirs_status() {
 
-    if [ $# -gt 0 ]; then
-        echo "Error - repo_additional_dirs_status needs 0 parameters"
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
 
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0 parameters"
+        echo "Calls \"git status\" on all locally versioned directories."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
         return -1
     fi
 
     # check status of additional dirs
     for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
-        _repo_git_st "${REPO_ADDITIONAL_DIRS_GIT[$i]}/"
+        _repo_git_st "${REPO_ADDITIONAL_DIRS_GIT[$i]}"
     done
 }

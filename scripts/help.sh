@@ -172,7 +172,9 @@ function repo_help_all() {
     echo -n "  "; echo "git_status_..."
     echo ""
     echo "additional dirs"
-    echo -n "  "; echo "<to be done>" # command -h
+    echo -n "  "; repo_additional_dirs_add -h
+    echo -n "  "; repo_additional_dirs_status -h
+    echo -n "  "; _repo_additional_dirs_load -h
     echo ""
 }
 
@@ -198,6 +200,7 @@ function repo_help() {
     echo -n "  "; repo_status_all -h
     echo ""
     echo "additional dirs"
-    echo -n "  "; echo "<to be done>" # command -h
+    echo -n "  "; repo_additional_dirs_add -h
+    echo -n "  "; repo_additional_dirs_status -h
     echo ""
 }
