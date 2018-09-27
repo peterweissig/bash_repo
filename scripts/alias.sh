@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #***************************[bash]*******************************************
-# 2018 02 08
+# 2018 09 27
 
-# repositories (peter)
+# repositories functions (peter)
 alias git_clone_bash_repo="_repo_git_clone ${REPO_BASH_REPO[*]}"
 alias git_pull_bash_repo="_repo_git_pull \"${REPO_BASH_REPO[0]}\""
 alias git_push_bash_repo="_repo_git_push \"${REPO_BASH_REPO[0]}\""
@@ -21,11 +21,17 @@ alias git_pull_bash_network="_repo_git_pull \"${REPO_BASH_NETWORK[0]}\""
 alias git_push_bash_network="_repo_git_push \"${REPO_BASH_NETWORK[0]}\""
 alias git_status_bash_network="_repo_git_st \"${REPO_BASH_NETWORK[0]}\""
 
-# multimedia (peter)
+# multimedia functions (peter)
 alias git_clone_bash_multimedia="_repo_git_clone ${REPO_BASH_MULTIMEDIA[*]}"
 alias git_pull_bash_multimedia="_repo_git_pull \"${REPO_BASH_MULTIMEDIA[0]}\""
 alias git_push_bash_multimedia="_repo_git_push \"${REPO_BASH_MULTIMEDIA[0]}\""
 alias git_status_bash_multimedia="_repo_git_st \"${REPO_BASH_MULTIMEDIA[0]}\""
+
+# file functions (peter)
+alias git_clone_bash_file="_repo_git_clone ${REPO_BASH_FILE[*]}"
+alias git_pull_bash_file="_repo_git_pull \"${REPO_BASH_FILE[0]}\""
+alias git_push_bash_file="_repo_git_push \"${REPO_BASH_FILE[0]}\""
+alias git_status_bash_file="_repo_git_st \"${REPO_BASH_FILE[0]}\""
 
 # roboag (roboag)
 alias git_clone_bash_roboag="_repo_git_clone ${REPO_BASH_ROBOAG[*]}"
@@ -381,7 +387,7 @@ alias git_status_ros_radar="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 09 03
+# 2018 09 27
 
 function repo_pull_all() {
 
@@ -410,6 +416,7 @@ function repo_pull_all() {
     git_pull_bash_config
     git_pull_bash_network
     git_pull_bash_multimedia
+    git_pull_bash_file
     git_pull_bash_roboag
 
 
@@ -481,6 +488,7 @@ function repo_status_all() {
     git_status_bash_config
     git_status_bash_network
     git_status_bash_multimedia
+    git_status_bash_file
     git_status_bash_roboag
 
 
@@ -566,6 +574,7 @@ function repo_clone_all() {
     git_clone_bash_config
     git_clone_bash_network
     git_clone_bash_multimedia
+    git_clone_bash_file
     git_clone_bash_roboag
 
 

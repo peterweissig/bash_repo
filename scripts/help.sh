@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2018 09 03
+# 2018 09 27
 
 function repo_help_overview() {
 
@@ -37,6 +37,7 @@ function repo_help_overview() {
     echo "      config/             [git]/peterweissig/bash_config.git"
     echo "      network/            [git]/peterweissig/bash_network.git"
     echo "      multimedia/         [git]/peterweissig/bash_multimedia.git"
+    echo "      file/               [git]/peterweissig/bash_file.git"
     echo "      roboag/             [git]/RoboAG/bash_roboag.git"
     echo ""
     echo "  robo/"

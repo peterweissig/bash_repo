@@ -21,14 +21,14 @@ export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
 
 #***************************[bash]********************************************
-# 2018 03 01
+# 2018 09 27
 
 # path
 if [ "$REPO_BASH_PATH" == "" ]; then
     export REPO_BASH_PATH="${REPO_PATH_WORKSPACE}bash/"
 fi
 
-# repositories (peter)
+# repositories functions (peter)
 export REPO_BASH_REPO=("${REPO_BASH_PATH}repo/" \
   "${REPO_ROOT_GITHUB_PETER}bash_repo.git")
 
@@ -40,9 +40,13 @@ export REPO_BASH_CONFIG=("${REPO_BASH_PATH}config/" \
 export REPO_BASH_NETWORK=("${REPO_BASH_PATH}network/" \
   "${REPO_ROOT_GITHUB_PETER}bash_network.git")
 
-# multimedia (peter)
+# multimedia functions (peter)
 export REPO_BASH_MULTIMEDIA=("${REPO_BASH_PATH}multimedia/" \
   "${REPO_ROOT_GITHUB_PETER}bash_multimedia.git")
+
+# file functions (peter)
+export REPO_BASH_FILE=("${REPO_BASH_PATH}file/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_file.git")
 
 # roboag (roboag)
 export REPO_BASH_ROBOAG=("${REPO_BASH_PATH}roboag/" \
