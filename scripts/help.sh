@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2018 09 27
+# 2018 11 01
 
 function repo_help_overview() {
 
@@ -55,6 +55,7 @@ function repo_help_overview() {
     echo "          rotierendes_display/ [git]/RoboAG/projekt_display.git"
     echo "          gluecksrad/     [git]/RoboAG/projekt_gluecksrad.git"
     echo "          3pi/            [git]/RoboAG/projekt_3pi.git"
+    echo "          roboter/        [git]/RoboAG/projekt_roboter.git"
     echo "          filebrowser_php/ [git]/RoboAG/php_filebrowser.git"
     echo ""
     echo "      robosax/"

@@ -184,7 +184,7 @@ alias git_push_robosax_points="_repo_git_push \"${REPO_ROBOSAX_POINTS[0]}\""
 alias git_status_robosax_points="_repo_git_st \"${REPO_ROBOSAX_POINTS[0]}\""
 
 #***************************[robo/roboag]
-# 2018 04 01
+# 2018 11 01
 
 # display (roboag)
 alias git_clone_roboag_display="_repo_git_clone ${REPO_ROBOAG_DISPLAY[*]}"
@@ -207,6 +207,12 @@ alias git_clone_roboag_3pi="_repo_git_clone ${REPO_ROBOAG_3PI[*]}"
 alias git_pull_roboag_3pi="_repo_git_pull \"${REPO_ROBOAG_3PI[0]}\""
 alias git_push_roboag_3pi="_repo_git_push \"${REPO_ROBOAG_3PI[0]}\""
 alias git_status_roboag_3pi="_repo_git_st \"${REPO_ROBOAG_3PI[0]}\""
+
+# robots (roboag)
+alias git_clone_roboag_roboter="_repo_git_clone ${REPO_ROBOAG_ROBOTER[*]}"
+alias git_pull_roboag_roboter="_repo_git_pull \"${REPO_ROBOAG_ROBOTER[0]}\""
+alias git_push_roboag_roboter="_repo_git_push \"${REPO_ROBOAG_ROBOTER[0]}\""
+alias git_status_roboag_roboter="_repo_git_st \"${REPO_ROBOAG_ROBOTER[0]}\""
 
 # php filebrowser (roboag)
 alias git_clone_roboag_filebrowser_php="_repo_git_clone \
@@ -387,7 +393,7 @@ alias git_status_ros_radar="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 09 27
+# 2018 11 01
 
 function repo_pull_all() {
 
@@ -432,6 +438,7 @@ function repo_pull_all() {
     git_pull_roboag_display
     git_pull_roboag_gluecksrad
     git_pull_roboag_3pi
+    git_pull_roboag_roboter
     git_pull_roboag_filebrowser_php
 
     git_pull_robosax_spielfeld
@@ -504,6 +511,7 @@ function repo_status_all() {
     git_status_roboag_display
     git_status_roboag_gluecksrad
     git_status_roboag_3pi
+    git_status_roboag_roboter
     git_status_roboag_filebrowser_php
 
     git_status_robosax_spielfeld
@@ -590,6 +598,7 @@ function repo_clone_all() {
     git_clone_roboag_display
     git_clone_roboag_gluecksrad
     git_clone_roboag_3pi
+    git_clone_roboag_roboter
     git_clone_roboag_filebrowser_php
 
     git_clone_robosax_spielfeld
