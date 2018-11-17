@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#***************************[git]*********************************************
+#***************************[git wrapper]*************************************
 # 2018 09 10
 
 function _repo_git_clone() {
@@ -170,6 +170,9 @@ function _repo_git_st() {
     (cd "$1" && git status -u)
 }
 
+#***************************[git diff]****************************************
+# 2018 09 10
+
 function repo_git_diff() {
 
     # print help
@@ -259,3 +262,80 @@ function repo_git_diff() {
 #
 #     # compare versions
 #     meld  "$local_path" "$dir_temp"
+
+#***************************[git config]**************************************
+# 2018 11 17
+
+function git_config_set_ssh() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME [<local_path>]"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "    [#1:]locale path (e.g. /home/egon/workspace/)"
+        echo "Changes the remote url of the selected repository to ssh-mode."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+    if [ $# -gt 0 ]; then
+        if [ ! -d "$1" ]; then
+            echo "$FUNCNAME: \"$1\" does not exist."
+            return -1
+        fi
+    fi
+
+    # git store current url
+    if [ $# -gt 0 ]; then
+        readarray -t lines <<< "$(cd "$1" && git remote -v)"
+    else
+        readarray -t lines <<< "$(git remote -v)"
+    fi
+    if [ $? -ne 0 ]; then
+        echo "$FUNCNAME: Stopping because of an error."
+        return -1
+    fi
+
+    # do simple checks
+    if [ "${#lines[*]}" -lt 2 ]; then
+        echo "$FUNCNAME: There is no remote url."
+        echo "  check with \"git remote -v\""
+        return -1
+    fi
+
+    frontless="${lines##*https://}"
+    if [ "${#frontless}" -lt 1 ] || \
+      [ "${#frontless}" -eq "${#lines}" ]; then
+        echo "$FUNCNAME: Current url does not include \"https://\"."
+        return -1
+    fi
+
+    temp="${frontless##*.git}"
+    if [ "${#temp}" -lt 1 ] || [ "${#temp}" -eq "${#frontless}" ]; then
+        echo "$FUNCNAME: Current url does not include \".git\"."
+        return -1
+    fi
+    url_base="${frontless:0:(${#frontless}-${#temp})}"
+
+    # create new url
+    url_new="git@${url_base/\//\:}"
+
+    # set new url
+    echo "git remote set-url origin ${url_new}"
+    if [ $# -gt 0 ]; then
+        $(cd $1 && git remote set-url origin "${url_new}")
+    else
+        git remote set-url origin "${url_new}"
+    fi
+
+}
