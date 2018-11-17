@@ -393,7 +393,7 @@ alias git_status_ros_radar="_repo_git_st \
 
 
 #***************************[git global]**************************************
-# 2018 11 01
+# 2018 11 17
 
 function repo_pull_all() {
 
@@ -548,19 +548,20 @@ function repo_clone_all() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
+        echo "$FUNCNAME [--yes]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0 parameters"
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "    [#1:]flag to skip question (--yes)"
         echo "Clones all avaiable repositories."
 
         return
     fi
 
     # check parameter
-    if [ $# -gt 0 ]; then
+    if [ $# -gt 1 ]; then
         echo "$FUNCNAME: Parameter Error."
         $FUNCNAME --help
         return -1
@@ -568,8 +569,13 @@ function repo_clone_all() {
 
     # ask user if continuing
     echo "Cloning all avaiable repositories."
-    echo -n "Do you wish to continue (N/y)?"
-    read answer
+    echo "Do you wish to continue ? (No/yes)"
+    if [ "$1" != "-y" ] && [ "$1" != "--yes" ]; then
+        read answer
+    else
+        echo "<auto answer \"yes\">"
+        answer="yes"
+    fi
     if [ "$answer" != "y" ] && [ "$answer" != "Y" ] && \
       [ "$answer" != "yes" ]; then
 
