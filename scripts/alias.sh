@@ -393,6 +393,8 @@ alias git_status_ros_radar="_repo_git_st \
 
 
 #***************************[git global]**************************************
+
+#***************************[pull]
 # 2018 11 17
 
 function repo_pull_all() {
@@ -468,6 +470,9 @@ function repo_pull_all() {
     git_pull_ros_radar
 }
 
+#***************************[status]
+# 2018 11 17
+
 function repo_status_all() {
 
     # print help
@@ -542,6 +547,40 @@ function repo_status_all() {
 
 
     repo_additional_dirs_status
+}
+
+#***************************[clone]
+# 2018 11 19
+
+function repo_clone_bash() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "Clones all repositories containing bash scripts."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # clone all
+    git_clone_bash_repo
+    git_clone_bash_config
+    git_clone_bash_network
+    git_clone_bash_multimedia
+    git_clone_bash_file
+    git_clone_bash_roboag
 }
 
 function repo_clone_all() {

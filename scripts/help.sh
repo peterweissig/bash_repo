@@ -114,7 +114,7 @@ function repo_help_overview() {
 
 
 #***************************[all]*********************************************
-# 2018 11 18
+# 2018 11 19
 
 function repo_help_all() {
 
@@ -166,6 +166,7 @@ function repo_help_all() {
     echo -n "  "; _repo_git_st -h
     echo ""
     echo "general repository functions"
+    echo -n "  "; repo_clone_bash -h
     echo -n "  "; repo_clone_all -h
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
@@ -183,7 +184,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2018 11 18
+# 2018 11 19
 
 function repo_help() {
 
@@ -201,6 +202,7 @@ function repo_help() {
     echo -n "  "; git_config_set_ssh -h
     echo ""
     echo "general repository functions"
+    echo -n "  "; repo_clone_bash -h
     echo -n "  "; repo_clone_all -h
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
