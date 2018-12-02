@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[bash]*******************************************
-# 2018 09 27
+# 2018 11 30
 
 # repositories functions (peter)
 alias git_clone_bash_repo="_repo_git_clone ${REPO_BASH_REPO[*]}"
@@ -22,10 +22,14 @@ alias git_push_bash_network="_repo_git_push \"${REPO_BASH_NETWORK[0]}\""
 alias git_status_bash_network="_repo_git_st \"${REPO_BASH_NETWORK[0]}\""
 
 # multimedia functions (peter)
-alias git_clone_bash_multimedia="_repo_git_clone ${REPO_BASH_MULTIMEDIA[*]}"
-alias git_pull_bash_multimedia="_repo_git_pull \"${REPO_BASH_MULTIMEDIA[0]}\""
-alias git_push_bash_multimedia="_repo_git_push \"${REPO_BASH_MULTIMEDIA[0]}\""
-alias git_status_bash_multimedia="_repo_git_st \"${REPO_BASH_MULTIMEDIA[0]}\""
+alias git_clone_bash_multimedia="_repo_git_clone \
+  ${REPO_BASH_MULTIMEDIA[*]}"
+alias git_pull_bash_multimedia="_repo_git_pull \
+  \"${REPO_BASH_MULTIMEDIA[0]}\""
+alias git_push_bash_multimedia="_repo_git_push \
+  \"${REPO_BASH_MULTIMEDIA[0]}\""
+alias git_status_bash_multimedia="_repo_git_st \
+  \"${REPO_BASH_MULTIMEDIA[0]}\""
 
 # file functions (peter)
 alias git_clone_bash_file="_repo_git_clone ${REPO_BASH_FILE[*]}"
@@ -33,11 +37,28 @@ alias git_pull_bash_file="_repo_git_pull \"${REPO_BASH_FILE[0]}\""
 alias git_push_bash_file="_repo_git_push \"${REPO_BASH_FILE[0]}\""
 alias git_status_bash_file="_repo_git_st \"${REPO_BASH_FILE[0]}\""
 
+#***************************[bash/master]
+# 2018 11 30
+
+# master (peter)
+alias git_clone_bash_master="_repo_git_clone \
+  ${REPO_BASH_MASTER_BASHONLY[*]}"
+alias git_pull_bash_master="_repo_git_pull \
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+alias git_push_bash_master="_repo_git_push \
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+alias git_status_bash_master="_repo_git_st \
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+
 # roboag (roboag)
-alias git_clone_bash_roboag="_repo_git_clone ${REPO_BASH_ROBOAG[*]}"
-alias git_pull_bash_roboag="_repo_git_pull \"${REPO_BASH_ROBOAG[0]}\""
-alias git_push_bash_roboag="_repo_git_push \"${REPO_BASH_ROBOAG[0]}\""
-alias git_status_bash_roboag="_repo_git_st \"${REPO_BASH_ROBOAG[0]}\""
+alias git_clone_bash_roboag="_repo_git_clone \
+  ${REPO_BASH_MASTER_ROBOAG[*]}"
+alias git_pull_bash_roboag="_repo_git_pull \
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
+alias git_push_bash_roboag="_repo_git_push \
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
+alias git_status_bash_roboag="_repo_git_st \
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
 
 
 
@@ -395,7 +416,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2018 11 17
+# 2018 11 30
 
 function repo_pull_all() {
 
@@ -425,6 +446,7 @@ function repo_pull_all() {
     git_pull_bash_network
     git_pull_bash_multimedia
     git_pull_bash_file
+    git_pull_bash_master
     git_pull_bash_roboag
 
 
@@ -471,7 +493,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2018 11 17
+# 2018 11 30
 
 function repo_status_all() {
 
@@ -501,6 +523,7 @@ function repo_status_all() {
     git_status_bash_network
     git_status_bash_multimedia
     git_status_bash_file
+    git_status_bash_master
     git_status_bash_roboag
 
 
@@ -550,7 +573,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2018 11 19
+# 2018 11 30
 
 function repo_clone_bash() {
 
@@ -580,7 +603,7 @@ function repo_clone_bash() {
     git_clone_bash_network
     git_clone_bash_multimedia
     git_clone_bash_file
-    git_clone_bash_roboag
+    git_clone_bash_master
 }
 
 function repo_clone_all() {
@@ -628,6 +651,7 @@ function repo_clone_all() {
     git_clone_bash_network
     git_clone_bash_multimedia
     git_clone_bash_file
+    git_clone_bash_master
     git_clone_bash_roboag
 
 

@@ -21,7 +21,7 @@ export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
 
 #***************************[bash]********************************************
-# 2018 09 27
+# 2018 11 30
 
 # path
 if [ "$REPO_BASH_PATH" == "" ]; then
@@ -48,8 +48,20 @@ export REPO_BASH_MULTIMEDIA=("${REPO_BASH_PATH}multimedia/" \
 export REPO_BASH_FILE=("${REPO_BASH_PATH}file/" \
   "${REPO_ROOT_GITHUB_PETER}bash_file.git")
 
+#***************************[bash/master]
+# 2018 11 30
+
+# path
+if [ "$REPO_BASH_MASTER_PATH" == "" ]; then
+    export REPO_BASH_MASTER_PATH="${REPO_BASH_PATH}master/"
+fi
+
+# master (peter)
+export REPO_BASH_MASTER_BASHONLY=("${REPO_BASH_MASTER_PATH}bash_only/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_master.git")
+
 # roboag (roboag)
-export REPO_BASH_ROBOAG=("${REPO_BASH_PATH}roboag/" \
+export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
   "${REPO_ROOT_GITHUB_ROBOAG}bash_roboag.git")
 
 
@@ -99,7 +111,7 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2018 16 05
+# 2018 05 16
 
 #paths
 if [ "$REPO_ROBOSAX_PATH" == "" ]; then
