@@ -594,7 +594,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2018 12 01
+# 2018 12 02
 
 function repo_clone_bash() {
 
@@ -619,12 +619,12 @@ function repo_clone_bash() {
     fi
 
     # clone all
+    git_clone_bash_master
     git_clone_bash_repo
     git_clone_bash_config
     git_clone_bash_network
     git_clone_bash_multimedia
     git_clone_bash_file
-    git_clone_bash_master
 }
 
 function repo_clone_all() {
@@ -667,12 +667,7 @@ function repo_clone_all() {
     fi
 
     # clone all repos
-    git_clone_bash_repo
-    git_clone_bash_config
-    git_clone_bash_network
-    git_clone_bash_multimedia
-    git_clone_bash_file
-    git_clone_bash_master
+    repo_clone_bash
     git_clone_bash_roboag
 
 
