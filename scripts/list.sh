@@ -275,6 +275,21 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 
+#***************************[doc]*********************************************
+# 2018 12 01
+
+# paths
+if [ "$REPO_DOC_PATH" == "" ]; then
+    export REPO_DOC_PATH="${REPO_PATH_WORKSPACE}doc/"
+fi
+
+# doc server (peter)
+export REPO_DOC_SERVER_IMSCP=( \
+  "${REPO_DOC_PATH}server_imscp/" \
+  "${REPO_ROOT_GITHUB_PETER}doc_server_imscp.git")
+
+
+
 #***************************[ros]*********************************************
 # 2018 03 01
 
