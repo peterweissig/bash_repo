@@ -343,9 +343,9 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[doc]*********************************************
-# 2018 12 01
+# 2018 12 16
 
-# doc server (peter)
+# imscp-server (peter)
 alias git_clone_doc_server_imscp="_repo_git_clone \
   ${REPO_DOC_SERVER_IMSCP[*]}"
 alias git_pull_doc_server_imscp="_repo_git_pull \
@@ -354,6 +354,16 @@ alias git_push_doc_server_imscp="_repo_git_push \
   \"${REPO_DOC_SERVER_IMSCP[0]}\""
 alias git_status_doc_server_imscp="_repo_git_st \
 \"${REPO_DOC_SERVER_IMSCP[0]}\""
+
+# local server (peter)
+alias git_clone_doc_server_local="_repo_git_clone \
+  ${REPO_DOC_SERVER_LOCAL[*]}"
+alias git_pull_doc_server_local="_repo_git_pull \
+  \"${REPO_DOC_SERVER_LOCAL[0]}\""
+alias git_push_doc_server_local="_repo_git_push \
+  \"${REPO_DOC_SERVER_LOCAL[0]}\""
+alias git_status_doc_server_local="_repo_git_st \
+\"${REPO_DOC_SERVER_LOCAL[0]}\""
 
 
 
@@ -431,7 +441,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2018 12 01
+# 2018 12 16
 
 function repo_pull_all() {
 
@@ -500,6 +510,7 @@ function repo_pull_all() {
 
 
     git_pull_doc_server_imscp
+    git_pull_doc_server_local
 
 
     git_pull_ros_parameter
@@ -511,7 +522,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2018 12 01
+# 2018 12 16
 
 function repo_status_all() {
 
@@ -580,6 +591,7 @@ function repo_status_all() {
 
 
     git_status_doc_server_imscp
+    git_status_doc_server_local
 
 
     git_status_ros_parameter
@@ -594,7 +606,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2018 12 02
+# 2018 12 16
 
 function repo_clone_bash() {
 
@@ -711,6 +723,7 @@ function repo_clone_all() {
 
 
     git_clone_doc_server_imscp
+    git_clone_doc_server_local
 
 
     git_clone_ros_parameter

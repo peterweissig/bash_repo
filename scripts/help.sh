@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2018 12 01
+# 2018 12 16
 
 function repo_help_overview() {
 
@@ -43,7 +43,9 @@ function repo_help_overview() {
     echo "          roboag/         [git]/RoboAG/bash_roboag.git"
     echo ""
     echo "  doc/"
-    echo "      server_imscp/       [git]/peterweissig/doc_server_imscp.git"
+    echo "      server/"
+    echo "          imscp/          [git]/peterweissig/doc_server_imscp.git"
+    echo "          local/          [git]/peterweissig/doc_server_local.git"
     echo ""
     echo "  robo/"
     echo "      lib/                [git]/RoboAG/avr_robolib.git"
