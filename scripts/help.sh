@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2018 12 16
+# 2019 01 06
 
 function repo_help_overview() {
 
@@ -69,7 +69,6 @@ function repo_help_overview() {
     echo "          spielfeld/      [git]/RoboSAX/cad_spielfeld.git"
     echo "          ledbox/         [git]/fabiangeissler/robosax-ledbox.git"
     echo "          licht_tht/      [git]/RoboSAX/eagle_licht.git"
-    echo "          licht_avr/      [git]/RoboSAX/avr_licht.git"
     echo "          spielfeld_tht/  [git]/RoboSAX/eagle_spielfeld.git"
     echo "          spielfeld_avr/  [git]/RoboSAX/avr_spielfeld.git"
     echo "          anzeige_tht/    [git]/RoboSAX/eagle_anzeige.git"

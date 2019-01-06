@@ -130,7 +130,7 @@ alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
 #***************************[robo/robosax]
-# 2018 05 16
+# 2019 01 06
 
 # spielfeld drawings (robosax)
 alias git_clone_robosax_spielfeld="_repo_git_clone \
@@ -157,16 +157,6 @@ alias git_push_robosax_licht_tht="_repo_git_push \
   \"${REPO_ROBOSAX_LICHT_THT[0]}\""
 alias git_status_robosax_licht_tht="_repo_git_st \
   \"${REPO_ROBOSAX_LICHT_THT[0]}\""
-
-# licht-tht software (robosax)
-alias git_clone_robosax_licht_avr="_repo_git_clone \
-  ${REPO_ROBOSAX_LICHT_AVR[*]}"
-alias git_pull_robosax_licht_avr="_repo_git_pull \
-  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
-alias git_push_robosax_licht_avr="_repo_git_push \
-  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
-alias git_status_robosax_licht_avr="_repo_git_st \
-  \"${REPO_ROBOSAX_LICHT_AVR[0]}\""
 
 # spielfeld-tht circuit (robosax)
 alias git_clone_robosax_spielfeld_tht="_repo_git_clone \
@@ -441,7 +431,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2018 12 16
+# 2019 01 06
 
 function repo_pull_all() {
 
@@ -493,7 +483,6 @@ function repo_pull_all() {
     git_pull_robosax_spielfeld
     git_pull_robosax_ledbox
     git_pull_robosax_licht_tht
-    git_pull_robosax_licht_avr
     git_pull_robosax_spielfeld_tht
     git_pull_robosax_spielfeld_avr
     git_pull_robosax_anzeige_tht
@@ -522,7 +511,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2018 12 16
+# 2019 01 06
 
 function repo_status_all() {
 
@@ -574,7 +563,6 @@ function repo_status_all() {
     git_status_robosax_spielfeld
     git_status_robosax_ledbox
     git_status_robosax_licht_tht
-    git_status_robosax_licht_avr
     git_status_robosax_spielfeld_tht
     git_status_robosax_spielfeld_avr
     git_status_robosax_anzeige_tht
@@ -606,7 +594,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2018 12 16
+# 2019 01 06
 
 function repo_clone_bash() {
 
@@ -701,7 +689,6 @@ function repo_clone_all() {
     git_clone_robosax_spielfeld
     git_clone_robosax_ledbox
     git_clone_robosax_licht_tht
-    git_clone_robosax_licht_avr
     git_clone_robosax_spielfeld_tht
     git_clone_robosax_spielfeld_avr
     git_clone_robosax_anzeige_tht
