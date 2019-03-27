@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2019 01 06
+# 2019 03 27
 
 function repo_help_overview() {
 
@@ -73,6 +73,7 @@ function repo_help_overview() {
     echo "          spielfeld_avr/  [git]/RoboSAX/avr_spielfeld.git"
     echo "          anzeige_tht/    [git]/RoboSAX/eagle_anzeige.git"
     echo "          punkte/         [git]/RoboSAX/php_punkte.git"
+    echo "          punkte_old/     [git]/RoboSAX/php_punkte_old.git"
     echo ""
     echo "  projects/"
     echo "      eagle/"

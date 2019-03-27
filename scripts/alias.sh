@@ -130,7 +130,7 @@ alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
 #***************************[robo/robosax]
-# 2019 01 06
+# 2019 03 27
 
 # spielfeld drawings (robosax)
 alias git_clone_robosax_spielfeld="_repo_git_clone \
@@ -193,6 +193,15 @@ alias git_clone_robosax_points="_repo_git_clone ${REPO_ROBOSAX_POINTS[*]}"
 alias git_pull_robosax_points="_repo_git_pull \"${REPO_ROBOSAX_POINTS[0]}\""
 alias git_push_robosax_points="_repo_git_push \"${REPO_ROBOSAX_POINTS[0]}\""
 alias git_status_robosax_points="_repo_git_st \"${REPO_ROBOSAX_POINTS[0]}\""
+
+alias git_clone_robosax_points_old="_repo_git_clone \
+  ${REPO_ROBOSAX_POINTS_OLD[*]}"
+alias git_pull_robosax_points_old="_repo_git_pull \
+  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
+alias git_push_robosax_points_old="_repo_git_push \
+  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
+alias git_status_robosax_points_old="_repo_git_st \
+  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
 
 #***************************[robo/roboag]
 # 2018 11 01
@@ -431,7 +440,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2019 01 06
+# 2019 03 27
 
 function repo_pull_all() {
 
@@ -487,6 +496,7 @@ function repo_pull_all() {
     git_pull_robosax_spielfeld_avr
     git_pull_robosax_anzeige_tht
     git_pull_robosax_points
+    git_pull_robosax_points_old
 
 
     git_pull_eagle_dmx_driver
@@ -511,7 +521,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2019 01 06
+# 2019 03 27
 
 function repo_status_all() {
 
@@ -567,6 +577,7 @@ function repo_status_all() {
     git_status_robosax_spielfeld_avr
     git_status_robosax_anzeige_tht
     git_status_robosax_points
+    git_status_robosax_points_old
 
 
     git_status_eagle_dmx_driver
@@ -594,7 +605,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2019 01 06
+# 2019 03 27
 
 function repo_clone_bash() {
 
@@ -693,6 +704,7 @@ function repo_clone_all() {
     git_clone_robosax_spielfeld_avr
     git_clone_robosax_anzeige_tht
     git_clone_robosax_points
+    git_clone_robosax_points_old
 
 
     git_clone_eagle_dmx_driver
