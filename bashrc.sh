@@ -17,13 +17,11 @@ export SOURCED_BASH_REPO=1
 
 # REPO_PATH_WORKSPACE
 if [ "$REPO_PATH_WORKSPACE" == "" ]; then
-
     echo "Error sourcing \"repo\": \$REPO_PATH_WORKSPACE is not set"
     return -1;
 fi
 
 if [ ! -d "$REPO_PATH_WORKSPACE" ]; then
-
     echo "Error sourcing \"repo\": path \$REPO_PATH_WORKSPACE does not exist"
     return -1;
 fi
