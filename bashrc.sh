@@ -24,17 +24,25 @@ fi
 
 if [ ! -d "$REPO_PATH_WORKSPACE" ]; then
 
-    echo "Error sourcing \"repo\": \$REPO_PATH_WORKSPACE does not exist"
+    echo "Error sourcing \"repo\": path \$REPO_PATH_WORKSPACE does not exist"
     return -1;
 fi
 
 
+#***************************[optional external variables]*********************
+# 2019 04 21
+
+# REPO_FILE_ADDITIONAL_GIT
+
+
 #***************************[paths and files]*********************************
-# 2018 11 17
+# 2019 04 21
 
 export REPO_PATH_REPO="$(cd "$(dirname "${BASH_SOURCE}")" && pwd )/"
-export REPO_PATH_CONFIG="${REPO_PATH_REPO}config/"
-export REPO_FILE_ADDITIONAL_GIT="${REPO_PATH_CONFIG}git.txt"
+
+if [ "$REPO_FILE_ADDITIONAL_GIT" == "" ]; then
+    export REPO_FILE_ADDITIONAL_GIT="${REPO_PATH_REPO}config/git.txt"
+fi
 
 
 #***************************[source]******************************************
