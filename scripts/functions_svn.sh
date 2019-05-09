@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#***************************[svn]*********************************************
+#***************************[_repo_svn_co]************************************
 # 2018 09 04
 
 function _repo_svn_co() {
@@ -49,6 +49,9 @@ function _repo_svn_co() {
     fi
 }
 
+#***************************[_repo_svn_up]************************************
+# 2018 09 04
+
 function _repo_svn_up() {
 
     # print help
@@ -77,6 +80,9 @@ function _repo_svn_up() {
         svn update -q "$1"
     fi
 }
+
+#***************************[_repo_svn_st]************************************
+# 2018 09 04
 
 function _repo_svn_st() {
 
@@ -107,7 +113,16 @@ function _repo_svn_st() {
     fi
 }
 
+#***************************[svn_diff]****************************************
+# 2019 05 09
+
 function repo_svn_diff() {
+
+  echo "repo_svn_diff is deprecated - please use svn_diff"
+  svn_diff "$@"
+}
+
+function svn_diff() {
 
     # print help
     if [ "$1" == "-h" ]; then
@@ -134,6 +149,7 @@ function repo_svn_diff() {
 
     _repo_diff "svn" $1
 }
+
 # 2018 09 10 old source code (instead of using _repo_diff):
 #     if [ $# -lt 1 ]; then
 #         local_path="."

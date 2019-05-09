@@ -111,7 +111,7 @@ export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
 #***************************[robo/robosax]
-# 2019 03 27
+# 2019 05 09
 
 #paths
 if [ "$REPO_ROBOSAX_PATH" == "" ]; then
@@ -158,9 +158,9 @@ export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_EAGLE_PATH}anzeige_tht/" \
 
 # punkte (robosax)
 export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte")
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte.git")
 export REPO_ROBOSAX_POINTS_OLD=("${REPO_ROBOSAX_PHP_PATH}punkte_old/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old")
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old.git")
 
 #***************************[robo/roboag]
 # 2018 11 01

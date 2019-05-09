@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#***************************[git wrapper]*************************************
+#***************************[_repo_git_clone]*********************************
 # 2018 09 10
 
 function _repo_git_clone() {
@@ -42,6 +42,9 @@ function _repo_git_clone() {
     git clone "$2" "$1"
 }
 
+#***************************[_repo_git_pull]**********************************
+# 2018 09 10
+
 function _repo_git_pull() {
 
     # print help
@@ -80,6 +83,9 @@ function _repo_git_pull() {
     echo "### pulling $REPO_NAME ###"
     (cd $1 && git pull --tags)
 }
+
+#***************************[_repo_git_push]**********************************
+# 2018 09 10
 
 function _repo_git_push() {
 
@@ -129,6 +135,9 @@ function _repo_git_push() {
     (cd "$1" && git push --tags)
 }
 
+#***************************[_repo_git_st]************************************
+# 2018 09 10
+
 function _repo_git_st() {
 
 
@@ -170,10 +179,16 @@ function _repo_git_st() {
     (cd "$1" && git status -u)
 }
 
-#***************************[git diff]****************************************
-# 2018 09 10
+#***************************[git_diff]****************************************
+# 2019 05 09
 
 function repo_git_diff() {
+
+  echo "repo_git_diff is deprecated - please use git_diff"
+  git_diff "$@"
+}
+
+function git_diff() {
 
     # print help
     if [ "$1" == "-h" ]; then
@@ -200,6 +215,7 @@ function repo_git_diff() {
 
     _repo_diff "git" $1
 }
+
 # 2018 09 10 old source code (instead of using _repo_diff):
 #     if [ $# -lt 1 ]; then
 #         local_path="."
@@ -263,7 +279,7 @@ function repo_git_diff() {
 #     # compare versions
 #     meld  "$local_path" "$dir_temp"
 
-#***************************[git config]**************************************
+#***************************[git_config_set_ssh]******************************
 # 2018 11 17
 
 function git_config_set_ssh() {

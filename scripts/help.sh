@@ -121,7 +121,7 @@ function repo_help_overview() {
 
 
 #***************************[all]*********************************************
-# 2018 11 19
+# 2019 05 09
 
 function repo_help_all() {
 
@@ -159,14 +159,14 @@ function repo_help_all() {
     echo -n "  "; _repo_diff -h
     echo ""
     echo "svn"
-    echo -n "  "; repo_svn_diff -h
+    echo -n "  "; svn_diff -h
     echo -n "  "; _repo_svn_co -h
     echo -n "  "; _repo_svn_up -h
     echo -n "  "; _repo_svn_st -h
     echo ""
     echo "git"
     echo -n "  "; git_config_set_ssh -h
-    echo -n "  "; repo_git_diff -h
+    echo -n "  "; git_diff -h
     echo -n "  "; _repo_git_clone -h
     echo -n "  "; _repo_git_pull -h
     echo -n "  "; _repo_git_push -h
@@ -191,7 +191,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2018 11 19
+# 2019 05 09
 
 function repo_help() {
 
@@ -204,8 +204,8 @@ function repo_help() {
     echo -n "  "; repo_help_overview -h
     echo ""
     echo "version control"
-    echo -n "  "; repo_svn_diff -h
-    echo -n "  "; repo_git_diff -h
+    echo -n "  "; svn_diff -h
+    echo -n "  "; git_diff -h
     echo -n "  "; git_config_set_ssh -h
     echo ""
     echo "general repository functions"
