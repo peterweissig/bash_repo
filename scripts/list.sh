@@ -278,7 +278,7 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[doc]*********************************************
-# 2018 12 16
+# 2019 06 22
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
@@ -297,6 +297,11 @@ export REPO_DOC_SERVER_IMSCP=( \
 export REPO_DOC_SERVER_LOCAL=( \
   "${REPO_DOC_SERVER_PATH}local/" \
   "${REPO_ROOT_GITHUB_PETER}doc_server_local.git")
+
+# robolib (roboag)
+export REPO_DOC_ROBOLIB=( \
+  "${REPO_DOC_PATH}robolib/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git")
 
 
 
