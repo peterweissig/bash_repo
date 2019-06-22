@@ -130,7 +130,7 @@ alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
 #***************************[robo/robosax]
-# 2019 05 27
+# 2019 06 22
 
 # spielfeld drawings (robosax)
 alias git_clone_robosax_spielfeld="_repo_git_clone \
@@ -208,6 +208,16 @@ alias git_clone_robosax_web="_repo_git_clone ${REPO_ROBOSAX_WEB[*]}"
 alias git_pull_robosax_web="_repo_git_pull \"${REPO_ROBOSAX_WEB[0]}\""
 alias git_push_robosax_web="_repo_git_push \"${REPO_ROBOSAX_WEB[0]}\""
 alias git_status_robosax_web="_repo_git_st \"${REPO_ROBOSAX_WEB[0]}\""
+
+# omnibot (robosax)
+alias git_clone_robosax_omnibot="_repo_git_clone \
+  ${REPO_ROBOSAX_OMNIBOT[*]}"
+alias git_pull_robosax_omnibot="_repo_git_pull \
+  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
+alias git_push_robosax_omnibot="_repo_git_push \
+  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
+alias git_status_robosax_omnibot="_repo_git_st \
+  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
 
 
 
@@ -512,6 +522,7 @@ function repo_pull_all() {
     git_pull_robosax_points
     git_pull_robosax_points_old
     git_pull_robosax_web
+    git_pull_robosax_omnibot
 
 
     git_pull_eagle_dmx_driver
@@ -595,6 +606,7 @@ function repo_status_all() {
     git_status_robosax_points
     git_status_robosax_points_old
     git_status_robosax_web
+    git_status_robosax_omnibot
 
 
     git_status_eagle_dmx_driver
@@ -724,6 +736,7 @@ function repo_clone_all() {
     git_clone_robosax_points
     git_clone_robosax_points_old
     git_clone_robosax_web
+    git_clone_robosax_omnibot
 
 
     git_clone_eagle_dmx_driver

@@ -76,6 +76,7 @@ function repo_help_overview() {
     echo "          punkte/         [git]/RoboSAX/php_punkte.git"
     echo "          punkte_old/     [git]/RoboSAX/php_punkte_old.git"
     echo "          web/            [git]/RoboSAX/php_web.git"
+    echo "          omnibot/        [git]/RoboSAX/avr_omnibot.git"
     echo ""
     echo "  projects/"
     echo "      eagle/"
