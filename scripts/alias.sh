@@ -360,7 +360,7 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[doc]*********************************************
-# 2019 06 22
+# 2019 08 21
 
 # imscp-server (peter)
 alias git_clone_doc_server_imscp="_repo_git_clone \
@@ -382,9 +382,10 @@ alias git_push_doc_server_local="_repo_git_push \
 alias git_status_doc_server_local="_repo_git_st \
 \"${REPO_DOC_SERVER_LOCAL[0]}\""
 
-# robolib (roboag)
+# robolib as release-repo (roboag)
 alias git_clone_doc_robolib="_repo_git_clone ${REPO_DOC_ROBOLIB[*]}"
-alias git_pull_doc_robolib="_repo_git_pull \"${REPO_DOC_ROBOLIB[0]}\""
+alias git_pull_doc_robolib="_repo_git_pull_release \
+  \"${REPO_DOC_ROBOLIB[0]}\""
 alias git_push_doc_robolib="_repo_git_push \"${REPO_DOC_ROBOLIB[0]}\""
 alias git_status_doc_robolib="_repo_git_st \"${REPO_DOC_ROBOLIB[0]}\""
 

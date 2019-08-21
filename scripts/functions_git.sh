@@ -81,7 +81,50 @@ function _repo_git_pull() {
 
     # git pull
     echo "### pulling $REPO_NAME ###"
-    (cd $1 && git pull --tags)
+    (cd "$1" && git pull --tags)
+}
+
+#***************************[_repo_git_pull_release]**************************
+# 2019 08 21
+
+function _repo_git_pull_release() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME <local_path> [<disp_name>]"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 1-2 parameters"
+        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
+        echo "    [#2:]displayed name of repository"
+        echo -n "Executes \"git fetch\" and \"git rebase --skip\" on the"
+        echo "given git-repository."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+    if [ $# -lt 2 ]; then
+        REPO_NAME="$(basename "$1")"
+    else
+        REPO_NAME="$2"
+    fi
+
+    # check local path
+    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
+        return
+    fi
+
+    # git pull
+    echo "### pulling $REPO_NAME (release!) ###"
+    (cd "$1" && git fetch && git reset --quiet --hard @{upstream})
 }
 
 #***************************[_repo_git_push]**********************************
@@ -180,7 +223,7 @@ function _repo_git_st() {
 }
 
 #***************************[git_diff]****************************************
-# 2019 05 09
+# 2019 08 21
 
 function repo_git_diff() {
 
@@ -213,7 +256,7 @@ function git_diff() {
         return -1
     fi
 
-    _repo_diff "git" $1
+    _repo_diff "git" "$1"
 }
 
 # 2018 09 10 old source code (instead of using _repo_diff):
@@ -280,7 +323,7 @@ function git_diff() {
 #     meld  "$local_path" "$dir_temp"
 
 #***************************[git_config_set_ssh]******************************
-# 2018 11 17
+# 2019 08 21
 
 function git_config_set_ssh() {
 
@@ -349,7 +392,7 @@ function git_config_set_ssh() {
     # set new url
     echo "git remote set-url origin ${url_new}"
     if [ $# -gt 0 ]; then
-        $(cd $1 && git remote set-url origin "${url_new}")
+        (cd "$1" && git remote set-url origin "${url_new}")
     else
         git remote set-url origin "${url_new}"
     fi

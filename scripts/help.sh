@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2019 06 22
+# 2019 08 21
 
 function repo_help_overview() {
 
@@ -46,7 +46,7 @@ function repo_help_overview() {
     echo "      server/"
     echo "          imscp/          [git]/peterweissig/doc_server_imscp.git"
     echo "          local/          [git]/peterweissig/doc_server_local.git"
-    echo "      robolib/            [git]/RoboAG/doc_robolib.git"
+    echo "      robolib/            [git]/RoboAG/doc_robolib.git (release!)"
     echo ""
     echo "  robo/"
     echo "      lib/                [git]/RoboAG/avr_robolib.git"
@@ -124,7 +124,7 @@ function repo_help_overview() {
 
 
 #***************************[all]*********************************************
-# 2019 05 09
+# 2019 08 21
 
 function repo_help_all() {
 
@@ -172,6 +172,7 @@ function repo_help_all() {
     echo -n "  "; git_diff -h
     echo -n "  "; _repo_git_clone -h
     echo -n "  "; _repo_git_pull -h
+    echo -n "  "; _repo_git_pull_release -h
     echo -n "  "; _repo_git_push -h
     echo -n "  "; _repo_git_st -h
     echo ""
