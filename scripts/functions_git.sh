@@ -223,7 +223,7 @@ function _repo_git_st() {
 }
 
 #***************************[git_diff]****************************************
-# 2019 08 21
+# 2019 08 23
 
 function repo_git_diff() {
 
@@ -256,7 +256,11 @@ function git_diff() {
         return -1
     fi
 
-    _repo_diff "git" "$1"
+    if [ $# -gt 0 ]; then
+        _repo_diff "git" "$1"
+    else
+        _repo_diff "git"
+    fi
 }
 
 # 2018 09 10 old source code (instead of using _repo_diff):
