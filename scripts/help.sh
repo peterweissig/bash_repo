@@ -124,7 +124,7 @@ function repo_help_overview() {
 
 
 #***************************[all]*********************************************
-# 2019 08 21
+# 2019 09 10
 
 function repo_help_all() {
 
@@ -154,8 +154,8 @@ function repo_help_all() {
     echo "### $FUNCNAME ###"
     echo ""
     echo "help"
-    echo -n "  "; echo "repo_help"
-    echo -n "  "; repo_help_all -h
+    echo -n "  "; echo "repo_help  #no help"
+    echo -n "  "; $FUNCNAME -h
     echo -n "  "; repo_help_overview -h
     echo ""
     echo "helper functions"
@@ -195,7 +195,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2019 05 09
+# 2019 09 10
 
 function repo_help() {
 
@@ -203,7 +203,7 @@ function repo_help() {
     echo "### $FUNCNAME ###"
     echo ""
     echo "help functions"
-    echo -n "  "; echo "repo_help"
+    echo -n "  "; echo "$FUNCNAME  #no help"
     echo -n "  "; repo_help_all -h
     echo -n "  "; repo_help_overview -h
     echo ""
