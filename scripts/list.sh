@@ -282,7 +282,7 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[doc]*********************************************
-# 2019 06 22
+# 2019 11 14
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
@@ -306,6 +306,11 @@ export REPO_DOC_SERVER_LOCAL=( \
 export REPO_DOC_ROBOLIB=( \
   "${REPO_DOC_PATH}robolib/" \
   "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git")
+
+# punkte (robosax)
+export REPO_DOC_PUNKTE=( \
+  "${REPO_DOC_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git")
 
 
 

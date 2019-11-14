@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2019 08 21
+# 2019 11 14
 
 function repo_help_overview() {
 
@@ -47,6 +47,7 @@ function repo_help_overview() {
     echo "          imscp/          [git]/peterweissig/doc_server_imscp.git"
     echo "          local/          [git]/peterweissig/doc_server_local.git"
     echo "      robolib/            [git]/RoboAG/doc_robolib.git (release!)"
+    echo "      punkte/             [git]/RoboSAX/doc_punkte.git (release!)"
     echo ""
     echo "  robo/"
     echo "      lib/                [git]/RoboAG/avr_robolib.git"
