@@ -49,16 +49,20 @@ export REPO_BASH_FILE=("${REPO_BASH_PATH}file/" \
   "${REPO_ROOT_GITHUB_PETER}bash_file.git")
 
 #***************************[bash/master]
-# 2018 11 30
+# 2019 12 01
 
 # path
 if [ "$REPO_BASH_MASTER_PATH" == "" ]; then
     export REPO_BASH_MASTER_PATH="${REPO_BASH_PATH}master/"
 fi
 
-# master (peter)
+# master simple (peter)
 export REPO_BASH_MASTER_BASHONLY=("${REPO_BASH_MASTER_PATH}bash_only/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_master.git")
+  "${REPO_ROOT_GITHUB_PETER}bash_master_simple.git")
+
+# master server (peter)
+export REPO_BASH_MASTER_SERVER=("${REPO_BASH_MASTER_PATH}server/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_master_server.git")
 
 # roboag (roboag)
 export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \

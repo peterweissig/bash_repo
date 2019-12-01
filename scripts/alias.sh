@@ -38,17 +38,27 @@ alias git_push_bash_file="_repo_git_push \"${REPO_BASH_FILE[0]}\""
 alias git_status_bash_file="_repo_git_st \"${REPO_BASH_FILE[0]}\""
 
 #***************************[bash/master]
-# 2018 11 30
+# 2019 12 01
 
-# master (peter)
-alias git_clone_bash_master="_repo_git_clone \
+# master simple (peter)
+alias git_clone_bash_master_simple="_repo_git_clone \
   ${REPO_BASH_MASTER_BASHONLY[*]}"
-alias git_pull_bash_master="_repo_git_pull \
+alias git_pull_bash_master_simple="_repo_git_pull \
   \"${REPO_BASH_MASTER_BASHONLY[0]}\""
-alias git_push_bash_master="_repo_git_push \
+alias git_push_bash_master_simple="_repo_git_push \
   \"${REPO_BASH_MASTER_BASHONLY[0]}\""
-alias git_status_bash_master="_repo_git_st \
+alias git_status_bash_master_simple="_repo_git_st \
   \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+
+# master server (peter)
+alias git_clone_bash_master_server="_repo_git_clone \
+  ${REPO_BASH_MASTER_SERVER[*]}"
+alias git_pull_bash_master_server="_repo_git_pull \
+  \"${REPO_BASH_MASTER_SERVER[0]}\""
+alias git_push_bash_master_server="_repo_git_push \
+  \"${REPO_BASH_MASTER_SERVER[0]}\""
+alias git_status_bash_master_server="_repo_git_st \
+  \"${REPO_BASH_MASTER_SERVER[0]}\""
 
 # roboag (roboag)
 alias git_clone_bash_roboag="_repo_git_clone \
@@ -472,7 +482,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2019 11 14
+# 2019 12 01
 
 function repo_pull_all() {
 
@@ -502,7 +512,8 @@ function repo_pull_all() {
     git_pull_bash_network
     git_pull_bash_multimedia
     git_pull_bash_file
-    git_pull_bash_master
+    git_pull_bash_master_simple
+    git_pull_bash_master_server
     git_pull_bash_roboag
 
 
@@ -557,7 +568,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2019 11 14
+# 2019 12 01
 
 function repo_status_all() {
 
@@ -587,7 +598,8 @@ function repo_status_all() {
     git_status_bash_network
     git_status_bash_multimedia
     git_status_bash_file
-    git_status_bash_master
+    git_status_bash_master_simple
+    git_status_bash_master_server
     git_status_bash_roboag
 
 
@@ -645,7 +657,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2019 11 14
+# 2019 12 01
 
 function repo_clone_bash() {
 
@@ -670,7 +682,7 @@ function repo_clone_bash() {
     fi
 
     # clone all
-    git_clone_bash_master
+    git_clone_bash_master_simple
     git_clone_bash_repo
     git_clone_bash_config
     git_clone_bash_network
@@ -719,6 +731,7 @@ function repo_clone_all() {
 
     # clone all repos
     repo_clone_bash
+    git_clone_bash_master_server
     git_clone_bash_roboag
 
 

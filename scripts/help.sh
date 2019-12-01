@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2019 11 14
+# 2019 12 01
 
 function repo_help_overview() {
 
@@ -39,7 +39,8 @@ function repo_help_overview() {
     echo "      multimedia/         [git]/peterweissig/bash_multimedia.git"
     echo "      file/               [git]/peterweissig/bash_file.git"
     echo "      master/"
-    echo "          bash_only/      [git]/peterweissig/bash_master.git"
+    echo "          bash_only/      [git]/peterweissig/bash_master_simple.git"
+    echo "          server/         [git]/peterweissig/bash_master_server.git"
     echo "          roboag/         [git]/RoboAG/bash_roboag.git"
     echo ""
     echo "  doc/"
