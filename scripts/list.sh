@@ -286,7 +286,7 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[doc]*********************************************
-# 2019 11 14
+# 2019 12 23
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
@@ -296,10 +296,10 @@ if [ "$REPO_DOC_SERVER_PATH" == "" ]; then
     export REPO_DOC_SERVER_PATH="${REPO_DOC_PATH}server/"
 fi
 
-# imscp-server (peter)
-export REPO_DOC_SERVER_IMSCP=( \
-  "${REPO_DOC_SERVER_PATH}imscp/" \
-  "${REPO_ROOT_GITHUB_PETER}doc_server_imscp.git")
+# online-server (peter)
+export REPO_DOC_SERVER_ONLINE=( \
+  "${REPO_DOC_SERVER_PATH}online/" \
+  "${REPO_ROOT_GITHUB_PETER}doc_server_online.git")
 
 # local server (peter)
 export REPO_DOC_SERVER_LOCAL=( \

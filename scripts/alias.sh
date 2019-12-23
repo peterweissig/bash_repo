@@ -370,17 +370,17 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[doc]*********************************************
-# 2019 11 14
+# 2019 12 23
 
-# imscp-server (peter)
-alias git_clone_doc_server_imscp="_repo_git_clone \
-  ${REPO_DOC_SERVER_IMSCP[*]}"
-alias git_pull_doc_server_imscp="_repo_git_pull \
-  \"${REPO_DOC_SERVER_IMSCP[0]}\""
-alias git_push_doc_server_imscp="_repo_git_push \
-  \"${REPO_DOC_SERVER_IMSCP[0]}\""
-alias git_status_doc_server_imscp="_repo_git_st \
-\"${REPO_DOC_SERVER_IMSCP[0]}\""
+# online-server (peter)
+alias git_clone_doc_server_online="_repo_git_clone \
+  ${REPO_DOC_SERVER_ONLINE[*]}"
+alias git_pull_doc_server_online="_repo_git_pull \
+  \"${REPO_DOC_SERVER_ONLINE[0]}\""
+alias git_push_doc_server_online="_repo_git_push \
+  \"${REPO_DOC_SERVER_ONLINE[0]}\""
+alias git_status_doc_server_online="_repo_git_st \
+\"${REPO_DOC_SERVER_ONLINE[0]}\""
 
 # local server (peter)
 alias git_clone_doc_server_local="_repo_git_clone \
@@ -482,7 +482,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2019 12 01
+# 2019 12 23
 
 function repo_pull_all() {
 
@@ -553,7 +553,7 @@ function repo_pull_all() {
     git_pull_cpp
 
 
-    git_pull_doc_server_imscp
+    git_pull_doc_server_online
     git_pull_doc_server_local
     git_pull_doc_robolib
     git_pull_doc_punkte
@@ -568,7 +568,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2019 12 01
+# 2019 12 23
 
 function repo_status_all() {
 
@@ -639,7 +639,7 @@ function repo_status_all() {
     git_status_cpp
 
 
-    git_status_doc_server_imscp
+    git_status_doc_server_online
     git_status_doc_server_local
     git_status_doc_robolib
     git_status_doc_punkte
@@ -657,7 +657,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2019 12 01
+# 2019 12 23
 
 function repo_clone_bash() {
 
@@ -776,7 +776,7 @@ function repo_clone_all() {
     git_clone_cpp_xbee
 
 
-    git_clone_doc_server_imscp
+    git_clone_doc_server_online
     git_clone_doc_server_local
     git_clone_doc_robolib
     git_clone_doc_punkte
