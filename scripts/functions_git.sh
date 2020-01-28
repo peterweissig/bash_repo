@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[_repo_git_clone]*********************************
-# 2018 09 10
+# 2020 01 28
 
 function _repo_git_clone() {
 
@@ -27,23 +27,27 @@ function _repo_git_clone() {
         $FUNCNAME --help
         return -1
     fi
+
+    # load parameters
+    PARAM_PATH="$1"
+    PARAM_SERVER="$2"
     if [ $# -lt 3 ]; then
-        REPO_NAME="$(basename "$1")"
+        REPO_NAME="$(basename "$PARAM_PATH")"
     else
         REPO_NAME="$3"
     fi
 
     # display repo name
     echo ""
-    echo "### $REPO_NAME ###"
+    echo "###g $REPO_NAME ###"
 
     # clone repo
-    echo "git clone \"$2\" \"$1\""
-    git clone "$2" "$1"
+    echo "git clone \"$PARAM_SERVER\" \"$PARAM_PATH\""
+    git clone "$PARAM_SERVER" "$PARAM_PATH"
 }
 
 #***************************[_repo_git_pull]**********************************
-# 2018 09 10
+# 2020 01 28
 
 function _repo_git_pull() {
 
@@ -68,24 +72,29 @@ function _repo_git_pull() {
         $FUNCNAME --help
         return -1
     fi
+
+    # load parameters
+    PARAM_PATH="$1"
     if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$1")"
+        REPO_NAME="$(basename "$PARAM_PATH")"
     else
         REPO_NAME="$2"
     fi
 
     # check local path
-    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
+    if [ ! -d "$PARAM_PATH" ] || [ ! -d "${PARAM_PATH}/.git" ]; then
         return
     fi
 
+    # display repo name
+    echo "###g $REPO_NAME ###"
+
     # git pull
-    echo "### pulling $REPO_NAME ###"
-    (cd "$1" && git pull --tags)
+    (cd "$PARAM_PATH" && git pull --tags)
 }
 
 #***************************[_repo_git_pull_release]**************************
-# 2019 08 21
+# 2020 01 28
 
 function _repo_git_pull_release() {
 
@@ -111,24 +120,29 @@ function _repo_git_pull_release() {
         $FUNCNAME --help
         return -1
     fi
+
+    # load parameters
+    PARAM_PATH="$1"
     if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$1")"
+        REPO_NAME="$(basename "$PARAM_PATH")"
     else
         REPO_NAME="$2"
     fi
 
     # check local path
-    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
+    if [ ! -d "$PARAM_PATH" ] || [ ! -d "${PARAM_PATH}/.git" ]; then
         return
     fi
 
+    # display repo name
+    echo "###g $REPO_NAME (release!) ###"
+
     # git pull
-    echo "### pulling $REPO_NAME (release!) ###"
-    (cd "$1" && git fetch && git reset --quiet --hard @{upstream})
+    (cd "$PARAM_PATH" && git fetch && git reset --quiet --hard @{upstream})
 }
 
 #***************************[_repo_git_push]**********************************
-# 2018 09 10
+# 2020 01 28
 
 function _repo_git_push() {
 
@@ -153,33 +167,36 @@ function _repo_git_push() {
         $FUNCNAME --help
         return -1
     fi
+
+    # load parameters
+    PARAM_PATH="$1"
     if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$1")"
+        REPO_NAME="$(basename "$PARAM_PATH")"
     else
         REPO_NAME="$2"
     fi
 
     # display repo name
     echo ""
-    echo "### $REPO_NAME ###"
+    echo "###g $REPO_NAME ###"
 
     # check local path
-    if [ ! -d "$1" ]; then
-        echo "\"$1\" does not exist"
+    if [ ! -d "$PARAM_PATH" ]; then
+        echo "\"$PARAM_PATH\" does not exist"
         return -2
     fi
-    if [ ! -d "$1/.git" ]; then
-        echo "\"$1\" is not a git repository"
+    if [ ! -d "${PARAM_PATH}/.git" ]; then
+        echo "\"$PARAM_PATH\" is not a git repository"
         return -3
     fi
 
     # git push
-    echo "cd \"$1\" && git push --tags"
-    (cd "$1" && git push --tags)
+    echo "cd \"$PARAM_PATH\" && git push --tags"
+    (cd "$PARAM_PATH" && git push --tags)
 }
 
 #***************************[_repo_git_st]************************************
-# 2018 09 10
+# 2020 01 28
 
 function _repo_git_st() {
 
@@ -205,21 +222,25 @@ function _repo_git_st() {
         $FUNCNAME --help
         return -1
     fi
+
+    # load parameters
+    PARAM_PATH="$1"
     if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$1")"
+        REPO_NAME="$(basename "$PARAM_PATH")"
     else
         REPO_NAME="$2"
     fi
 
     # check local path
-    if [ ! -d "$1" ] || [ ! -d "$1/.git" ]; then
+    if [ ! -d "$PARAM_PATH" ] || [ ! -d "${PARAM_PATH}/.git" ]; then
         return
     fi
 
+    # display repo name
+    echo "###g $REPO_NAME ###"
+
     # git status
-    echo ""
-    echo "### $REPO_NAME ###"
-    (cd "$1" && git status -u)
+    (cd "$1" && git status --untracked-files)
 }
 
 #***************************[git_diff]****************************************
