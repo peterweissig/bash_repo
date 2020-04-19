@@ -229,12 +229,16 @@ export REPO_EAGLE_DMX_DRIVER=("${REPO_PROJECTS_EAGLE_PATH}dmx_driver/" \
   "${REPO_ROOT_GITHUB_PETER}eagle_dmx_driver.git")
 
 #***************************[projects/hardware]
-# 2018 03 01
+# 2020 04 19
 
 # path
 if [ "$REPO_HARDWARE_PATH" == "" ]; then
     export REPO_HARDWARE_PATH="${REPO_PROJECTS_PATH}hardware/"
 fi
+
+# trailer (peter)
+export REPO_HARDWARE_TRAILER=("${REPO_HARDWARE_PATH}anhaenger/" \
+  "${REPO_ROOT_GITHUB_PETER}project_anhaenger.git")
 
 # audio system (peter)
 export REPO_HARDWARE_AUDIO_HOME=("${REPO_HARDWARE_PATH}audio_home/" \

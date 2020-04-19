@@ -290,7 +290,17 @@ alias git_status_eagle_dmx_driver="_repo_git_st \
   \"${REPO_EAGLE_DMX_DRIVER[0]}\""
 
 #***************************[projects/hardware]
-# 2018 02 25
+# 2020 04 19
+
+# trailer (peter)
+alias git_clone_hardware_trailer="_repo_git_clone \
+  ${REPO_HARDWARE_TRAILER[*]}"
+alias git_pull_hardware_trailer="_repo_git_pull \
+  \"${REPO_HARDWARE_TRAILER[0]}\""
+alias git_push_hardware_trailer="_repo_git_push \
+  \"${REPO_HARDWARE_TRAILER[0]}\""
+alias git_status_hardware_trailer="_repo_git_st \
+  \"${REPO_HARDWARE_TRAILER[0]}\""
 
 # audio system (peter)
 alias git_clone_hardware_audio_home="_repo_git_clone \
@@ -482,7 +492,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2019 12 23
+# 2020 04 19
 
 function repo_pull_all() {
 
@@ -546,6 +556,7 @@ function repo_pull_all() {
 
     git_pull_eagle_dmx_driver
 
+    git_pull_hardware_trailer
     git_pull_hardware_audio_home
     git_pull_hardware_dmx_opa
     git_pull_hardware_dimmer
@@ -568,7 +579,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2019 12 23
+# 2020 04 19
 
 function repo_status_all() {
 
@@ -632,6 +643,7 @@ function repo_status_all() {
 
     git_status_eagle_dmx_driver
 
+    git_status_hardware_trailer
     git_status_hardware_audio_home
     git_status_hardware_dmx_opa
     git_status_hardware_dimmer
@@ -657,7 +669,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2019 12 23
+# 2020 04 19
 
 function repo_clone_bash() {
 
@@ -764,6 +776,7 @@ function repo_clone_all() {
 
     git_clone_eagle_dmx_driver
 
+    git_clone_hardware_trailer
     git_clone_hardware_audio_home
     git_clone_hardware_dmx_opa
     git_clone_hardware_dimmer

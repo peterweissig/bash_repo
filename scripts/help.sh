@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2019 12 23
+# 2020 04 19
 
 function repo_help_overview() {
 
@@ -85,6 +85,7 @@ function repo_help_overview() {
     echo "          dmx_driver/     [git]/peterweissig/eagle_dmx_driver.git"
     echo ""
     echo "      hardware/"
+    echo "          trailer/        [git]/peterweissig/project_anhaenger.git"
     echo "          audio_home/     [git]/peterweissig/project_audio_home.git"
     echo "          dmx_opa/        [git]/peterweissig/project_opa.git"
     echo "          dimmer/         [git]/peterweissig/project_dimmer.git"
