@@ -38,7 +38,6 @@ export REPO_DOC_SERVER_IMSCP=("${REPO_DOC_SERVER_ONLINE[@]}")
 #***************************[removed repo odometry]***************************
 # 2020 06 19
 
-echo "$REPO_ROS_PROAUT_ODOMETRY"
 if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
   [ -d "$REPO_ROS_PROAUT_ODOMETRY" ]; then
 
