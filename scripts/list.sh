@@ -331,7 +331,7 @@ if [ "$REPO_ROS_PATH" == "" ]; then
 fi
 
 #***************************[ros-tools-pa]
-# 2018 06 19
+# 2020 06 19
 
 # paths
 if [ "$REPO_ROS_TOOLS_PATH" == "" ]; then
@@ -359,7 +359,7 @@ export REPO_ROS_PROAUT_NEARFIELDMAP=( \
   "${REPO_ROS_TOOLS_SRC_PATH}nearfield_map_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_nearfield_map.git")
 
-# odometry (TUC-ProAut)
+# odometry (TUC-ProAut) -- deprecated
 export REPO_ROS_PROAUT_ODOMETRY=( \
   "${REPO_ROS_TOOLS_SRC_PATH}odometry_pa/" \
   "${REPO_ROOT_GITHUB_PROAUT}ros_odometry.git")

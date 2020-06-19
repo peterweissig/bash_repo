@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2020 04 19
+# 2020 06 19
 
 function repo_help_overview() {
 
@@ -105,7 +105,6 @@ function repo_help_overview() {
     echo "        pcdfilter_pa/     [git]/TUC-ProAut/ros_pcdfilter.git"
     echo "        octomap_pa/       [git]/TUC-ProAut/ros_octomap.git"
     echo "        nearfield_map_pa/ [git]/TUC-ProAut/ros_nearfield_map.git"
-    echo "        odometry_pa/      [git]/TUC-ProAut/ros_odometry.git"
     echo ""
     echo "    ros-sensors-pa/"
     echo "      src/"

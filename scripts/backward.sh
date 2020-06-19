@@ -34,3 +34,18 @@ if [ "$REPO_DOC_SERVER_PATH" != "" ] && [ -d "$temp_imscp_server_old" ]; then
 fi
 
 export REPO_DOC_SERVER_IMSCP=("${REPO_DOC_SERVER_ONLINE[@]}")
+
+#***************************[removed repo odometry]***************************
+# 2020 06 19
+
+echo "$REPO_ROS_PROAUT_ODOMETRY"
+if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
+  [ -d "$REPO_ROS_PROAUT_ODOMETRY" ]; then
+
+    echo "warning: Repo odometry_pa was removed on 18.06.2020!"
+    echo "  It was always empty and will never be used."
+    echo "  You should manually remove the files:"
+    echo "    \$ git_status_ros_odometry"
+    echo "    \$ rm -rf \"${REPO_ROS_PROAUT_ODOMETRY}\""
+    echo ""
+fi

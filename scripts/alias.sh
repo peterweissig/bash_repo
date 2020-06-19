@@ -421,7 +421,7 @@ alias git_status_doc_punkte="_repo_git_st \"${REPO_DOC_PUNKTE[0]}\""
 #***************************[ros]*********************************************
 
 #***************************[ros-tools-pa]
-# 2018 06 19
+# 2020 06 19
 
 # parameter (TUC-ProAut)
 alias git_clone_ros_parameter="_repo_git_clone \
@@ -463,13 +463,7 @@ alias git_push_ros_nearfieldmap="_repo_git_push \
 alias git_status_ros_nearfieldmap="_repo_git_st \
   \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
 
-# odometry (TUC-ProAut)
-alias git_clone_ros_odometry="_repo_git_clone \
-  ${REPO_ROS_PROAUT_ODOMETRY[*]}"
-alias git_pull_ros_odometry="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
-alias git_push_ros_odometry="_repo_git_push \
-  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
+# odometry (TUC-ProAut) -- deprecated
 alias git_status_ros_odometry="_repo_git_st \
   \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
 
@@ -492,7 +486,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2020 04 19
+# 2020 06 19
 
 function repo_pull_all() {
 
@@ -574,7 +568,6 @@ function repo_pull_all() {
     git_pull_ros_pcdfilter
     git_pull_ros_octomap
     git_pull_ros_nearfieldmap
-    git_pull_ros_odometry
     git_pull_ros_radar
 }
 
@@ -669,7 +662,7 @@ function repo_status_all() {
 }
 
 #***************************[clone]
-# 2020 04 19
+# 2020 06 19
 
 function repo_clone_bash() {
 
@@ -799,6 +792,5 @@ function repo_clone_all() {
     git_clone_ros_pcdfilter
     git_clone_ros_octomap
     git_clone_ros_nearfieldmap
-    git_clone_ros_odometry
     git_clone_ros_radar
 }
