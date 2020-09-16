@@ -72,112 +72,124 @@ alias git_status_bash_roboag="_repo_git_st \
 
 
 
-#***************************[robo]*******************************************
-# 2018 02 08
+#***************************[roboag]******************************************
+# 2020 09 16
 
 # robolib (roboag)
-alias git_clone_robo_lib="_repo_git_clone ${REPO_ROBO_LIB[*]}"
-alias git_pull_robo_lib="_repo_git_pull \"${REPO_ROBO_LIB[0]}\""
-alias git_push_robo_lib="_repo_git_push \"${REPO_ROBO_LIB[0]}\""
-alias git_status_robo_lib="_repo_git_st \"${REPO_ROBO_LIB[0]}\""
+alias git_clone_roboag_lib="_repo_git_clone ${REPO_ROBOAG_LIB[*]}"
+alias git_pull_roboag_lib="_repo_git_pull \"${REPO_ROBOAG_LIB[0]}\""
+alias git_push_roboag_lib="_repo_git_push \"${REPO_ROBOAG_LIB[0]}\""
+alias git_status_roboag_lib="_repo_git_st \"${REPO_ROBOAG_LIB[0]}\""
 
 # pololu (extern)
-alias git_clone_robo_pololu="_repo_git_clone ${REPO_ROBO_POLOLU[*]}"
-alias git_pull_robo_pololu="_repo_git_pull \"${REPO_ROBO_POLOLU[0]}\""
-alias git_status_robo_pololu="_repo_git_st \"${REPO_ROBO_POLOLU[0]}\""
+alias git_clone_roboag_pololu="_repo_git_clone ${REPO_ROBOAG_POLOLU[*]}"
+alias git_pull_roboag_pololu="_repo_git_pull \"${REPO_ROBOAG_POLOLU[0]}\""
+alias git_status_roboag_pololu="_repo_git_st \"${REPO_ROBOAG_POLOLU[0]}\""
 
-#***************************[robo/eagle]
-# 2018 02 08
+#***************************[roboag/eagle]
+# 2020 09 16
 
 # config (roboag)
-alias git_clone_robo_eagle_config="_repo_git_clone \
-  ${REPO_ROBO_EAGLE_CONFIG[*]}"
-alias git_pull_robo_eagle_config="_repo_git_pull \
-  \"${REPO_ROBO_EAGLE_CONFIG[0]}\""
-alias git_push_robo_eagle_config="_repo_git_push \
-  \"${REPO_ROBO_EAGLE_CONFIG[0]}\""
-alias git_status_robo_eagle_config="_repo_git_st \
-  \"${REPO_ROBO_EAGLE_CONFIG[0]}\""
+alias git_clone_roboag_eagle_config="_repo_git_clone \
+  ${REPO_ROBOAG_EAGLE_CONFIG[*]}"
+alias git_pull_roboag_eagle_config="_repo_git_pull \
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
+alias git_push_roboag_eagle_config="_repo_git_push \
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
+alias git_status_roboag_eagle_config="_repo_git_st \
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
 
 # keplerboard (roboag)
-alias git_clone_robo_eagle_keplerboard="_repo_git_clone \
-  ${REPO_ROBO_EAGLE_KEPLERBOARD[*]}"
-alias git_pull_robo_eagle_keplerboard="_repo_git_pull \
-  \"${REPO_ROBO_EAGLE_KEPLERBOARD[0]}\""
-alias git_push_robo_eagle_keplerboard="_repo_git_push \
-  \"${REPO_ROBO_EAGLE_KEPLERBOARD[0]}\""
-alias git_status_robo_eagle_keplerboard="_repo_git_st \
-  \"${REPO_ROBO_EAGLE_KEPLERBOARD[0]}\""
+alias git_clone_roboag_eagle_keplerboard="_repo_git_clone \
+  ${REPO_ROBOAG_EAGLE_KEPLERBOARD[*]}"
+alias git_pull_roboag_eagle_keplerboard="_repo_git_pull \
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
+alias git_push_roboag_eagle_keplerboard="_repo_git_push \
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
+alias git_status_roboag_eagle_keplerboard="_repo_git_st \
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
 
 # xbee (roboag)
-alias git_clone_robo_eagle_xbee="_repo_git_clone \
-  ${REPO_ROBO_EAGLE_XBEE[*]}"
-alias git_pull_robo_eagle_xbee="_repo_git_pull \
-  \"${REPO_ROBO_EAGLE_XBEE[0]}\""
-alias git_push_robo_eagle_xbee="_repo_git_push \
-  \"${REPO_ROBO_EAGLE_XBEE[0]}\""
-alias git_status_robo_eagle_xbee="_repo_git_st \
-  \"${REPO_ROBO_EAGLE_XBEE[0]}\""
+alias git_clone_roboag_eagle_xbee="_repo_git_clone \
+  ${REPO_ROBOAG_EAGLE_XBEE[*]}"
+alias git_pull_roboag_eagle_xbee="_repo_git_pull \
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
+alias git_push_roboag_eagle_xbee="_repo_git_push \
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
+alias git_status_roboag_eagle_xbee="_repo_git_st \
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
 
 # logic (roboag)
-alias git_clone_robo_eagle_logic="_repo_git_clone \
-  ${REPO_ROBO_EAGLE_LOGIC[*]}"
-alias git_pull_robo_eagle_logic="_repo_git_pull \
-  \"${REPO_ROBO_EAGLE_LOGIC[0]}\""
-alias git_push_robo_eagle_logic="_repo_git_push \
-  \"${REPO_ROBO_EAGLE_LOGIC[0]}\""
-alias git_status_robo_eagle_logic="_repo_git_st \
-  \"${REPO_ROBO_EAGLE_LOGIC[0]}\""
+alias git_clone_roboag_eagle_logic="_repo_git_clone \
+  ${REPO_ROBOAG_EAGLE_LOGIC[*]}"
+alias git_pull_roboag_eagle_logic="_repo_git_pull \
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
+alias git_push_roboag_eagle_logic="_repo_git_push \
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
+alias git_status_roboag_eagle_logic="_repo_git_st \
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
 
 # voltage monitor (roboag)
-alias git_clone_robo_eagle_vtgMon="_repo_git_clone \
-  ${REPO_ROBO_EAGLE_VTGMON[*]}"
-alias git_pull_robo_eagle_vtgMon="_repo_git_pull \
-  \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
-alias git_push_robo_eagle_vtgMon="_repo_git_push \
-  \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
-alias git_status_robo_eagle_vtgMon="_repo_git_st \
-  \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
+alias git_clone_roboag_eagle_vtgMon="_repo_git_clone \
+  ${REPO_ROBOAG_EAGLE_VTGMON[*]}"
+alias git_pull_roboag_eagle_vtgMon="_repo_git_pull \
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
+alias git_push_roboag_eagle_vtgMon="_repo_git_push \
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
+alias git_status_roboag_eagle_vtgMon="_repo_git_st \
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
 
-#***************************[robo/roboag]
-# 2018 11 01
+#***************************[roboag/projects]
+# 2020 09 16
 
 # display (roboag)
-alias git_clone_roboag_display="_repo_git_clone ${REPO_ROBOAG_DISPLAY[*]}"
-alias git_pull_roboag_display="_repo_git_pull \"${REPO_ROBOAG_DISPLAY[0]}\""
-alias git_push_roboag_display="_repo_git_push \"${REPO_ROBOAG_DISPLAY[0]}\""
-alias git_status_roboag_display="_repo_git_st \"${REPO_ROBOAG_DISPLAY[0]}\""
+alias git_clone_roboag_projects_display="_repo_git_clone \
+  ${REPO_ROBOAG_PROJECTS_DISPLAY[*]}"
+alias git_pull_roboag_projects_display="_repo_git_pull \
+  \"${REPO_ROBOAG_PROJECTS_DISPLAY[0]}\""
+alias git_push_roboag_projects_display="_repo_git_push \
+  \"${REPO_ROBOAG_PROJECTS_DISPLAY[0]}\""
+alias git_status_roboag_projects_display="_repo_git_st \
+  \"${REPO_ROBOAG_PROJECTS_DISPLAY[0]}\""
 
 # gluecksrad (roboag)
-alias git_clone_roboag_gluecksrad="_repo_git_clone \
-  ${REPO_ROBOAG_GLUECKSRAD[*]}"
-alias git_pull_roboag_gluecksrad="_repo_git_pull \
-  \"${REPO_ROBOAG_GLUECKSRAD[0]}\""
-alias git_push_roboag_gluecksrad="_repo_git_push \
-  \"${REPO_ROBOAG_GLUECKSRAD[0]}\""
-alias git_status_roboag_gluecksrad="_repo_git_st \
-  \"${REPO_ROBOAG_GLUECKSRAD[0]}\""
+alias git_clone_roboag_projects_gluecksrad="_repo_git_clone \
+  ${REPO_ROBOAG_PROJECTS_GLUECKSRAD[*]}"
+alias git_pull_roboag_projects_gluecksrad="_repo_git_pull \
+  \"${REPO_ROBOAG_PROJECTS_GLUECKSRAD[0]}\""
+alias git_push_roboag_projects_gluecksrad="_repo_git_push \
+  \"${REPO_ROBOAG_PROJECTS_GLUECKSRAD[0]}\""
+alias git_status_roboag_projects_gluecksrad="_repo_git_st \
+  \"${REPO_ROBOAG_PROJECTS_GLUECKSRAD[0]}\""
 
 # 3pi modification (roboag)
-alias git_clone_roboag_3pi="_repo_git_clone ${REPO_ROBOAG_3PI[*]}"
-alias git_pull_roboag_3pi="_repo_git_pull \"${REPO_ROBOAG_3PI[0]}\""
-alias git_push_roboag_3pi="_repo_git_push \"${REPO_ROBOAG_3PI[0]}\""
-alias git_status_roboag_3pi="_repo_git_st \"${REPO_ROBOAG_3PI[0]}\""
+alias git_clone_roboag_projects_3pi="_repo_git_clone \
+  ${REPO_ROBOAG_PROJECTS_3PI[*]}"
+alias git_pull_roboag_projects_3pi="_repo_git_pull \
+  \"${REPO_ROBOAG_PROJECTS_3PI[0]}\""
+alias git_push_roboag_projects_3pi="_repo_git_push \
+  \"${REPO_ROBOAG_PROJECTS_3PI[0]}\""
+alias git_status_roboag_projects_3pi="_repo_git_st \
+  \"${REPO_ROBOAG_PROJECTS_3PI[0]}\""
 
 # robots (roboag)
-alias git_clone_roboag_roboter="_repo_git_clone ${REPO_ROBOAG_ROBOTER[*]}"
-alias git_pull_roboag_roboter="_repo_git_pull \"${REPO_ROBOAG_ROBOTER[0]}\""
-alias git_push_roboag_roboter="_repo_git_push \"${REPO_ROBOAG_ROBOTER[0]}\""
-alias git_status_roboag_roboter="_repo_git_st \"${REPO_ROBOAG_ROBOTER[0]}\""
+alias git_clone_roboag_projects_roboter="_repo_git_clone \
+  ${REPO_ROBOAG_PROJECTS_ROBOTER[*]}"
+alias git_pull_roboag_projects_roboter="_repo_git_pull \
+  \"${REPO_ROBOAG_PROJECTS_ROBOTER[0]}\""
+alias git_push_roboag_projects_roboter="_repo_git_push \
+  \"${REPO_ROBOAG_PROJECTS_ROBOTER[0]}\""
+alias git_status_roboag_projects_roboter="_repo_git_st \
+  \"${REPO_ROBOAG_PROJECTS_ROBOTER[0]}\""
 
-# php filebrowser (roboag)
-alias git_clone_roboag_filebrowser_php="_repo_git_clone \
+# filebrowser (roboag)
+alias git_clone_roboag_projects_filebrowser_php="_repo_git_clone \
   ${REPO_ROBOAG_FILEBROWSER_PHP[*]}"
-alias git_pull_roboag_filebrowser_php="_repo_git_pull \
+alias git_pull_roboag_projects_filebrowser_php="_repo_git_pull \
   \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
-alias git_push_roboag_filebrowser_php="_repo_git_push \
+alias git_push_roboag_projects_filebrowser_php="_repo_git_push \
   \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
-alias git_status_roboag_filebrowser_php="_repo_git_st \
+alias git_status_roboag_projects_filebrowser_php="_repo_git_st \
   \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
 
 
@@ -544,20 +556,21 @@ function repo_pull_all() {
     git_pull_bash_roboag
 
 
-    git_pull_robo_lib
-    git_pull_robo_pololu
+    git_pull_roboag_lib
+    git_pull_roboag_pololu
 
-    git_pull_robo_eagle_config
-    git_pull_robo_eagle_keplerboard
-    git_pull_robo_eagle_xbee
-    git_pull_robo_eagle_logic
-    git_pull_robo_eagle_vtgMon
+    git_pull_roboag_eagle_config
+    git_pull_roboag_eagle_keplerboard
+    git_pull_roboag_eagle_xbee
+    git_pull_roboag_eagle_logic
+    git_pull_roboag_eagle_vtgMon
 
-    git_pull_roboag_display
-    git_pull_roboag_gluecksrad
-    git_pull_roboag_3pi
-    git_pull_roboag_roboter
-    git_pull_roboag_filebrowser_php
+    git_pull_roboag_projects_display
+    git_pull_roboag_projects_gluecksrad
+    git_pull_roboag_projects_3pi
+    git_pull_roboag_projects_roboter
+    git_pull_roboag_projects_filebrowser_php
+
 
     git_pull_robosax_eagle_spielfeld
     git_pull_robosax_eagle_anzeige
@@ -630,20 +643,21 @@ function repo_status_all() {
     git_status_bash_roboag
 
 
-    git_status_robo_lib
-    git_status_robo_pololu
+    git_status_roboag_lib
+    git_status_roboag_pololu
 
-    git_status_robo_eagle_config
-    git_status_robo_eagle_keplerboard
-    git_status_robo_eagle_xbee
-    git_status_robo_eagle_logic
-    git_status_robo_eagle_vtgMon
+    git_status_roboag_eagle_config
+    git_status_roboag_eagle_keplerboard
+    git_status_roboag_eagle_xbee
+    git_status_roboag_eagle_logic
+    git_status_roboag_eagle_vtgMon
 
-    git_status_roboag_display
-    git_status_roboag_gluecksrad
-    git_status_roboag_3pi
-    git_status_roboag_roboter
-    git_status_roboag_filebrowser_php
+    git_status_roboag_projects_display
+    git_status_roboag_projects_gluecksrad
+    git_status_roboag_projects_3pi
+    git_status_roboag_projects_roboter
+    git_status_roboag_projects_filebrowser_php
+
 
     git_status_robosax_eagle_spielfeld
     git_status_robosax_eagle_licht
@@ -743,21 +757,21 @@ function repo_clone_roboag() {
     # clone all
     git_clone_bash_roboag
 
-    git_clone_robo_lib
+    git_clone_roboag_lib
     git_clone_doc_robolib
-    git_clone_robo_pololu
+    git_clone_roboag_pololu
 
-    git_clone_robo_eagle_config
-    git_clone_robo_eagle_keplerboard
-    git_clone_robo_eagle_xbee
-    git_clone_robo_eagle_logic
-    git_clone_robo_eagle_vtgMon
+    git_clone_roboag_eagle_config
+    git_clone_roboag_eagle_keplerboard
+    git_clone_roboag_eagle_xbee
+    git_clone_roboag_eagle_logic
+    git_clone_roboag_eagle_vtgMon
 
-    git_clone_roboag_display
-    git_clone_roboag_gluecksrad
-    git_clone_roboag_3pi
-    git_clone_roboag_roboter
-    git_clone_roboag_filebrowser_php
+    git_clone_roboag_projects_display
+    git_clone_roboag_projects_gluecksrad
+    git_clone_roboag_projects_3pi
+    git_clone_roboag_projects_roboter
+    git_clone_roboag_projects_filebrowser_php
 }
 
 function repo_clone_robosax() {

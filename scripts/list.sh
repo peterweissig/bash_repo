@@ -70,78 +70,80 @@ export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
 
 
 
-#***************************[robo]********************************************
-# 2018 03 01
-
-# path
-if [ "$REPO_ROBO_PATH" == "" ]; then
-    export REPO_ROBO_PATH="${REPO_PATH_WORKSPACE}robo/"
-fi
-
-# robolib (roboag)
-export REPO_ROBO_LIB=("${REPO_ROBO_PATH}library/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}avr_robolib.git")
-
-# pololu (extern)
-export REPO_ROBO_POLOLU=("${REPO_ROBO_PATH}pololu/" \
-  "https://github.com/pololu/libpololu-avr.git")
-
-#***************************[robo/eagle]
-# 2018 03 01
-
-# path
-if [ "$REPO_ROBO_EAGLE_PATH" == "" ]; then
-    export REPO_ROBO_EAGLE_PATH="${REPO_ROBO_PATH}eagle/"
-fi
-
-# config (roboag)
-export REPO_ROBO_EAGLE_CONFIG=("${REPO_ROBO_EAGLE_PATH}config/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_config.git")
-
-# keplerboard (roboag)
-export REPO_ROBO_EAGLE_KEPLERBOARD=("${REPO_ROBO_EAGLE_PATH}keplerboard/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_keplerboard.git")
-
-# xbee (roboag)
-export REPO_ROBO_EAGLE_XBEE=("${REPO_ROBO_EAGLE_PATH}xbee/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_xbee.git")
-
-# logic (roboag)
-export REPO_ROBO_EAGLE_LOGIC=("${REPO_ROBO_EAGLE_PATH}logic/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_logic.git")
-
-# voltage monitor (roboag)
-export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
-
-#***************************[robo/roboag]
-# 2018 11 01
+#***************************[roboag]******************************************
+# 2020 09 16
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
-    export REPO_ROBOAG_PATH="${REPO_ROBO_PATH}roboag/"
+    export REPO_ROBOAG_PATH="${REPO_PATH_WORKSPACE}roboag/"
+fi
+
+# robolib (roboag)
+export REPO_ROBOAG_LIB=("${REPO_ROBOAG_PATH}library/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}avr_robolib.git")
+
+# pololu (extern)
+export REPO_ROBOAG_POLOLU=("${REPO_ROBOAG_PATH}pololu/" \
+  "https://github.com/pololu/libpololu-avr.git")
+
+#***************************[roboag/eagle]
+# 2020 09 16
+
+# path
+if [ "$REPO_ROBOAG_EAGLE_PATH" == "" ]; then
+    export REPO_ROBOAG_EAGLE_PATH="${REPO_ROBOAG_PATH}eagle/"
+fi
+
+# config (roboag)
+export REPO_ROBOAG_EAGLE_CONFIG=("${REPO_ROBOAG_EAGLE_PATH}config/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_config.git")
+
+# keplerboard (roboag)
+export REPO_ROBOAG_EAGLE_KEPLERBOARD=("${REPO_ROBOAG_EAGLE_PATH}keplerboard/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_keplerboard.git")
+
+# xbee (roboag)
+export REPO_ROBOAG_EAGLE_XBEE=("${REPO_ROBOAG_EAGLE_PATH}xbee/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_xbee.git")
+
+# logic (roboag)
+export REPO_ROBOAG_EAGLE_LOGIC=("${REPO_ROBOAG_EAGLE_PATH}logic/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_logic.git")
+
+# voltage monitor (roboag)
+export REPO_ROBOAG_EAGLE_VTGMON=("${REPO_ROBOAG_EAGLE_PATH}vtgMon/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
+
+#***************************[roboag/projects]
+# 2020 09 16
+
+# path
+if [ "$REPO_ROBOAG_PROJECTS_PATH" == "" ]; then
+    export REPO_ROBOAG_PROJECTS_PATH="${REPO_ROBOAG_PATH}roboag/"
 fi
 if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
-    export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PATH}"
+    export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PROJECTS_PATH}"
 fi
 
 # display (roboag)
-export REPO_ROBOAG_DISPLAY=("${REPO_ROBOAG_PATH}rotierendes_display/" \
+export REPO_ROBOAG_PROJECTS_DISPLAY=( \
+  "${REPO_ROBOAG_PROJECTS_PATH}rotierendes_display/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_display.git")
 
 # gluecksrad (roboag)
-export REPO_ROBOAG_GLUECKSRAD=("${REPO_ROBOAG_PATH}gluecksrad/" \
+export REPO_ROBOAG_PROJECTS_GLUECKSRAD=( \
+  "${REPO_ROBOAG_PROJECTS_PATH}gluecksrad/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_gluecksrad.git")
 
 # 3pi modification (roboag)
-export REPO_ROBOAG_3PI=("${REPO_ROBOAG_PATH}3pi/" \
+export REPO_ROBOAG_PROJECTS_3PI=("${REPO_ROBOAG_PROJECTS_PATH}3pi/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_3pi.git")
 
 # roboter (roboag)
-export REPO_ROBOAG_ROBOTER=("${REPO_ROBOAG_PATH}roboter/" \
+export REPO_ROBOAG_PROJECTS_ROBOTER=("${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_roboter.git")
 
-# php filebrowser (roboag)
+# filebrowser (roboag)
 export REPO_ROBOAG_FILEBROWSER_PHP=( \
   "${REPO_ROBOAG_PHP_PATH}filebrowser_php/" \
   "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")

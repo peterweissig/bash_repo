@@ -49,10 +49,14 @@ if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
     echo ""
 fi
 
-#***************************[changed structure of robosax]********************
+#***************************[changed structure of robo]***********************
 # 2020 09 16
 
-temp_path="${REPO_ROBOAG_PATH}robosax/"
+# check for robosax
+temp_path="${REPO_PATH_WORKSPACE}robo/robosax/"
+if [ ! -d "$temp_path" ]; then
+    temp_path="${REPO_ROBOAG_PATH}robosax/"
+fi
 if [ -d "$temp_path" ]; then
     echo "warning: Folder structure of robosax changed on 16.09.2020!"
     echo "  Please check the following folders for changes and remove them."
@@ -66,4 +70,14 @@ if [ -d "$temp_path" ]; then
     echo "      $ git_clone_robosax_..."
     echo "    or simply"
     echo "      $ repo_clone_robosax"
+fi
+
+# check for roboag
+temp_path="${REPO_PATH_WORKSPACE}robo/"
+if [ -d "$temp_path" ]; then
+    echo "warning: Folder of roboag was renamed on 16.09.2020!"
+    echo "  (robo/ --> roboag/)"
+    echo ""
+    echo "  Please rename the folder:"
+    echo "      $ mv \"$temp_path\" \"$REPO_ROBOAG_PATH\""
 fi
