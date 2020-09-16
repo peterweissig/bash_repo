@@ -182,15 +182,18 @@ alias git_push_roboag_projects_roboter="_repo_git_push \
 alias git_status_roboag_projects_roboter="_repo_git_st \
   \"${REPO_ROBOAG_PROJECTS_ROBOTER[0]}\""
 
+#***************************[roboag/php]
+# 2020 09 16
+
 # filebrowser (roboag)
-alias git_clone_roboag_projects_filebrowser_php="_repo_git_clone \
-  ${REPO_ROBOAG_FILEBROWSER_PHP[*]}"
-alias git_pull_roboag_projects_filebrowser_php="_repo_git_pull \
-  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
-alias git_push_roboag_projects_filebrowser_php="_repo_git_push \
-  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
-alias git_status_roboag_projects_filebrowser_php="_repo_git_st \
-  \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
+alias git_clone_roboag_php_filebrowser="_repo_git_clone \
+  ${REPO_ROBOAG_PHP_FILEBROWSER[*]}"
+alias git_pull_roboag_php_filebrowser="_repo_git_pull \
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
+alias git_push_roboag_php_filebrowser="_repo_git_push \
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
+alias git_status_roboag_php_filebrowser="_repo_git_st \
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
 
 
 
@@ -521,7 +524,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2020 06 19
+# 2020 09 16
 
 function repo_pull_all() {
 
@@ -569,7 +572,8 @@ function repo_pull_all() {
     git_pull_roboag_projects_gluecksrad
     git_pull_roboag_projects_3pi
     git_pull_roboag_projects_roboter
-    git_pull_roboag_projects_filebrowser_php
+
+    git_pull_roboag_php_filebrowser
 
 
     git_pull_robosax_eagle_spielfeld
@@ -608,7 +612,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2020 04 19
+# 2020 09 16
 
 function repo_status_all() {
 
@@ -656,7 +660,7 @@ function repo_status_all() {
     git_status_roboag_projects_gluecksrad
     git_status_roboag_projects_3pi
     git_status_roboag_projects_roboter
-    git_status_roboag_projects_filebrowser_php
+    git_status_roboag_php_filebrowser
 
 
     git_status_robosax_eagle_spielfeld
@@ -771,7 +775,8 @@ function repo_clone_roboag() {
     git_clone_roboag_projects_gluecksrad
     git_clone_roboag_projects_3pi
     git_clone_roboag_projects_roboter
-    git_clone_roboag_projects_filebrowser_php
+
+    git_clone_roboag_php_filebrowser
 }
 
 function repo_clone_robosax() {

@@ -78,6 +78,16 @@ if [ "$REPO_ROBOAG_PATH" == "" ]; then
     export REPO_ROBOAG_PATH="${REPO_PATH_WORKSPACE}roboag/"
 fi
 
+if [ "$REPO_ROBOAG_EAGLE_PATH" == "" ]; then
+    export REPO_ROBOAG_EAGLE_PATH="${REPO_ROBOAG_PATH}eagle/"
+fi
+if [ "$REPO_ROBOAG_PROJECTS_PATH" == "" ]; then
+    export REPO_ROBOAG_PROJECTS_PATH="${REPO_ROBOAG_PATH}projects/"
+fi
+if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
+    export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PATH}php/"
+fi
+
 # robolib (roboag)
 export REPO_ROBOAG_LIB=("${REPO_ROBOAG_PATH}library/" \
   "${REPO_ROOT_GITHUB_ROBOAG}avr_robolib.git")
@@ -88,11 +98,6 @@ export REPO_ROBOAG_POLOLU=("${REPO_ROBOAG_PATH}pololu/" \
 
 #***************************[roboag/eagle]
 # 2020 09 16
-
-# path
-if [ "$REPO_ROBOAG_EAGLE_PATH" == "" ]; then
-    export REPO_ROBOAG_EAGLE_PATH="${REPO_ROBOAG_PATH}eagle/"
-fi
 
 # config (roboag)
 export REPO_ROBOAG_EAGLE_CONFIG=("${REPO_ROBOAG_EAGLE_PATH}config/" \
@@ -117,14 +122,6 @@ export REPO_ROBOAG_EAGLE_VTGMON=("${REPO_ROBOAG_EAGLE_PATH}vtgMon/" \
 #***************************[roboag/projects]
 # 2020 09 16
 
-# path
-if [ "$REPO_ROBOAG_PROJECTS_PATH" == "" ]; then
-    export REPO_ROBOAG_PROJECTS_PATH="${REPO_ROBOAG_PATH}roboag/"
-fi
-if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
-    export REPO_ROBOAG_PHP_PATH="${REPO_ROBOAG_PROJECTS_PATH}"
-fi
-
 # display (roboag)
 export REPO_ROBOAG_PROJECTS_DISPLAY=( \
   "${REPO_ROBOAG_PROJECTS_PATH}rotierendes_display/" \
@@ -143,9 +140,12 @@ export REPO_ROBOAG_PROJECTS_3PI=("${REPO_ROBOAG_PROJECTS_PATH}3pi/" \
 export REPO_ROBOAG_PROJECTS_ROBOTER=("${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_roboter.git")
 
+#***************************[roboag/php]
+# 2020 09 16
+
 # filebrowser (roboag)
-export REPO_ROBOAG_FILEBROWSER_PHP=( \
-  "${REPO_ROBOAG_PHP_PATH}filebrowser_php/" \
+export REPO_ROBOAG_PHP_FILEBROWSER=( \
+  "${REPO_ROBOAG_PHP_PATH}filebrowser/" \
   "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")
 
 

@@ -72,7 +72,35 @@ if [ -d "$temp_path" ]; then
     echo "      $ repo_clone_robosax"
 fi
 
-# check for roboag
+# check for roboag (internal - 1)
+temp_path="${REPO_PATH_WORKSPACE}robo/roboag/filebrowser_php"
+if [ ! -d "$temp_path" ]; then
+    temp_path="${REPO_ROBOAG_PATH}roboag/filebrowser_php"
+fi
+if [ ! -d "$temp_path" ]; then
+    temp_path="${REPO_ROBOAG_PROJECTS_PATH}filebrowser_php"
+fi
+if [ -d "$temp_path" ]; then
+    temp="$(dirname "$(dirname "${temp_path}")")/php/"
+    echo "warning: Repo filebrowser moved to its own subfolder on 16.09.2020!"
+    echo "    $ mkdir \"$temp\""
+    echo "    $ mv \"$temp_path\" \"${temp}filebrowser\""
+fi
+
+# check for roboag (internal - 2)
+temp_path="${REPO_PATH_WORKSPACE}robo/roboag/"
+if [ ! -d "$temp_path" ]; then
+    temp_path="${REPO_ROBOAG_PATH}roboag/"
+fi
+if [ -d "$temp_path" ]; then
+    temp="$(dirname "${temp_path}")/projects/"
+    echo "warning: Folder structure of roboag changed on 16.09.2020!"
+    echo "  (.../robo/ --> .../projects/)"
+    echo "  Please rename the following subfolder:"
+    echo "      $ mv \"$temp_path\" \"$temp\""
+fi
+
+# check for roboag (name)
 temp_path="${REPO_PATH_WORKSPACE}robo/"
 if [ -d "$temp_path" ]; then
     echo "warning: Folder of roboag was renamed on 16.09.2020!"
