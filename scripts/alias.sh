@@ -139,98 +139,6 @@ alias git_push_robo_eagle_vtgMon="_repo_git_push \
 alias git_status_robo_eagle_vtgMon="_repo_git_st \
   \"${REPO_ROBO_EAGLE_VTGMON[0]}\""
 
-#***************************[robo/robosax]
-# 2019 06 22
-
-# spielfeld drawings (robosax)
-alias git_clone_robosax_spielfeld="_repo_git_clone \
-  ${REPO_ROBOSAX_SPIELFELD[*]}"
-alias git_pull_robosax_spielfeld="_repo_git_pull \
-  \"${REPO_ROBOSAX_SPIELFELD[0]}\""
-alias git_push_robosax_spielfeld="_repo_git_push \
-  \"${REPO_ROBOSAX_SPIELFELD[0]}\""
-alias git_status_robosax_spielfeld="_repo_git_st \
-  \"${REPO_ROBOSAX_SPIELFELD[0]}\""
-
-# led-box (fabian) - original repo is from fabian geissler
-alias git_clone_robosax_ledbox="_repo_git_clone ${REPO_ROBOSAX_LEDBOX[*]}"
-alias git_pull_robosax_ledbox="_repo_git_pull \"${REPO_ROBOSAX_LEDBOX[0]}\""
-alias git_push_robosax_ledbox="_repo_git_push \"${REPO_ROBOSAX_LEDBOX[0]}\""
-alias git_status_robosax_ledbox="_repo_git_st \"${REPO_ROBOSAX_LEDBOX[0]}\""
-
-# licht-tht circuit (robosax)
-alias git_clone_robosax_licht_tht="_repo_git_clone \
-  ${REPO_ROBOSAX_LICHT_THT[*]}"
-alias git_pull_robosax_licht_tht="_repo_git_pull \
-  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
-alias git_push_robosax_licht_tht="_repo_git_push \
-  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
-alias git_status_robosax_licht_tht="_repo_git_st \
-  \"${REPO_ROBOSAX_LICHT_THT[0]}\""
-
-# spielfeld-tht circuit (robosax)
-alias git_clone_robosax_spielfeld_tht="_repo_git_clone \
-  ${REPO_ROBOSAX_SPIELFELD_THT[*]}"
-alias git_pull_robosax_spielfeld_tht="_repo_git_pull \
-  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
-alias git_push_robosax_spielfeld_tht="_repo_git_push \
-  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
-alias git_status_robosax_spielfeld_tht="_repo_git_st \
-  \"${REPO_ROBOSAX_SPIELFELD_THT[0]}\""
-
-# spielfeld-tht software (robosax)
-alias git_clone_robosax_spielfeld_avr="_repo_git_clone \
-  ${REPO_ROBOSAX_SPIELFELD_AVR[*]}"
-alias git_pull_robosax_spielfeld_avr="_repo_git_pull \
-  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
-alias git_push_robosax_spielfeld_avr="_repo_git_push \
-  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
-alias git_status_robosax_spielfeld_avr="_repo_git_st \
-  \"${REPO_ROBOSAX_SPIELFELD_AVR[0]}\""
-
-# anzeige-tht circuit (robosax)
-alias git_clone_robosax_anzeige_tht="_repo_git_clone \
-  ${REPO_ROBOSAX_ANZEIGE_THT[*]}"
-alias git_pull_robosax_anzeige_tht="_repo_git_pull \
-  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
-alias git_push_robosax_anzeige_tht="_repo_git_push \
-  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
-alias git_status_robosax_anzeige_tht="_repo_git_st \
-  \"${REPO_ROBOSAX_ANZEIGE_THT[0]}\""
-
-# punkte (robosax)
-alias git_clone_robosax_points="_repo_git_clone ${REPO_ROBOSAX_POINTS[*]}"
-alias git_pull_robosax_points="_repo_git_pull \"${REPO_ROBOSAX_POINTS[0]}\""
-alias git_push_robosax_points="_repo_git_push \"${REPO_ROBOSAX_POINTS[0]}\""
-alias git_status_robosax_points="_repo_git_st \"${REPO_ROBOSAX_POINTS[0]}\""
-
-alias git_clone_robosax_points_old="_repo_git_clone \
-  ${REPO_ROBOSAX_POINTS_OLD[*]}"
-alias git_pull_robosax_points_old="_repo_git_pull \
-  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
-alias git_push_robosax_points_old="_repo_git_push \
-  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
-alias git_status_robosax_points_old="_repo_git_st \
-  \"${REPO_ROBOSAX_POINTS_OLD[0]}\""
-
-# webseite (robosax)
-alias git_clone_robosax_web="_repo_git_clone ${REPO_ROBOSAX_WEB[*]}"
-alias git_pull_robosax_web="_repo_git_pull \"${REPO_ROBOSAX_WEB[0]}\""
-alias git_push_robosax_web="_repo_git_push \"${REPO_ROBOSAX_WEB[0]}\""
-alias git_status_robosax_web="_repo_git_st \"${REPO_ROBOSAX_WEB[0]}\""
-
-# omnibot (robosax)
-alias git_clone_robosax_omnibot="_repo_git_clone \
-  ${REPO_ROBOSAX_OMNIBOT[*]}"
-alias git_pull_robosax_omnibot="_repo_git_pull \
-  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
-alias git_push_robosax_omnibot="_repo_git_push \
-  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
-alias git_status_robosax_omnibot="_repo_git_st \
-  \"${REPO_ROBOSAX_OMNIBOT[0]}\""
-
-
-
 #***************************[robo/roboag]
 # 2018 11 01
 
@@ -271,6 +179,121 @@ alias git_push_roboag_filebrowser_php="_repo_git_push \
   \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
 alias git_status_roboag_filebrowser_php="_repo_git_st \
   \"${REPO_ROBOAG_FILEBROWSER_PHP[0]}\""
+
+
+
+#***************************[robosax]*****************************************
+
+#***************************[robosax/eagle]
+# 2020 09 16
+
+# spielfeld circuit (robosax)
+alias git_clone_robosax_eagle_spielfeld="_repo_git_clone \
+  ${REPO_ROBOSAX_EAGLE_SPIELFELD[*]}"
+alias git_pull_robosax_eagle_spielfeld="_repo_git_pull \
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+alias git_push_robosax_eagle_spielfeld="_repo_git_push \
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+alias git_status_robosax_eagle_spielfeld="_repo_git_st \
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+
+# licht circuit (robosax)
+alias git_clone_robosax_eagle_licht="_repo_git_clone \
+  ${REPO_ROBOSAX_EAGLE_LICHT[*]}"
+alias git_pull_robosax_eagle_licht="_repo_git_pull \
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+alias git_push_robosax_eagle_licht="_repo_git_push \
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+alias git_status_robosax_eagle_licht="_repo_git_st \
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+
+# anzeige circuit (robosax)
+alias git_clone_robosax_eagle_anzeige="_repo_git_clone \
+  ${REPO_ROBOSAX_EAGLE_ANZEIGE[*]}"
+alias git_pull_robosax_eagle_anzeige="_repo_git_pull \
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+alias git_push_robosax_eagle_anzeige="_repo_git_push \
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+alias git_status_robosax_eagle_anzeige="_repo_git_st \
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+
+#***************************[robosax/avr]
+# 2020 09 16
+
+# spielfeld software (robosax)
+alias git_clone_robosax_avr_spielfeld="_repo_git_clone \
+  ${REPO_ROBOSAX_AVR_SPIELFELD[*]}"
+alias git_pull_robosax_avr_spielfeld="_repo_git_pull \
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+alias git_push_robosax_avr_spielfeld="_repo_git_push \
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+alias git_status_robosax_avr_spielfeld="_repo_git_st \
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+
+# omnibot (robosax)
+alias git_clone_robosax_avr_omnibot="_repo_git_clone \
+  ${REPO_ROBOSAX_AVR_OMNIBOT[*]}"
+alias git_pull_robosax_avr_omnibot="_repo_git_pull \
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+alias git_push_robosax_avr_omnibot="_repo_git_push \
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+alias git_status_robosax_avr_omnibot="_repo_git_st \
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+
+#***************************[robosax/projects]
+# 2020 09 16
+
+# spielfeld drawings (robosax)
+alias git_clone_robosax_projects_spielfeld="_repo_git_clone \
+  ${REPO_ROBOSAX_PROJECTS_SPIELFELD[*]}"
+alias git_pull_robosax_projects_spielfeld="_repo_git_pull \
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+alias git_push_robosax_projects_spielfeld="_repo_git_push \
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+alias git_status_robosax_projects_spielfeld="_repo_git_st \
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+
+# led-box (fabian) - original repo is from fabian geissler
+alias git_clone_robosax_projects_ledbox="_repo_git_clone \
+  ${REPO_ROBOSAX_PROJECTS_LEDBOX[*]}"
+alias git_pull_robosax_projects_ledbox="_repo_git_pull \
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+alias git_push_robosax_projects_ledbox="_repo_git_push \
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+alias git_status_robosax_projects_ledbox="_repo_git_st \
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+
+#***************************[robosax/php]
+# 2020 09 16
+
+# punkte (robosax)
+alias git_clone_robosax_php_punkte="_repo_git_clone \
+  ${REPO_ROBOSAX_PHP_PUNKTE[*]}"
+alias git_pull_robosax_php_punkte="_repo_git_pull \
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+alias git_push_robosax_php_punkte="_repo_git_push \
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+alias git_status_robosax_php_punkte="_repo_git_st \
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+
+alias git_clone_robosax_php_punkte_old="_repo_git_clone \
+  ${REPO_ROBOSAX_PHP_PUNKTE_OLD[*]}"
+alias git_pull_robosax_php_punkte_old="_repo_git_pull \
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+alias git_push_robosax_php_punkte_old="_repo_git_push \
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+alias git_status_robosax_php_punkte_old="_repo_git_st \
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+
+# webseite (robosax)
+alias git_clone_robosax_php_web_frame="_repo_git_clone \
+  ${REPO_ROBOSAX_PHP_WEB_FRAME[*]}"
+alias git_pull_robosax_php_web_frame="_repo_git_pull \
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
+alias git_push_robosax_php_web_frame="_repo_git_push \
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
+alias git_status_robosax_php_web_frame="_repo_git_st \
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
 
 
 
@@ -536,16 +559,16 @@ function repo_pull_all() {
     git_pull_roboag_roboter
     git_pull_roboag_filebrowser_php
 
-    git_pull_robosax_spielfeld
-    git_pull_robosax_ledbox
-    git_pull_robosax_licht_tht
-    git_pull_robosax_spielfeld_tht
-    git_pull_robosax_spielfeld_avr
-    git_pull_robosax_anzeige_tht
-    git_pull_robosax_points
-    git_pull_robosax_points_old
-    git_pull_robosax_web
-    git_pull_robosax_omnibot
+    git_pull_robosax_eagle_spielfeld
+    git_pull_robosax_eagle_anzeige
+    git_pull_robosax_eagle_licht
+    git_pull_robosax_avr_spielfeld
+    git_pull_robosax_avr_omnibot
+    git_pull_robosax_projects_spielfeld
+    git_pull_robosax_projects_ledbox
+    git_pull_robosax_php_punkte
+    git_pull_robosax_php_punkte_old
+    git_pull_robosax_php_web_frame
 
 
     git_pull_eagle_dmx_driver
@@ -622,16 +645,16 @@ function repo_status_all() {
     git_status_roboag_roboter
     git_status_roboag_filebrowser_php
 
-    git_status_robosax_spielfeld
-    git_status_robosax_ledbox
-    git_status_robosax_licht_tht
-    git_status_robosax_spielfeld_tht
-    git_status_robosax_spielfeld_avr
-    git_status_robosax_anzeige_tht
-    git_status_robosax_points
-    git_status_robosax_points_old
-    git_status_robosax_web
-    git_status_robosax_omnibot
+    git_status_robosax_eagle_spielfeld
+    git_status_robosax_eagle_licht
+    git_status_robosax_eagle_anzeige
+    git_status_robosax_avr_spielfeld
+    git_status_robosax_avr_omnibot
+    git_status_robosax_projects_spielfeld
+    git_status_robosax_projects_ledbox
+    git_status_robosax_php_punkte
+    git_status_robosax_php_punkte_old
+    git_status_robosax_php_web_frame
 
 
     git_status_eagle_dmx_driver
@@ -760,20 +783,20 @@ function repo_clone_robosax() {
     fi
 
     # clone all
-    git_clone_robosax_licht_tht
-    git_clone_robosax_spielfeld_tht
-    git_clone_robosax_anzeige_tht
+    git_clone_robosax_eagle_spielfeld
+    git_clone_robosax_eagle_licht
+    git_clone_robosax_eagle_anzeige
 
-    git_clone_robosax_spielfeld_avr
-    git_clone_robosax_omnibot
+    git_clone_robosax_avr_spielfeld
+    git_clone_robosax_avr_omnibot
 
-    git_clone_robosax_spielfeld
-    git_clone_robosax_ledbox
+    git_clone_robosax_projects_spielfeld
+    git_clone_robosax_projects_ledbox
 
-    git_clone_robosax_points
+    git_clone_robosax_php_punkte
     git_clone_doc_punkte
-    git_clone_robosax_points_old
-    git_clone_robosax_web
+    git_clone_robosax_php_punkte_old
+    git_clone_robosax_php_web_frame
 }
 
 function repo_clone_peter() {

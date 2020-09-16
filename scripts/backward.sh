@@ -48,3 +48,22 @@ if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
     echo "    \$ rm -rf \"${REPO_ROS_PROAUT_ODOMETRY}\""
     echo ""
 fi
+
+#***************************[changed structure of robosax]********************
+# 2020 09 16
+
+temp_path="${REPO_ROBOAG_PATH}robosax/"
+if [ -d "$temp_path" ]; then
+    echo "warning: Folder structure of robosax changed on 16.09.2020!"
+    echo "  Please check the following folders for changes and remove them."
+    folder_list="$(ls "$temp_path")"
+    for folder in $folder_list; do
+        temp="${temp_path}${folder}"
+        echo "      $ cd ${temp} && git status"
+    done
+    echo ""
+    echo "    You may check out the repos again using"
+    echo "      $ git_clone_robosax_..."
+    echo "    or simply"
+    echo "      $ repo_clone_robosax"
+fi

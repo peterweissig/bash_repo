@@ -114,66 +114,6 @@ export REPO_ROBO_EAGLE_LOGIC=("${REPO_ROBO_EAGLE_PATH}logic/" \
 export REPO_ROBO_EAGLE_VTGMON=("${REPO_ROBO_EAGLE_PATH}vtgMon/" \
   "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
 
-#***************************[robo/robosax]
-# 2019 06 22
-
-#paths
-if [ "$REPO_ROBOSAX_PATH" == "" ]; then
-    export REPO_ROBOSAX_PATH="${REPO_ROBO_PATH}robosax/"
-fi
-if [ "$REPO_ROBOSAX_EAGLE_PATH" == "" ]; then
-    export REPO_ROBOSAX_EAGLE_PATH="${REPO_ROBOSAX_PATH}"
-fi
-if [ "$REPO_ROBOSAX_AVR_PATH" == "" ]; then
-    export REPO_ROBOSAX_AVR_PATH="${REPO_ROBOSAX_PATH}"
-fi
-if [ "$REPO_ROBOSAX_PROJECT_PATH" == "" ]; then
-    export REPO_ROBOSAX_PROJECT_PATH="${REPO_ROBOSAX_PATH}"
-fi
-if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
-    export REPO_ROBOSAX_PHP_PATH="${REPO_ROBOSAX_PATH}"
-fi
-
-# spielfeld drawings (robosax)
-export REPO_ROBOSAX_SPIELFELD=("${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}cad_spielfeld.git")
-
-# led-box (fabian) - original repo is from fabian geissler
-export REPO_ROBOSAX_LEDBOX=("${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
-  "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git")
-#  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
-
-# licht-tht circuit (robosax)
-export REPO_ROBOSAX_LICHT_THT=("${REPO_ROBOSAX_EAGLE_PATH}licht_tht/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git")
-
-# spielfeld circuit (robosax)
-export REPO_ROBOSAX_SPIELFELD_THT=( \
-  "${REPO_ROBOSAX_EAGLE_PATH}spielfeld_tht/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_spielfeld.git")
-
-# spielfeld software (robosax)
-export REPO_ROBOSAX_SPIELFELD_AVR=("${REPO_ROBOSAX_AVR_PATH}spielfeld_avr/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}avr_spielfeld.git")
-
-# anzeige circuit (robosax)
-export REPO_ROBOSAX_ANZEIGE_THT=("${REPO_ROBOSAX_EAGLE_PATH}anzeige_tht/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git")
-
-# punkte (robosax)
-export REPO_ROBOSAX_POINTS=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte.git")
-export REPO_ROBOSAX_POINTS_OLD=("${REPO_ROBOSAX_PHP_PATH}punkte_old/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old.git")
-
-# webseite (robosax)
-export REPO_ROBOSAX_WEB=("${REPO_ROBOSAX_PHP_PATH}web/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_web.git")
-
-# omnibot (robosax)
-export REPO_ROBOSAX_OMNIBOT=("${REPO_ROBOSAX_PHP_PATH}omnibot/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}avr_omnibot.git")
-
 #***************************[robo/roboag]
 # 2018 11 01
 
@@ -205,6 +145,81 @@ export REPO_ROBOAG_ROBOTER=("${REPO_ROBOAG_PATH}roboter/" \
 export REPO_ROBOAG_FILEBROWSER_PHP=( \
   "${REPO_ROBOAG_PHP_PATH}filebrowser_php/" \
   "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")
+
+
+
+#***************************[robosax]*****************************************
+# 2020 09 16
+
+# path
+if [ "$REPO_ROBOSAX_PATH" == "" ]; then
+    export REPO_ROBOSAX_PATH="${REPO_PATH_WORKSPACE}robosax/"
+fi
+
+if [ "$REPO_ROBOSAX_EAGLE_PATH" == "" ]; then
+    export REPO_ROBOSAX_EAGLE_PATH="${REPO_ROBOSAX_PATH}eagle/"
+fi
+if [ "$REPO_ROBOSAX_AVR_PATH" == "" ]; then
+    export REPO_ROBOSAX_AVR_PATH="${REPO_ROBOSAX_PATH}avr/"
+fi
+if [ "$REPO_ROBOSAX_PROJECT_PATH" == "" ]; then
+    export REPO_ROBOSAX_PROJECT_PATH="${REPO_ROBOSAX_PATH}projects/"
+fi
+if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
+    export REPO_ROBOSAX_PHP_PATH="${REPO_ROBOSAX_PATH}php/"
+fi
+
+#***************************[robosax/eagle]
+# 2020 09 16
+
+# spielfeld circuit (robosax)
+export REPO_ROBOSAX_EAGLE_SPIELFELD=( \
+  "${REPO_ROBOSAX_EAGLE_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_spielfeld.git")
+
+# licht-tht circuit (robosax)
+export REPO_ROBOSAX_EAGLE_LICHT=("${REPO_ROBOSAX_EAGLE_PATH}licht/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git")
+
+# anzeige circuit (robosax)
+export REPO_ROBOSAX_EAGLE_ANZEIGE=("${REPO_ROBOSAX_EAGLE_PATH}anzeige/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git")
+
+#***************************[robosax/avr]
+# 2020 09 16
+
+# spielfeld software (robosax)
+export REPO_ROBOSAX_AVR_SPIELFELD=("${REPO_ROBOSAX_AVR_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}avr_spielfeld.git")
+
+# omnibot (robosax)
+export REPO_ROBOSAX_AVR_OMNIBOT=("${REPO_ROBOSAX_AVR_PATH}omnibot/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}avr_omnibot.git")
+
+#***************************[robosax/projects]
+# 2020 09 16
+
+# spielfeld drawings (robosax)
+export REPO_ROBOSAX_PROJECTS_SPIELFELD=("${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}cad_spielfeld.git")
+
+# led-box (fabian) - original repo is from fabian geissler
+export REPO_ROBOSAX_PROJECTS_LEDBOX=("${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
+  "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git")
+#  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
+
+#***************************[robosax/php]
+# 2020 09 16
+
+# punkte (robosax)
+export REPO_ROBOSAX_PHP_PUNKTE=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte.git")
+export REPO_ROBOSAX_PHP_PUNKTE_OLD=("${REPO_ROBOSAX_PHP_PATH}punkte_old/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old.git")
+
+# webseite (robosax)
+export REPO_ROBOSAX_PHP_WEB_FRAME=("${REPO_ROBOSAX_PHP_PATH}web_frame/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_web.git")
 
 
 
