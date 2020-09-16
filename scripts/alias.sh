@@ -695,6 +695,152 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
+function repo_clone_roboag() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "Clones all repositories containing RoboAG data."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # clone all
+    git_clone_bash_roboag
+
+    git_clone_robo_lib
+    git_clone_doc_robolib
+    git_clone_robo_pololu
+
+    git_clone_robo_eagle_config
+    git_clone_robo_eagle_keplerboard
+    git_clone_robo_eagle_xbee
+    git_clone_robo_eagle_logic
+    git_clone_robo_eagle_vtgMon
+
+    git_clone_roboag_display
+    git_clone_roboag_gluecksrad
+    git_clone_roboag_3pi
+    git_clone_roboag_roboter
+    git_clone_roboag_filebrowser_php
+}
+
+function repo_clone_robosax() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "Clones all repositories containing RoboSAX data."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # clone all
+    git_clone_robosax_licht_tht
+    git_clone_robosax_spielfeld_tht
+    git_clone_robosax_anzeige_tht
+
+    git_clone_robosax_spielfeld_avr
+    git_clone_robosax_omnibot
+
+    git_clone_robosax_spielfeld
+    git_clone_robosax_ledbox
+
+    git_clone_robosax_points
+    git_clone_doc_punkte
+    git_clone_robosax_points_old
+    git_clone_robosax_web
+}
+
+function repo_clone_peter() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "Clones all repositories containing ROS data."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # clone all
+    git_clone_eagle_dmx_driver
+
+    git_clone_hardware_trailer
+    git_clone_hardware_audio_home
+    git_clone_hardware_dmx_opa
+    git_clone_hardware_dimmer
+
+    git_clone_doc_server_online
+    git_clone_doc_server_local
+}
+
+function repo_clone_ros() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "Clones all repositories containing ROS data."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 0 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    # clone all
+    git_clone_ros_parameter
+    git_clone_ros_pcdfilter
+    git_clone_ros_octomap
+    git_clone_ros_nearfieldmap
+
+    git_clone_ros_radar
+}
+
 function repo_clone_all() {
 
     # print help
@@ -736,43 +882,12 @@ function repo_clone_all() {
 
     # clone all repos
     repo_clone_bash
+    repo_clone_roboag
+    repo_clone_robosax
+    repo_clone_peter
+    repo_clone_ros
+
     git_clone_bash_master_server
-    git_clone_bash_roboag
-
-
-    git_clone_robo_lib
-    git_clone_robo_pololu
-
-    git_clone_robo_eagle_config
-    git_clone_robo_eagle_keplerboard
-    git_clone_robo_eagle_xbee
-    git_clone_robo_eagle_logic
-    git_clone_robo_eagle_vtgMon
-
-    git_clone_roboag_display
-    git_clone_roboag_gluecksrad
-    git_clone_roboag_3pi
-    git_clone_roboag_roboter
-    git_clone_roboag_filebrowser_php
-
-    git_clone_robosax_spielfeld
-    git_clone_robosax_ledbox
-    git_clone_robosax_licht_tht
-    git_clone_robosax_spielfeld_tht
-    git_clone_robosax_spielfeld_avr
-    git_clone_robosax_anzeige_tht
-    git_clone_robosax_points
-    git_clone_robosax_points_old
-    git_clone_robosax_web
-    git_clone_robosax_omnibot
-
-
-    git_clone_eagle_dmx_driver
-
-    git_clone_hardware_trailer
-    git_clone_hardware_audio_home
-    git_clone_hardware_dmx_opa
-    git_clone_hardware_dimmer
 
     git_clone_cpp_main
     git_clone_cpp_basic
@@ -780,17 +895,4 @@ function repo_clone_all() {
     git_clone_cpp_comport
     git_clone_cpp_downloader
     git_clone_cpp_xbee
-
-
-    git_clone_doc_server_online
-    git_clone_doc_server_local
-    git_clone_doc_robolib
-    git_clone_doc_punkte
-
-
-    git_clone_ros_parameter
-    git_clone_ros_pcdfilter
-    git_clone_ros_octomap
-    git_clone_ros_nearfieldmap
-    git_clone_ros_radar
 }

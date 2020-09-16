@@ -126,7 +126,7 @@ function repo_help_overview() {
 
 
 #***************************[all]*********************************************
-# 2019 09 10
+# 2020 09 16
 
 function repo_help_all() {
 
@@ -179,10 +179,14 @@ function repo_help_all() {
     echo -n "  "; _repo_git_st -h
     echo ""
     echo "general repository functions"
-    echo -n "  "; repo_clone_bash -h
-    echo -n "  "; repo_clone_all -h
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
+    echo -n "  "; repo_clone_all -h
+    echo -n "    "; repo_clone_bash -h
+    echo -n "    "; repo_clone_roboag -h
+    echo -n "    "; repo_clone_robosax -h
+    echo -n "    "; repo_clone_peter -h
+    echo -n "    "; repo_clone_ros -h
     echo ""
     echo "specific repository functions (alias)"
     echo -n "  "; echo "git_clone_..."
@@ -197,7 +201,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2019 09 10
+# 2020 09 16
 
 function repo_help() {
 
@@ -215,10 +219,14 @@ function repo_help() {
     echo -n "  "; git_config_set_ssh -h
     echo ""
     echo "general repository functions"
-    echo -n "  "; repo_clone_bash -h
-    echo -n "  "; repo_clone_all -h
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
+    echo -n "  "; repo_clone_all -h
+    echo -n "    "; repo_clone_bash -h
+    echo -n "    "; repo_clone_roboag -h
+    echo -n "    "; repo_clone_robosax -h
+    echo -n "    "; repo_clone_peter -h
+    echo -n "    "; repo_clone_ros -h
     echo ""
     echo "additional dirs"
     echo -n "  "; repo_additional_dirs_add -h
