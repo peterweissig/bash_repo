@@ -115,7 +115,8 @@ fi
 
 # check for robolib
 temp_path="${REPO_DOC_PATH}robolib/"
-if [ -d "$temp_path" ]; then
+if [ -d "$temp_path" ] && \
+  [ "${REPO_DOC_PATH}" != "${REPO_ROBOAG_DOC_PATH}" ]; then
     echo "warning: Folder structure of doc/ changed on 27.09.2020!"
     echo "  You should move the files accordingly:"
     echo "    \$ mkdir -p \"$REPO_ROBOAG_DOC_PATH\""
