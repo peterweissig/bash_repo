@@ -86,6 +86,29 @@ alias git_clone_roboag_pololu="_repo_git_clone ${REPO_ROBOAG_POLOLU[*]}"
 alias git_pull_roboag_pololu="_repo_git_pull \"${REPO_ROBOAG_POLOLU[0]}\""
 alias git_status_roboag_pololu="_repo_git_st \"${REPO_ROBOAG_POLOLU[0]}\""
 
+#***************************[roboag/doc]
+# 2020 09 27
+
+# robolib as release-repo (roboag)
+alias git_clone_roboag_doc_robolib="_repo_git_clone \
+  ${REPO_ROBOAG_DOC_ROBOLIB[*]}"
+alias git_pull_roboag_doc_robolib="_repo_git_pull_release \
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+alias git_push_roboag_doc_robolib="_repo_git_push \
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+alias git_status_roboag_doc_robolib="_repo_git_st \
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+
+# install (roboag)
+alias git_clone_roboag_doc_install="_repo_git_clone \
+  ${REPO_ROBOAG_DOC_INSTALL[*]}"
+alias git_pull_roboag_doc_install="_repo_git_pull_release \
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+alias git_push_roboag_doc_install="_repo_git_push \
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+alias git_status_roboag_doc_install="_repo_git_st \
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+
 #***************************[roboag/eagle]
 # 2020 09 16
 
@@ -198,6 +221,19 @@ alias git_status_roboag_php_filebrowser="_repo_git_st \
 
 
 #***************************[robosax]*****************************************
+
+#***************************[robosax/doc]
+# 2020 09 27
+
+# punkte as release-repo (robosax)
+alias git_clone_robosax_doc_punkte="_repo_git_clone \
+  ${REPO_ROBOSAX_DOC_PUNKTE[*]}"
+alias git_pull_robosax_doc_punkte="_repo_git_pull_release \
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
+alias git_push_robosax_doc_punkte="_repo_git_push \
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
+alias git_status_robosax_doc_punkte="_repo_git_st \
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
 
 #***************************[robosax/eagle]
 # 2020 09 16
@@ -418,7 +454,7 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[doc]*********************************************
-# 2019 12 23
+# 2020 09 27
 
 # online-server (peter)
 alias git_clone_doc_server_online="_repo_git_clone \
@@ -439,20 +475,6 @@ alias git_push_doc_server_local="_repo_git_push \
   \"${REPO_DOC_SERVER_LOCAL[0]}\""
 alias git_status_doc_server_local="_repo_git_st \
 \"${REPO_DOC_SERVER_LOCAL[0]}\""
-
-# robolib as release-repo (roboag)
-alias git_clone_doc_robolib="_repo_git_clone ${REPO_DOC_ROBOLIB[*]}"
-alias git_pull_doc_robolib="_repo_git_pull_release \
-  \"${REPO_DOC_ROBOLIB[0]}\""
-alias git_push_doc_robolib="_repo_git_push \"${REPO_DOC_ROBOLIB[0]}\""
-alias git_status_doc_robolib="_repo_git_st \"${REPO_DOC_ROBOLIB[0]}\""
-
-# punkte as release-repo (robosax)
-alias git_clone_doc_punkte="_repo_git_clone ${REPO_DOC_PUNKTE[*]}"
-alias git_pull_doc_punkte="_repo_git_pull_release \
-  \"${REPO_DOC_PUNKTE[0]}\""
-alias git_push_doc_punkte="_repo_git_push \"${REPO_DOC_PUNKTE[0]}\""
-alias git_status_doc_punkte="_repo_git_st \"${REPO_DOC_PUNKTE[0]}\""
 
 
 
@@ -736,6 +758,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
+# 2020 06 27
 function repo_clone_roboag() {
 
     # print help
@@ -760,9 +783,10 @@ function repo_clone_roboag() {
 
     # clone all
     git_clone_bash_roboag
+    git_clone_roboag_doc_install
 
     git_clone_roboag_lib
-    git_clone_doc_robolib
+    git_clone_roboag_doc_robolib
     git_clone_roboag_pololu
 
     git_clone_roboag_eagle_config
@@ -779,6 +803,7 @@ function repo_clone_roboag() {
     git_clone_roboag_php_filebrowser
 }
 
+# 2020 06 27
 function repo_clone_robosax() {
 
     # print help
@@ -813,11 +838,12 @@ function repo_clone_robosax() {
     git_clone_robosax_projects_ledbox
 
     git_clone_robosax_php_punkte
-    git_clone_doc_punkte
+    git_clone_robosax_doc_punkte
     git_clone_robosax_php_punkte_old
     git_clone_robosax_php_web_frame
 }
 
+# 2020 06 19
 function repo_clone_peter() {
 
     # print help
@@ -852,6 +878,7 @@ function repo_clone_peter() {
     git_clone_doc_server_local
 }
 
+# 2020 06 19
 function repo_clone_ros() {
 
     # print help
@@ -883,6 +910,7 @@ function repo_clone_ros() {
     git_clone_ros_radar
 }
 
+# 2020 06 19
 function repo_clone_all() {
 
     # print help

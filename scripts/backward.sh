@@ -109,3 +109,24 @@ if [ -d "$temp_path" ]; then
     echo "  Please rename the folder:"
     echo "      $ mv \"$temp_path\" \"$REPO_ROBOAG_PATH\""
 fi
+
+#***************************[changed structure of doc]************************
+# 2020 09 27
+
+# check for robolib
+temp_path="${REPO_DOC_PATH}robolib/"
+if [ -d "$temp_path" ]; then
+    echo "warning: Folder structure of doc/ changed on 27.09.2020!"
+    echo "  You should move the files accordingly:"
+    echo "    \$ mkdir -p \"$REPO_ROBOAG_DOC_PATH\""
+    echo "    \$ mv \"$temp_path\" \"$REPO_ROBOAG_DOC_ROBOLIB\""
+fi
+
+# check for punkte
+temp_path="${REPO_DOC_PATH}punkte/"
+if [ -d "$temp_path" ]; then
+    echo "warning: Folder structure of doc/ changed on 27.09.2020!"
+    echo "  You should move the files accordingly:"
+    echo "    \$ mkdir -p \"$REPO_ROBOSAX_DOC_PATH\""
+    echo "    \$ mv \"$temp_path\" \"$REPO_ROBOSAX_DOC_PUNKTE\""
+fi

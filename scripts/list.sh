@@ -71,13 +71,16 @@ export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
 
 
 #***************************[roboag]******************************************
-# 2020 09 16
+# 2020 09 27
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
     export REPO_ROBOAG_PATH="${REPO_PATH_WORKSPACE}roboag/"
 fi
 
+if [ "$REPO_ROBOAG_DOC_PATH" == "" ]; then
+    export REPO_ROBOAG_DOC_PATH="${REPO_ROBOAG_PATH}doc/"
+fi
 if [ "$REPO_ROBOAG_EAGLE_PATH" == "" ]; then
     export REPO_ROBOAG_EAGLE_PATH="${REPO_ROBOAG_PATH}eagle/"
 fi
@@ -95,6 +98,19 @@ export REPO_ROBOAG_LIB=("${REPO_ROBOAG_PATH}library/" \
 # pololu (extern)
 export REPO_ROBOAG_POLOLU=("${REPO_ROBOAG_PATH}pololu/" \
   "https://github.com/pololu/libpololu-avr.git")
+
+#***************************[roboag/doc]
+# 2020 09 27
+
+# robolib (roboag)
+export REPO_ROBOAG_DOC_ROBOLIB=( \
+  "${REPO_ROBOAG_DOC_PATH}robolib/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git")
+
+# install (roboag)
+export REPO_ROBOAG_DOC_INSTALL=( \
+  "${REPO_ROBOAG_DOC_PATH}install/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}doc_install.git")
 
 #***************************[roboag/eagle]
 # 2020 09 16
@@ -151,13 +167,16 @@ export REPO_ROBOAG_PHP_FILEBROWSER=( \
 
 
 #***************************[robosax]*****************************************
-# 2020 09 16
+# 2020 09 27
 
 # path
 if [ "$REPO_ROBOSAX_PATH" == "" ]; then
     export REPO_ROBOSAX_PATH="${REPO_PATH_WORKSPACE}robosax/"
 fi
 
+if [ "$REPO_ROBOSAX_DOC_PATH" == "" ]; then
+    export REPO_ROBOSAX_DOC_PATH="${REPO_ROBOSAX_PATH}doc/"
+fi
 if [ "$REPO_ROBOSAX_EAGLE_PATH" == "" ]; then
     export REPO_ROBOSAX_EAGLE_PATH="${REPO_ROBOSAX_PATH}eagle/"
 fi
@@ -170,6 +189,14 @@ fi
 if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
     export REPO_ROBOSAX_PHP_PATH="${REPO_ROBOSAX_PATH}php/"
 fi
+
+#***************************[robosax/doc]
+# 2020 09 27
+
+# punkte (robosax)
+export REPO_ROBOSAX_DOC_PUNKTE=( \
+  "${REPO_ROBOSAX_DOC_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git")
 
 #***************************[robosax/eagle]
 # 2020 09 16
@@ -307,7 +334,7 @@ export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
 
 
 #***************************[doc]*********************************************
-# 2019 12 23
+# 2020 09 27
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
@@ -326,16 +353,6 @@ export REPO_DOC_SERVER_ONLINE=( \
 export REPO_DOC_SERVER_LOCAL=( \
   "${REPO_DOC_SERVER_PATH}local/" \
   "${REPO_ROOT_GITHUB_PETER}doc_server_local.git")
-
-# robolib (roboag)
-export REPO_DOC_ROBOLIB=( \
-  "${REPO_DOC_PATH}robolib/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git")
-
-# punkte (robosax)
-export REPO_DOC_PUNKTE=( \
-  "${REPO_DOC_PATH}punkte/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git")
 
 
 
