@@ -18,6 +18,7 @@ fi
 export SOURCED_BASH_REPO="$SOURCED_BASH_LAST"
 
 
+
 #***************************[needed external variables]***********************
 # 2019 04 21
 
@@ -33,35 +34,80 @@ if [ ! -d "$REPO_PATH_WORKSPACE" ]; then
 fi
 
 
+
 #***************************[optional external variables]*********************
-# 2019 04 21
+# 2020 10 11
 
 # REPO_FILE_ADDITIONAL_GIT
 
+# REPO_BASH_DATA_PATH
+if [ "$REPO_BASH_DATA_PATH" != "" ] && [ ! -d "$REPO_BASH_DATA_PATH" ]; then
+    echo -n "Error sourcing \"repo\": "
+    echo "path \$REPO_BASH_DATA_PATH does not exist"
+fi
+
+
 
 #***************************[paths and files]*********************************
-# 2019 04 21
+# 2020 10 11
 
-export REPO_PATH_REPO="$(cd "$(dirname "${BASH_SOURCE}")" && pwd )/"
+# current path
+export REPO_PATH="$(cd "$(dirname "${BASH_SOURCE}")" && pwd )/"
+
+# general data path
+export REPO_BASH_DATA1_PATH="${HOME}/workspace/bash/data/"
+export REPO_BASH_DATA2_PATH="${HOME}/config/${HOSTNAME}/"
+export REPO_BASH_DATA3_PATH="${REPO_PATH_WORKSPACE}bash/data/"
+
+if [ "$REPO_BASH_DATA_PATH" == "" ]; then
+    if [ -d "${REPO_BASH_DATA1_PATH}" ]; then
+        export REPO_BASH_DATA_PATH="$REPO_BASH_DATA1_PATH"
+    else
+        if [ -d "${REPO_BASH_DATA2_PATH}" ]; then
+            export REPO_BASH_DATA_PATH="$REPO_BASH_DATA2_PATH"
+        else
+            if [ -d "${REPO_BASH_DATA3_PATH}" ]; then
+                export REPO_BASH_DATA_PATH="$REPO_BASH_DATA3_PATH"
+            fi
+        fi
+    fi
+fi
 
 if [ "$REPO_FILE_ADDITIONAL_GIT" == "" ]; then
-    export REPO_FILE_ADDITIONAL_GIT="${REPO_PATH_REPO}config/git.txt"
+    # check if an alternative path exists
+    if [ "$REPO_BASH_DATA_PATH" != "" ] && \
+      [ -d "$REPO_BASH_DATA_PATH" ]; then
+        export REPO_PATH_CONFIG="${REPO_BASH_DATA_PATH}repo/"
+    else
+        export REPO_PATH_CONFIG="${REPO_PATH}config/"
+    fi
+
+    # check if config folder exists
+    if [ ! -d "$REPO_PATH_CONFIG" ]; then
+        echo "creating config folder for \"repo\""
+        echo "    ($REPO_PATH_CONFIG)"
+        mkdir -p "$REPO_PATH_CONFIG"
+    fi
+
+    # set config filename
+    export REPO_FILE_ADDITIONAL_GIT="${REPO_PATH_CONFIG}git.txt"
 fi
+
 
 
 #***************************[source]******************************************
 # 2020 10 11
 
-. ${REPO_PATH_REPO}scripts/functions_other.sh
-. ${REPO_PATH_REPO}scripts/functions_git.sh
-. ${REPO_PATH_REPO}scripts/functions_svn.sh
-. ${REPO_PATH_REPO}scripts/help.sh
-. ${REPO_PATH_REPO}scripts/help_overview.sh
+. ${REPO_PATH}scripts/functions_other.sh
+. ${REPO_PATH}scripts/functions_git.sh
+. ${REPO_PATH}scripts/functions_svn.sh
+. ${REPO_PATH}scripts/help.sh
+. ${REPO_PATH}scripts/help_overview.sh
 
-. ${REPO_PATH_REPO}scripts/list_other.sh
-. ${REPO_PATH_REPO}scripts/list.sh
-. ${REPO_PATH_REPO}scripts/alias.sh
+. ${REPO_PATH}scripts/list_other.sh
+. ${REPO_PATH}scripts/list.sh
+. ${REPO_PATH}scripts/alias.sh
 
-. ${REPO_PATH_REPO}scripts/backward.sh
+. ${REPO_PATH}scripts/backward.sh
 
 _repo_additional_dirs_load
