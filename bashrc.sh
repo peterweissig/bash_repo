@@ -50,13 +50,15 @@ fi
 
 
 #***************************[source]******************************************
-# 2018 11 30
+# 2020 10 11
 
 . ${REPO_PATH_REPO}scripts/functions_other.sh
 . ${REPO_PATH_REPO}scripts/functions_git.sh
 . ${REPO_PATH_REPO}scripts/functions_svn.sh
 . ${REPO_PATH_REPO}scripts/help.sh
+. ${REPO_PATH_REPO}scripts/help_overview.sh
 
+. ${REPO_PATH_REPO}scripts/list_other.sh
 . ${REPO_PATH_REPO}scripts/list.sh
 . ${REPO_PATH_REPO}scripts/alias.sh
 
