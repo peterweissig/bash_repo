@@ -546,7 +546,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2020 09 16
+# 2020 10 11
 
 function repo_pull_all() {
 
@@ -582,6 +582,7 @@ function repo_pull_all() {
 
 
     git_pull_roboag_lib
+    git_pull_roboag_doc_robolib
     git_pull_roboag_pololu
 
     git_pull_roboag_eagle_config
@@ -607,6 +608,7 @@ function repo_pull_all() {
     git_pull_robosax_projects_ledbox
     git_pull_robosax_php_punkte
     git_pull_robosax_php_punkte_old
+    git_pull_robosax_doc_punkte
     git_pull_robosax_php_web_frame
 
 
@@ -622,8 +624,6 @@ function repo_pull_all() {
 
     git_pull_doc_server_online
     git_pull_doc_server_local
-    git_pull_doc_robolib
-    git_pull_doc_punkte
 
 
     git_pull_ros_parameter
@@ -634,7 +634,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2020 09 16
+# 2020 10 11
 
 function repo_status_all() {
 
@@ -670,6 +670,7 @@ function repo_status_all() {
 
 
     git_status_roboag_lib
+    git_status_roboag_doc_robolib
     git_status_roboag_pololu
 
     git_status_roboag_eagle_config
@@ -694,6 +695,7 @@ function repo_status_all() {
     git_status_robosax_projects_ledbox
     git_status_robosax_php_punkte
     git_status_robosax_php_punkte_old
+    git_status_robosax_doc_punkte
     git_status_robosax_php_web_frame
 
 
@@ -709,8 +711,6 @@ function repo_status_all() {
 
     git_status_doc_server_online
     git_status_doc_server_local
-    git_status_doc_robolib
-    git_status_doc_punkte
 
 
     git_status_ros_parameter
