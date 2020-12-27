@@ -123,7 +123,7 @@ function _repo_diff() {
 }
 
 #***************************[local repos]*************************************
-# 2018 09 15
+# 2020 12 27
 
 function _repo_additional_dirs_load() {
 
@@ -202,7 +202,7 @@ function repo_additional_dirs_add() {
     fi
 
     # store path with trailing '/'
-    path="$(cd "$path"; pwd)/"
+    path="$(realpath "$path")/"
 
     # set up as git repo
     if [ ! -d "${path}.git" ]; then

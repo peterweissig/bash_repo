@@ -49,10 +49,10 @@ fi
 
 
 #***************************[paths and files]*********************************
-# 2020 10 11
+# 2020 12 27
 
 # current path
-export REPO_PATH="$(cd "$(dirname "${BASH_SOURCE}")" && pwd )/"
+export REPO_PATH="$(realpath "$(dirname "${BASH_SOURCE}")" )/"
 
 # general data path
 export REPO_BASH_DATA1_PATH="${HOME}/workspace/bash/data/"
