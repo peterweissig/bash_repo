@@ -10,10 +10,10 @@ if [ "$REPO_BASH_PATH" != "" ] && [ -d "$temp_roboag_old" ]; then
     echo "warning: Folder structure of repo has changed on 30.11.2018!"
     echo "  bash/roboag is expected to be bash/master/roboag"
     echo "  You should move the files accordingly:"
-    echo "    \$ mkdir -p \"$REPO_BASH_MASTER_PATH\""
-    echo "    \$ mv \"$temp_roboag_old\" \"$REPO_BASH_MASTER_ROBOAG\""
+    echo "    $ mkdir -p \"$REPO_BASH_MASTER_PATH\""
+    echo "    $ mv \"$temp_roboag_old\" \"$REPO_BASH_MASTER_ROBOAG\""
     echo "  You may also need to adjust your bashrc file:"
-    echo "    \$ nano ~/.bashrc"
+    echo "    $ nano ~/.bashrc"
     echo ""
 fi
 
@@ -28,8 +28,8 @@ if [ "$REPO_DOC_SERVER_PATH" != "" ] && [ -d "$temp_imscp_server_old" ]; then
 
     echo "warning: Repo doc/server/imscp was renamed on 23.12.2019!"
     echo "  You should move the files accordingly:"
-    echo "    \$ mkdir -p \"$REPO_DOC_SERVER_PATH\""
-    echo "    \$ mv \"$temp_imscp_server_old\" \"$REPO_DOC_SERVER_ONLINE\""
+    echo "    $ mkdir -p \"$REPO_DOC_SERVER_PATH\""
+    echo "    $ mv \"$temp_imscp_server_old\" \"$REPO_DOC_SERVER_ONLINE\""
     echo ""
 fi
 
@@ -44,8 +44,8 @@ if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
     echo "warning: Repo odometry_pa was removed on 18.06.2020!"
     echo "  It was always empty and will never be used."
     echo "  You should manually remove the files:"
-    echo "    \$ git_status_ros_odometry"
-    echo "    \$ rm -rf \"${REPO_ROS_PROAUT_ODOMETRY}\""
+    echo "    $ git_status_ros_odometry"
+    echo "    $ rm -rf \"${REPO_ROS_PROAUT_ODOMETRY}\""
     echo ""
 fi
 
@@ -119,8 +119,8 @@ if [ -d "$temp_path" ] && \
   [ "${REPO_DOC_PATH}" != "${REPO_ROBOAG_DOC_PATH}" ]; then
     echo "warning: Folder structure of doc/ changed on 27.09.2020!"
     echo "  You should move the files accordingly:"
-    echo "    \$ mkdir -p \"$REPO_ROBOAG_DOC_PATH\""
-    echo "    \$ mv \"$temp_path\" \"$REPO_ROBOAG_DOC_ROBOLIB\""
+    echo "    $ mkdir -p \"$REPO_ROBOAG_DOC_PATH\""
+    echo "    $ mv \"$temp_path\" \"$REPO_ROBOAG_DOC_ROBOLIB\""
 fi
 
 # check for punkte
@@ -128,8 +128,8 @@ temp_path="${REPO_DOC_PATH}punkte/"
 if [ -d "$temp_path" ]; then
     echo "warning: Folder structure of doc/ changed on 27.09.2020!"
     echo "  You should move the files accordingly:"
-    echo "    \$ mkdir -p \"$REPO_ROBOSAX_DOC_PATH\""
-    echo "    \$ mv \"$temp_path\" \"$REPO_ROBOSAX_DOC_PUNKTE\""
+    echo "    $ mkdir -p \"$REPO_ROBOSAX_DOC_PATH\""
+    echo "    $ mv \"$temp_path\" \"$REPO_ROBOSAX_DOC_PUNKTE\""
 fi
 
 #***************************[removed doc/ from bash master roboag]************
@@ -144,7 +144,7 @@ if [ -e "$REPO_BASH_MASTER_ROBOAG" ]; then
         echo -n "warning: images were removed from bash master roboag "
         echo "on 27.09.2020!"
         echo "  You should update the repository accordingly:"
-        echo "    \$ cd \"$REPO_BASH_MASTER_ROBOAG\""
-        echo "    \$ git fetch && git reset --quiet --hard @{upstream}"
+        echo "    $ cd \"$REPO_BASH_MASTER_ROBOAG\""
+        echo "    $ git fetch && git reset --quiet --hard @{upstream}"
     fi
 fi
