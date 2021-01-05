@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2020 10 11
+# 2021 01 05
 
 function repo_help_overview() {
 
@@ -55,6 +55,7 @@ function repo_help_overview() {
     echo "      doc/"
     echo "          install/        [git]/RoboAG/doc_install.git"
     echo "          robolib/        [git]/RoboAG/doc_robolib.git (release!)"
+    echo ""
     echo "      eagle/"
     echo "          config/         [git]/RoboAG/eagle_config.git"
     echo "          keplerboard/    [git]/RoboAG/eagle_keplerboard.git"
@@ -74,6 +75,7 @@ function repo_help_overview() {
     echo "  robosax/"
     echo "      doc/"
     echo "          punkte/         [git]/RoboSAX/doc_punkte.git (release!)"
+    echo ""
     echo "      eagle/"
     echo "          spielfeld/      [git]/RoboSAX/eagle_spielfeld.git"
     echo "          licht/          [git]/RoboSAX/eagle_licht.git"
