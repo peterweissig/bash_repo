@@ -1,5 +1,24 @@
 #!/bin/bash
 
+#***************************[fixed structure of doc]**************************
+# 2021 01 05
+
+# check for robolib
+temp_path="${REPO_PATH_WORKSPACE}robosax/doc/punkte/"
+if [ -d "$temp_path" ] && \
+  [ "${REPO_DOC_PATH}" == "${REPO_ROBOAG_DOC_PATH}" ]; then
+    echo "warning: Fixed path of robosax/doc/punkte/ on 05.01.2021!"
+    echo "  You should move the files accordingly:"
+    if [ ! -d "$REPO_ROBOSAX_DOC_PATH" ]; then
+        echo "    $ mkdir -p \"$REPO_ROBOSAX_DOC_PATH\""
+    fi
+    echo "    $ mv \"$temp_path\" \"$REPO_ROBOSAX_DOC_PUNKTE\""
+    echo "    $ rmdir \"$(dirname "$temp_path")\""
+    echo "    $ rmdir \"$(dirname "$(dirname "$temp_path")")\""
+fi
+
+
+
 #***************************[removed doc/ from bash master roboag]************
 # 2020 10 11
 

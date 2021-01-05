@@ -15,7 +15,7 @@
 
 
 #***************************[check for roboag structure]**********************
-# 2020 10 11
+# 2021 01 05
 
 if [ "$REPO_MODE" == "roboag" ]; then
 
@@ -115,14 +115,18 @@ if [ "$REPO_MODE" == "roboag" ]; then
     # doc
     if [ "$REPO_DOC_PATH" == "" ]; then
         export REPO_DOC_PATH="${REPO_PATH_WORKSPACE}Dokumentation/"
-            # server
-                # online server
-                # local server
-            # robosax
-                # punkte
-        export REPO_ROBOAG_DOC_PATH="${REPO_DOC_PATH}"
-            # robolib
-            # install
+            # online server
+            # local server
 
+        if [ "$REPO_ROBOAG_DOC_PATH" == "" ]; then
+            export REPO_ROBOAG_DOC_PATH="${REPO_DOC_PATH}"
+                # robolib
+                # install
+        fi
+
+        if [ "$REPO_ROBOSAX_DOC_PATH" == "" ]; then
+            export REPO_ROBOSAX_DOC_PATH="${REPO_DOC_PATH}RoboSAX/"
+                # punkte
+        fi
     fi
 fi
