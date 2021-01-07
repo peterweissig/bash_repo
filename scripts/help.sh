@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[all]*********************************************
-# 2020 10 11
+# 2021 01 07
 
 function repo_help_all() {
 
@@ -13,7 +13,7 @@ function repo_help_all() {
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0 parameters"
+        echo "$FUNCNAME needs no parameters"
         echo "Prints all available functions within repository \"repo\"."
 
         return
@@ -69,6 +69,11 @@ function repo_help_all() {
     echo -n "  "; echo "git_pull_..."
     echo -n "  "; echo "git_status_..."
     echo ""
+    echo "workspace"
+    echo -n "  "; repo_workspace_status -h
+    echo -n "  "; repo_workspace_check -h
+    echo -n "  "; repo_workspace_update -h
+    echo ""
     echo "additional dirs"
     echo -n "  "; repo_additional_dirs_add -h
     echo -n "  "; repo_additional_dirs_status -h
@@ -77,7 +82,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2020 10 11
+# 2021 01 07
 
 function repo_help() {
 
@@ -104,6 +109,11 @@ function repo_help() {
     echo -n "    "; repo_clone_robosax -h
     echo -n "    "; repo_clone_peter -h
     echo -n "    "; repo_clone_ros -h
+    echo ""
+    echo "workspace"
+    echo -n "  "; repo_workspace_status -h
+    echo -n "  "; repo_workspace_check -h
+    echo -n "  "; repo_workspace_update -h
     echo ""
     echo "additional dirs"
     echo -n "  "; repo_additional_dirs_add -h
