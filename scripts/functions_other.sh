@@ -303,7 +303,7 @@ function repo_workspace_check() {
       .git "$param_workspace")"
     if [ $? -ne 0 ]; then
         echo "  error"
-        unset git_repos
+        unset repos
     fi
 
     # check against variables in export
@@ -323,7 +323,7 @@ function repo_workspace_check() {
       .svn "$param_workspace")"
     if [ $? -ne 0 ]; then
         echo "  error"
-        unset svn_repos
+        unset repos
     fi
 
     # check against variables in export
