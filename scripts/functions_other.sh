@@ -260,7 +260,7 @@ function repo_additional_dirs_status() {
 
 #***************************[workspace]**************************************
 
-# 2021 01 07
+# 2021 01 09
 function repo_workspace_check() {
 
     # print help
@@ -308,8 +308,10 @@ function repo_workspace_check() {
 
     # check against variables in export
     for i in ${!repos[@]}; do
-        repo="$(dirname "${repos[$i]}")/"
+        repo="${repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
 
+        repo="$(dirname "${repo}")/"
         if echo "$exports" | grep "\"$repo\"" > /dev/null; then
             continue
         fi
@@ -328,8 +330,10 @@ function repo_workspace_check() {
 
     # check against variables in export
     for i in ${!repos[@]}; do
-        repo="$(dirname "${repos[$i]}")/"
+        repo="${repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
 
+        repo="$(dirname "${repo}")/"
         if echo "$exports" | grep "\"$repo\"" > /dev/null; then
             continue
         fi
@@ -337,7 +341,7 @@ function repo_workspace_check() {
     done
 }
 
-# 2021 01 07
+# 2021 01 09
 function repo_workspace_status() {
 
     # print help
@@ -385,14 +389,22 @@ function repo_workspace_status() {
 
     # print status
     for i in ${!git_repos[@]}; do
-        _repo_git_st "$(dirname "${git_repos[$i]}")/"
+        repo="${git_repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
+
+        repo="$(dirname "${repo}")/"
+        _repo_git_st "$repo"
     done
     for i in ${!svn_repos[@]}; do
-        _repo_svn_st "$(dirname "${svn_repos[$i]}")/"
+        repo="${svn_repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
+
+        repo="$(dirname "${repo}")/"
+        _repo_svn_st "$repo/"
     done
 }
 
-# 2021 01 07
+# 2021 01 09
 function repo_workspace_update() {
 
     # print help
@@ -424,9 +436,15 @@ function repo_workspace_update() {
 
     # print status
     for i in ${!git_repos[@]}; do
-        _repo_git_pull "$(dirname "${git_repos[$i]}")/"
+        repo="${git_repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
+
+        _repo_git_pull "$(dirname "$repo")/"
     done
     for i in ${!svn_repos[@]}; do
-        _repo_svn_up "$(dirname "${svn_repos[$i]}")/"
+        repo="${svn_repos[$i]}"
+        if [ "$repo" == "" ]; then continue; fi
+
+        _repo_svn_up "$(dirname "$repo")/"
     done
 }
