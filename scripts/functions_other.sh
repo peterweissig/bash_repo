@@ -260,7 +260,7 @@ function repo_additional_dirs_status() {
 
 #***************************[workspace]**************************************
 
-# 2021 01 09
+# 2021 01 16
 function repo_workspace_check() {
 
     # print help
@@ -312,7 +312,7 @@ function repo_workspace_check() {
         if [ "$repo" == "" ]; then continue; fi
 
         repo="$(dirname "${repo}")/"
-        if echo "$exports" | grep "\"$repo\"" > /dev/null; then
+        if echo "$exports" | grep --quiet "\"$repo\""; then
             continue
         fi
         echo "  $repo"
@@ -334,7 +334,7 @@ function repo_workspace_check() {
         if [ "$repo" == "" ]; then continue; fi
 
         repo="$(dirname "${repo}")/"
-        if echo "$exports" | grep "\"$repo\"" > /dev/null; then
+        if echo "$exports" | grep --quiet "\"$repo\""; then
             continue
         fi
         echo "  $repo"
