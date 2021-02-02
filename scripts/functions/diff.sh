@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[version control]*********************************
-# 2018 09 10
+# 2021 02 02
 
 function _repo_diff() {
 
@@ -12,9 +12,9 @@ function _repo_diff() {
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0-1 parameters"
+        echo "$FUNCNAME needs 1-2 parameters"
         echo "     #1: type of repository (\"git\" or \"svn\")"
-        echo "    [#2:]locale path (e.g. /home/egon/workspace/)"
+        echo "    [#2:]local path (e.g. /home/egon/workspace/)"
         echo "Shows difference between current und previous version"
         echo "of the given repository."
         echo "For visualization, \"meld\" will be executed."
