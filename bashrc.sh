@@ -49,47 +49,25 @@ fi
 
 
 #***************************[paths and files]*********************************
-# 2020 12 27
+# 2021 01 31
 
 # current path
 export REPO_PATH="$(realpath "$(dirname "${BASH_SOURCE}")" )/"
 
-# general data path
-export REPO_BASH_DATA1_PATH="${HOME}/workspace/bash/data/"
-export REPO_BASH_DATA2_PATH="${HOME}/config/${HOSTNAME}/"
-export REPO_BASH_DATA3_PATH="${REPO_PATH_WORKSPACE}bash/data/"
+# load (alternative) data paths
+. ${REPO_PATH}scripts/functions/bash_data.sh
+_repo_bash_data_dirs_load
 
-if [ "$REPO_BASH_DATA_PATH" == "" ]; then
-    if [ -d "${REPO_BASH_DATA1_PATH}" ]; then
-        export REPO_BASH_DATA_PATH="$REPO_BASH_DATA1_PATH"
-    else
-        if [ -d "${REPO_BASH_DATA2_PATH}" ]; then
-            export REPO_BASH_DATA_PATH="$REPO_BASH_DATA2_PATH"
-        else
-            if [ -d "${REPO_BASH_DATA3_PATH}" ]; then
-                export REPO_BASH_DATA_PATH="$REPO_BASH_DATA3_PATH"
-            fi
-        fi
-    fi
+# load and check data dir
+if [ "$REPO_PATH_CONFIG" == "" ]; then
+    REPO_PATH_CONFIG="$(_repo_bash_data_dirs_get --mkdir "repo" \
+      "${REPO_PATH}config/")"
 fi
+_repo_bash_data_dirs_check --rmdir "$REPO_PATH_CONFIG" \
+  "repo" "${REPO_PATH}config/"
 
+# additional (local) git dirs
 if [ "$REPO_FILE_ADDITIONAL_GIT" == "" ]; then
-    # check if an alternative path exists
-    if [ "$REPO_BASH_DATA_PATH" != "" ] && \
-      [ -d "$REPO_BASH_DATA_PATH" ]; then
-        export REPO_PATH_CONFIG="${REPO_BASH_DATA_PATH}repo/"
-    else
-        export REPO_PATH_CONFIG="${REPO_PATH}config/"
-    fi
-
-    # check if config folder exists
-    if [ ! -d "$REPO_PATH_CONFIG" ]; then
-        echo "creating config folder for \"repo\""
-        echo "    ($REPO_PATH_CONFIG)"
-        mkdir -p "$REPO_PATH_CONFIG"
-    fi
-
-    # set config filename
     export REPO_FILE_ADDITIONAL_GIT="${REPO_PATH_CONFIG}git.txt"
 fi
 
