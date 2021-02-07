@@ -1,13 +1,14 @@
 #!/bin/bash
 
 #***************************[load default and alternative data dirs]**********
-# 2021 02 02
+# 2021 02 06
 
 function _repo_bash_data_dirs_load() {
 
     # general data path
     data_paths=(
         "${HOME}/workspace/bash/data/"
+        "${HOME}/config/${HOSTNAME,,}/"
         "${HOME}/config/${HOSTNAME}/"
         "${REPO_PATH_WORKSPACE}bash/data/"
     )
