@@ -1,85 +1,105 @@
 #!/bin/bash
 
 #***************************[bash]*******************************************
-# 2018 11 30
+# 2021 02 18
 
 # repositories functions (peter)
-alias git_clone_bash_repo="_repo_git_clone ${REPO_BASH_REPO[*]}"
-alias git_pull_bash_repo="_repo_git_pull \"${REPO_BASH_REPO[0]}\""
-alias git_push_bash_repo="_repo_git_push \"${REPO_BASH_REPO[0]}\""
-alias git_status_bash_repo="_repo_git_st \"${REPO_BASH_REPO[0]}\""
+alias git_clone_bash_repo="_repo_git_clone \
+  ${REPO_BASH_REPO[*]} bash/repo"
+alias git_pull_bash_repo="_repo_git_pull \
+  \"${REPO_BASH_REPO[0]}\" bash/repo"
+alias git_push_bash_repo="_repo_git_push \
+  \"${REPO_BASH_REPO[0]}\" bash/repo"
+alias git_status_bash_repo="_repo_git_st \
+  \"${REPO_BASH_REPO[0]}\" bash/repo"
 
 # config functions (peter)
-alias git_clone_bash_config="_repo_git_clone ${REPO_BASH_CONFIG[*]}"
-alias git_pull_bash_config="_repo_git_pull \"${REPO_BASH_CONFIG[0]}\""
-alias git_push_bash_config="_repo_git_push \"${REPO_BASH_CONFIG[0]}\""
-alias git_status_bash_config="_repo_git_st \"${REPO_BASH_CONFIG[0]}\""
+alias git_clone_bash_config="_repo_git_clone \
+  ${REPO_BASH_CONFIG[*]} bash/config"
+alias git_pull_bash_config="_repo_git_pull \
+  \"${REPO_BASH_CONFIG[0]}\" bash/config"
+alias git_push_bash_config="_repo_git_push \
+  \"${REPO_BASH_CONFIG[0]}\" bash/config"
+alias git_status_bash_config="_repo_git_st \
+  \"${REPO_BASH_CONFIG[0]}\" bash/config"
 
 # network functions (peter)
-alias git_clone_bash_network="_repo_git_clone ${REPO_BASH_NETWORK[*]}"
-alias git_pull_bash_network="_repo_git_pull \"${REPO_BASH_NETWORK[0]}\""
-alias git_push_bash_network="_repo_git_push \"${REPO_BASH_NETWORK[0]}\""
-alias git_status_bash_network="_repo_git_st \"${REPO_BASH_NETWORK[0]}\""
+alias git_clone_bash_network="_repo_git_clone \
+  ${REPO_BASH_NETWORK[*]} bash/network"
+alias git_pull_bash_network="_repo_git_pull \
+  \"${REPO_BASH_NETWORK[0]}\" bash/network"
+alias git_push_bash_network="_repo_git_push \
+  \"${REPO_BASH_NETWORK[0]}\" bash/network"
+alias git_status_bash_network="_repo_git_st \
+  \"${REPO_BASH_NETWORK[0]}\" bash/network"
 
 # multimedia functions (peter)
 alias git_clone_bash_multimedia="_repo_git_clone \
-  ${REPO_BASH_MULTIMEDIA[*]}"
+  ${REPO_BASH_MULTIMEDIA[*]} bash/multimedia"
 alias git_pull_bash_multimedia="_repo_git_pull \
-  \"${REPO_BASH_MULTIMEDIA[0]}\""
+  \"${REPO_BASH_MULTIMEDIA[0]}\" bash/multimedia"
 alias git_push_bash_multimedia="_repo_git_push \
-  \"${REPO_BASH_MULTIMEDIA[0]}\""
+  \"${REPO_BASH_MULTIMEDIA[0]}\" bash/multimedia"
 alias git_status_bash_multimedia="_repo_git_st \
-  \"${REPO_BASH_MULTIMEDIA[0]}\""
+  \"${REPO_BASH_MULTIMEDIA[0]}\" bash/multimedia"
 
 # file functions (peter)
-alias git_clone_bash_file="_repo_git_clone ${REPO_BASH_FILE[*]}"
-alias git_pull_bash_file="_repo_git_pull \"${REPO_BASH_FILE[0]}\""
-alias git_push_bash_file="_repo_git_push \"${REPO_BASH_FILE[0]}\""
-alias git_status_bash_file="_repo_git_st \"${REPO_BASH_FILE[0]}\""
+alias git_clone_bash_file="_repo_git_clone \
+  ${REPO_BASH_FILE[*]} bash/file"
+alias git_pull_bash_file="_repo_git_pull \
+  \"${REPO_BASH_FILE[0]}\" bash/file"
+alias git_push_bash_file="_repo_git_push \
+  \"${REPO_BASH_FILE[0]}\" bash/file"
+alias git_status_bash_file="_repo_git_st \
+  \"${REPO_BASH_FILE[0]}\" bash/file"
 
 #***************************[bash/master]
-# 2019 12 01
+# 2021 02 18
 
 # master simple (peter)
 alias git_clone_bash_master_simple="_repo_git_clone \
-  ${REPO_BASH_MASTER_BASHONLY[*]}"
+  ${REPO_BASH_MASTER_BASHONLY[*]} master/simple"
 alias git_pull_bash_master_simple="_repo_git_pull \
-  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\" master/simple"
 alias git_push_bash_master_simple="_repo_git_push \
-  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\" master/simple"
 alias git_status_bash_master_simple="_repo_git_st \
-  \"${REPO_BASH_MASTER_BASHONLY[0]}\""
+  \"${REPO_BASH_MASTER_BASHONLY[0]}\" master/simple"
 
 # master server (peter)
 alias git_clone_bash_master_server="_repo_git_clone \
-  ${REPO_BASH_MASTER_SERVER[*]}"
+  ${REPO_BASH_MASTER_SERVER[*]} master/server"
 alias git_pull_bash_master_server="_repo_git_pull \
-  \"${REPO_BASH_MASTER_SERVER[0]}\""
+  \"${REPO_BASH_MASTER_SERVER[0]}\" master/server"
 alias git_push_bash_master_server="_repo_git_push \
-  \"${REPO_BASH_MASTER_SERVER[0]}\""
+  \"${REPO_BASH_MASTER_SERVER[0]}\" master/server"
 alias git_status_bash_master_server="_repo_git_st \
-  \"${REPO_BASH_MASTER_SERVER[0]}\""
+  \"${REPO_BASH_MASTER_SERVER[0]}\" master/server"
 
 # roboag (roboag)
 alias git_clone_bash_roboag="_repo_git_clone \
-  ${REPO_BASH_MASTER_ROBOAG[*]}"
+  ${REPO_BASH_MASTER_ROBOAG[*]} master/roboag"
 alias git_pull_bash_roboag="_repo_git_pull \
-  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\" master/roboag"
 alias git_push_bash_roboag="_repo_git_push \
-  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\" master/roboag"
 alias git_status_bash_roboag="_repo_git_st \
-  \"${REPO_BASH_MASTER_ROBOAG[0]}\""
+  \"${REPO_BASH_MASTER_ROBOAG[0]}\" master/roboag"
 
 
 
 #***************************[roboag]******************************************
-# 2020 09 16
+# 2021 02 18
 
 # robolib (roboag)
-alias git_clone_roboag_lib="_repo_git_clone ${REPO_ROBOAG_LIB[*]}"
-alias git_pull_roboag_lib="_repo_git_pull \"${REPO_ROBOAG_LIB[0]}\""
-alias git_push_roboag_lib="_repo_git_push \"${REPO_ROBOAG_LIB[0]}\""
-alias git_status_roboag_lib="_repo_git_st \"${REPO_ROBOAG_LIB[0]}\""
+alias git_clone_roboag_lib="_repo_git_clone \
+  ${REPO_ROBOAG_LIB[*]} roboag/robolib"
+alias git_pull_roboag_lib="_repo_git_pull \
+  \"${REPO_ROBOAG_LIB[0]}\" roboag/robolib"
+alias git_push_roboag_lib="_repo_git_push \
+  \"${REPO_ROBOAG_LIB[0]}\" roboag/robolib"
+alias git_status_roboag_lib="_repo_git_st \
+  \"${REPO_ROBOAG_LIB[0]}\" roboag/robolib"
 
 # pololu (extern)
 alias git_clone_roboag_pololu="_repo_git_clone ${REPO_ROBOAG_POLOLU[*]}"
@@ -87,80 +107,80 @@ alias git_pull_roboag_pololu="_repo_git_pull \"${REPO_ROBOAG_POLOLU[0]}\""
 alias git_status_roboag_pololu="_repo_git_st \"${REPO_ROBOAG_POLOLU[0]}\""
 
 #***************************[roboag/doc]
-# 2020 09 27
+# 2021 02 18
 
 # robolib as release-repo (roboag)
 alias git_clone_roboag_doc_robolib="_repo_git_clone \
-  ${REPO_ROBOAG_DOC_ROBOLIB[*]}"
+  ${REPO_ROBOAG_DOC_ROBOLIB[*]} doc/robolib"
 alias git_pull_roboag_doc_robolib="_repo_git_pull_release \
-  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\" doc/robolib"
 alias git_push_roboag_doc_robolib="_repo_git_push \
-  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\" doc/robolib"
 alias git_status_roboag_doc_robolib="_repo_git_st \
-  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\""
+  \"${REPO_ROBOAG_DOC_ROBOLIB[0]}\" doc/robolib"
 
 # install (roboag)
 alias git_clone_roboag_doc_install="_repo_git_clone \
-  ${REPO_ROBOAG_DOC_INSTALL[*]}"
+  ${REPO_ROBOAG_DOC_INSTALL[*]} doc/install"
 alias git_pull_roboag_doc_install="_repo_git_pull_release \
-  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\" doc/install"
 alias git_push_roboag_doc_install="_repo_git_push \
-  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\" doc/install"
 alias git_status_roboag_doc_install="_repo_git_st \
-  \"${REPO_ROBOAG_DOC_INSTALL[0]}\""
+  \"${REPO_ROBOAG_DOC_INSTALL[0]}\" doc/install"
 
 #***************************[roboag/eagle]
-# 2020 09 16
+# 2021 02 18
 
 # config (roboag)
 alias git_clone_roboag_eagle_config="_repo_git_clone \
-  ${REPO_ROBOAG_EAGLE_CONFIG[*]}"
+  ${REPO_ROBOAG_EAGLE_CONFIG[*]} eagle/config"
 alias git_pull_roboag_eagle_config="_repo_git_pull \
-  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\" eagle/config"
 alias git_push_roboag_eagle_config="_repo_git_push \
-  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\" eagle/config"
 alias git_status_roboag_eagle_config="_repo_git_st \
-  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\""
+  \"${REPO_ROBOAG_EAGLE_CONFIG[0]}\" eagle/config"
 
 # keplerboard (roboag)
 alias git_clone_roboag_eagle_keplerboard="_repo_git_clone \
-  ${REPO_ROBOAG_EAGLE_KEPLERBOARD[*]}"
+  ${REPO_ROBOAG_EAGLE_KEPLERBOARD[*]} eagle/keplerboard"
 alias git_pull_roboag_eagle_keplerboard="_repo_git_pull \
-  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\" eagle/keplerboard"
 alias git_push_roboag_eagle_keplerboard="_repo_git_push \
-  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\" eagle/keplerboard"
 alias git_status_roboag_eagle_keplerboard="_repo_git_st \
-  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\""
+  \"${REPO_ROBOAG_EAGLE_KEPLERBOARD[0]}\" eagle/keplerboard"
 
 # xbee (roboag)
 alias git_clone_roboag_eagle_xbee="_repo_git_clone \
-  ${REPO_ROBOAG_EAGLE_XBEE[*]}"
+  ${REPO_ROBOAG_EAGLE_XBEE[*]} eagle/xbee"
 alias git_pull_roboag_eagle_xbee="_repo_git_pull \
-  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\" eagle/xbee"
 alias git_push_roboag_eagle_xbee="_repo_git_push \
-  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\" eagle/xbee"
 alias git_status_roboag_eagle_xbee="_repo_git_st \
-  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\""
+  \"${REPO_ROBOAG_EAGLE_XBEE[0]}\" eagle/xbee"
 
 # logic (roboag)
 alias git_clone_roboag_eagle_logic="_repo_git_clone \
-  ${REPO_ROBOAG_EAGLE_LOGIC[*]}"
+  ${REPO_ROBOAG_EAGLE_LOGIC[*]} eagle/logic"
 alias git_pull_roboag_eagle_logic="_repo_git_pull \
-  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\" eagle/logic"
 alias git_push_roboag_eagle_logic="_repo_git_push \
-  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\" eagle/logic"
 alias git_status_roboag_eagle_logic="_repo_git_st \
-  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\""
+  \"${REPO_ROBOAG_EAGLE_LOGIC[0]}\" eagle/logic"
 
 # voltage monitor (roboag)
 alias git_clone_roboag_eagle_vtgMon="_repo_git_clone \
-  ${REPO_ROBOAG_EAGLE_VTGMON[*]}"
+  ${REPO_ROBOAG_EAGLE_VTGMON[*]} eagle/vtgmon"
 alias git_pull_roboag_eagle_vtgMon="_repo_git_pull \
-  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\" eagle/vtgmon"
 alias git_push_roboag_eagle_vtgMon="_repo_git_push \
-  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\" eagle/vtgmon"
 alias git_status_roboag_eagle_vtgMon="_repo_git_st \
-  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\""
+  \"${REPO_ROBOAG_EAGLE_VTGMON[0]}\" eagle/vtgmon"
 
 #***************************[roboag/projects]
 # 2020 09 16
@@ -206,205 +226,205 @@ alias git_status_roboag_projects_roboter="_repo_git_st \
   \"${REPO_ROBOAG_PROJECTS_ROBOTER[0]}\""
 
 #***************************[roboag/php]
-# 2020 09 16
+# 2021 02 18
 
 # filebrowser (roboag)
 alias git_clone_roboag_php_filebrowser="_repo_git_clone \
-  ${REPO_ROBOAG_PHP_FILEBROWSER[*]}"
+  ${REPO_ROBOAG_PHP_FILEBROWSER[*]} php/filebrowser"
 alias git_pull_roboag_php_filebrowser="_repo_git_pull \
-  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\" php/filebrowser"
 alias git_push_roboag_php_filebrowser="_repo_git_push \
-  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\" php/filebrowser"
 alias git_status_roboag_php_filebrowser="_repo_git_st \
-  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\""
+  \"${REPO_ROBOAG_PHP_FILEBROWSER[0]}\" php/filebrowser"
 
 
 
 #***************************[robosax]*****************************************
 
 #***************************[robosax/doc]
-# 2020 09 27
+# 2021 02 18
 
 # punkte as release-repo (robosax)
 alias git_clone_robosax_doc_punkte="_repo_git_clone \
-  ${REPO_ROBOSAX_DOC_PUNKTE[*]}"
+  ${REPO_ROBOSAX_DOC_PUNKTE[*]} doc/punkte"
 alias git_pull_robosax_doc_punkte="_repo_git_pull_release \
-  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\" doc/punkte"
 alias git_push_robosax_doc_punkte="_repo_git_push \
-  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\" doc/punkte"
 alias git_status_robosax_doc_punkte="_repo_git_st \
-  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_DOC_PUNKTE[0]}\" doc/punkte"
 
 #***************************[robosax/eagle]
-# 2020 09 16
+# 2021 02 18
 
 # spielfeld circuit (robosax)
 alias git_clone_robosax_eagle_spielfeld="_repo_git_clone \
-  ${REPO_ROBOSAX_EAGLE_SPIELFELD[*]}"
+  ${REPO_ROBOSAX_EAGLE_SPIELFELD[*]} eagle/spielfeld"
 alias git_pull_robosax_eagle_spielfeld="_repo_git_pull \
-  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\" eagle/spielfeld"
 alias git_push_robosax_eagle_spielfeld="_repo_git_push \
-  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\" eagle/spielfeld"
 alias git_status_robosax_eagle_spielfeld="_repo_git_st \
-  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_SPIELFELD[0]}\" eagle/spielfeld"
 
 # licht circuit (robosax)
 alias git_clone_robosax_eagle_licht="_repo_git_clone \
-  ${REPO_ROBOSAX_EAGLE_LICHT[*]}"
+  ${REPO_ROBOSAX_EAGLE_LICHT[*]} eagle/licht"
 alias git_pull_robosax_eagle_licht="_repo_git_pull \
-  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\" eagle/licht"
 alias git_push_robosax_eagle_licht="_repo_git_push \
-  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\" eagle/licht"
 alias git_status_robosax_eagle_licht="_repo_git_st \
-  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_LICHT[0]}\" eagle/licht"
 
 # anzeige circuit (robosax)
 alias git_clone_robosax_eagle_anzeige="_repo_git_clone \
-  ${REPO_ROBOSAX_EAGLE_ANZEIGE[*]}"
+  ${REPO_ROBOSAX_EAGLE_ANZEIGE[*]} eagle/anzeige"
 alias git_pull_robosax_eagle_anzeige="_repo_git_pull \
-  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\" eagle/anzeige"
 alias git_push_robosax_eagle_anzeige="_repo_git_push \
-  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\" eagle/anzeige"
 alias git_status_robosax_eagle_anzeige="_repo_git_st \
-  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\""
+  \"${REPO_ROBOSAX_EAGLE_ANZEIGE[0]}\" eagle/anzeige"
 
 #***************************[robosax/avr]
-# 2020 09 16
+# 2021 02 18
 
 # spielfeld software (robosax)
 alias git_clone_robosax_avr_spielfeld="_repo_git_clone \
-  ${REPO_ROBOSAX_AVR_SPIELFELD[*]}"
+  ${REPO_ROBOSAX_AVR_SPIELFELD[*]} avr/spielfeld"
 alias git_pull_robosax_avr_spielfeld="_repo_git_pull \
-  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\" avr/spielfeld"
 alias git_push_robosax_avr_spielfeld="_repo_git_push \
-  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\" avr/spielfeld"
 alias git_status_robosax_avr_spielfeld="_repo_git_st \
-  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_AVR_SPIELFELD[0]}\" avr/spielfeld"
 
 # omnibot (robosax)
 alias git_clone_robosax_avr_omnibot="_repo_git_clone \
-  ${REPO_ROBOSAX_AVR_OMNIBOT[*]}"
+  ${REPO_ROBOSAX_AVR_OMNIBOT[*]} avr/omnibot"
 alias git_pull_robosax_avr_omnibot="_repo_git_pull \
-  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\" avr/omnibot"
 alias git_push_robosax_avr_omnibot="_repo_git_push \
-  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\" avr/omnibot"
 alias git_status_robosax_avr_omnibot="_repo_git_st \
-  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\""
+  \"${REPO_ROBOSAX_AVR_OMNIBOT[0]}\" avr/omnibot"
 
 #***************************[robosax/projects]
-# 2020 09 16
+# 2021 02 18
 
 # spielfeld drawings (robosax)
 alias git_clone_robosax_projects_spielfeld="_repo_git_clone \
-  ${REPO_ROBOSAX_PROJECTS_SPIELFELD[*]}"
+  ${REPO_ROBOSAX_PROJECTS_SPIELFELD[*]} cad/spielfeld"
 alias git_pull_robosax_projects_spielfeld="_repo_git_pull \
-  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\" cad/spielfeld"
 alias git_push_robosax_projects_spielfeld="_repo_git_push \
-  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\" cad/spielfeld"
 alias git_status_robosax_projects_spielfeld="_repo_git_st \
-  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_SPIELFELD[0]}\" cad/spielfeld"
 
 # led-box (fabian) - original repo is from fabian geissler
 alias git_clone_robosax_projects_ledbox="_repo_git_clone \
-  ${REPO_ROBOSAX_PROJECTS_LEDBOX[*]}"
+  ${REPO_ROBOSAX_PROJECTS_LEDBOX[*]} robosax/ledbox"
 alias git_pull_robosax_projects_ledbox="_repo_git_pull \
-  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\" robosax/ledbox"
 alias git_push_robosax_projects_ledbox="_repo_git_push \
-  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\" robosax/ledbox"
 alias git_status_robosax_projects_ledbox="_repo_git_st \
-  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\""
+  \"${REPO_ROBOSAX_PROJECTS_LEDBOX[0]}\" robosax/ledbox"
 
 #***************************[robosax/php]
-# 2020 09 16
+# 2021 02 18
 
 # punkte (robosax)
 alias git_clone_robosax_php_punkte="_repo_git_clone \
-  ${REPO_ROBOSAX_PHP_PUNKTE[*]}"
+  ${REPO_ROBOSAX_PHP_PUNKTE[*]} php/punkte"
 alias git_pull_robosax_php_punkte="_repo_git_pull \
-  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\" php/punkte"
 alias git_push_robosax_php_punkte="_repo_git_push \
-  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\" php/punkte"
 alias git_status_robosax_php_punkte="_repo_git_st \
-  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE[0]}\" php/punkte"
 
 alias git_clone_robosax_php_punkte_old="_repo_git_clone \
-  ${REPO_ROBOSAX_PHP_PUNKTE_OLD[*]}"
+  ${REPO_ROBOSAX_PHP_PUNKTE_OLD[*]} php/punkte_old"
 alias git_pull_robosax_php_punkte_old="_repo_git_pull \
-  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\" php/punkte_old"
 alias git_push_robosax_php_punkte_old="_repo_git_push \
-  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\" php/punkte_old"
 alias git_status_robosax_php_punkte_old="_repo_git_st \
-  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\""
+  \"${REPO_ROBOSAX_PHP_PUNKTE_OLD[0]}\" php/punkte_old"
 
 # webseite (robosax)
 alias git_clone_robosax_php_web_frame="_repo_git_clone \
-  ${REPO_ROBOSAX_PHP_WEB_FRAME[*]}"
+  ${REPO_ROBOSAX_PHP_WEB_FRAME[*]} php/webframe"
 alias git_pull_robosax_php_web_frame="_repo_git_pull \
-  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\" php/webframe"
 alias git_push_robosax_php_web_frame="_repo_git_push \
-  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\" php/webframe"
 alias git_status_robosax_php_web_frame="_repo_git_st \
-  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\""
+  \"${REPO_ROBOSAX_PHP_WEB_FRAME[0]}\" php/webframe"
 
 
 
 #***************************[projects]****************************************
 
 #***************************[projects/eagle]
-# 2018 02 25
+# 2021 02 18
 
 # dmx-driver (peter)
 alias git_clone_eagle_dmx_driver="_repo_git_clone \
-  ${REPO_EAGLE_DMX_DRIVER[*]}"
+  ${REPO_EAGLE_DMX_DRIVER[*]} peter/dmx"
 alias git_pull_eagle_dmx_driver="_repo_git_pull \
-  \"${REPO_EAGLE_DMX_DRIVER[0]}\""
+  \"${REPO_EAGLE_DMX_DRIVER[0]}\" peter/dmx"
 alias git_push_eagle_dmx_driver="_repo_git_push \
-  \"${REPO_EAGLE_DMX_DRIVER[0]}\""
+  \"${REPO_EAGLE_DMX_DRIVER[0]}\" peter/dmx"
 alias git_status_eagle_dmx_driver="_repo_git_st \
-  \"${REPO_EAGLE_DMX_DRIVER[0]}\""
+  \"${REPO_EAGLE_DMX_DRIVER[0]}\" peter/dmx"
 
 #***************************[projects/hardware]
-# 2020 04 19
+# 2021 02 18
 
 # trailer (peter)
 alias git_clone_hardware_trailer="_repo_git_clone \
-  ${REPO_HARDWARE_TRAILER[*]}"
+  ${REPO_HARDWARE_TRAILER[*]} peter/trailer"
 alias git_pull_hardware_trailer="_repo_git_pull \
-  \"${REPO_HARDWARE_TRAILER[0]}\""
+  \"${REPO_HARDWARE_TRAILER[0]}\" peter/trailer"
 alias git_push_hardware_trailer="_repo_git_push \
-  \"${REPO_HARDWARE_TRAILER[0]}\""
+  \"${REPO_HARDWARE_TRAILER[0]}\" peter/trailer"
 alias git_status_hardware_trailer="_repo_git_st \
-  \"${REPO_HARDWARE_TRAILER[0]}\""
+  \"${REPO_HARDWARE_TRAILER[0]}\" peter/trailer"
 
 # audio system (peter)
 alias git_clone_hardware_audio_home="_repo_git_clone \
-  ${REPO_HARDWARE_AUDIO_HOME[*]}"
+  ${REPO_HARDWARE_AUDIO_HOME[*]} peter/audio"
 alias git_pull_hardware_audio_home="_repo_git_pull \
-  \"${REPO_HARDWARE_AUDIO_HOME[0]}\""
+  \"${REPO_HARDWARE_AUDIO_HOME[0]}\" peter/audio"
 alias git_push_hardware_audio_home="_repo_git_push \
-  \"${REPO_HARDWARE_AUDIO_HOME[0]}\""
+  \"${REPO_HARDWARE_AUDIO_HOME[0]}\" peter/audio"
 alias git_status_hardware_audio_home="_repo_git_st \
-  \"${REPO_HARDWARE_AUDIO_HOME[0]}\""
+  \"${REPO_HARDWARE_AUDIO_HOME[0]}\" peter/audio"
 
 # opa (peter)
 alias git_clone_hardware_dmx_opa="_repo_git_clone \
-  ${REPO_HARDWARE_DMX_OPA[*]}"
+  ${REPO_HARDWARE_DMX_OPA[*]} peter/opa"
 alias git_pull_hardware_dmx_opa="_repo_git_pull \
-  \"${REPO_HARDWARE_DMX_OPA[0]}\""
+  \"${REPO_HARDWARE_DMX_OPA[0]}\" peter/opa"
 alias git_push_hardware_dmx_opa="_repo_git_push \
-  \"${REPO_HARDWARE_DMX_OPA[0]}\""
+  \"${REPO_HARDWARE_DMX_OPA[0]}\" peter/opa"
 alias git_status_hardware_dmx_opa="_repo_git_st \
-  \"${REPO_HARDWARE_DMX_OPA[0]}\""
+  \"${REPO_HARDWARE_DMX_OPA[0]}\" peter/opa"
 
 # dimmer (peter)
 alias git_clone_hardware_dimmer="_repo_git_clone \
-  ${REPO_HARDWARE_DIMMER[*]}"
+  ${REPO_HARDWARE_DIMMER[*]} peter/dimmer"
 alias git_pull_hardware_dimmer="_repo_git_pull \
-  \"${REPO_HARDWARE_DIMMER[0]}\""
+  \"${REPO_HARDWARE_DIMMER[0]}\" peter/dimmer"
 alias git_push_hardware_dimmer="_repo_git_push \
-  \"${REPO_HARDWARE_DIMMER[0]}\""
+  \"${REPO_HARDWARE_DIMMER[0]}\" peter/dimmer"
 alias git_status_hardware_dimmer="_repo_git_st \
-  \"${REPO_HARDWARE_DIMMER[0]}\""
+  \"${REPO_HARDWARE_DIMMER[0]}\" peter/dimmer"
 
 #***************************[projects/c++]
 # 2018 02 08
@@ -454,92 +474,92 @@ alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
 
 
 #***************************[doc]*********************************************
-# 2020 09 27
+# 2021 02 18
 
 # online-server (peter)
 alias git_clone_doc_server_online="_repo_git_clone \
-  ${REPO_DOC_SERVER_ONLINE[*]}"
+  ${REPO_DOC_SERVER_ONLINE[*]} \"doc/server (online)\""
 alias git_pull_doc_server_online="_repo_git_pull \
-  \"${REPO_DOC_SERVER_ONLINE[0]}\""
+  \"${REPO_DOC_SERVER_ONLINE[0]}\" \"doc/server (online)\""
 alias git_push_doc_server_online="_repo_git_push \
-  \"${REPO_DOC_SERVER_ONLINE[0]}\""
+  \"${REPO_DOC_SERVER_ONLINE[0]}\" \"doc/server (online)\""
 alias git_status_doc_server_online="_repo_git_st \
-\"${REPO_DOC_SERVER_ONLINE[0]}\""
+\"${REPO_DOC_SERVER_ONLINE[0]}\" \"doc/server (online)\""
 
 # local server (peter)
 alias git_clone_doc_server_local="_repo_git_clone \
-  ${REPO_DOC_SERVER_LOCAL[*]}"
+  ${REPO_DOC_SERVER_LOCAL[*]} \"doc/server (local)\""
 alias git_pull_doc_server_local="_repo_git_pull \
-  \"${REPO_DOC_SERVER_LOCAL[0]}\""
+  \"${REPO_DOC_SERVER_LOCAL[0]}\" \"doc/server (local)\""
 alias git_push_doc_server_local="_repo_git_push \
-  \"${REPO_DOC_SERVER_LOCAL[0]}\""
+  \"${REPO_DOC_SERVER_LOCAL[0]}\" \"doc/server (local)\""
 alias git_status_doc_server_local="_repo_git_st \
-\"${REPO_DOC_SERVER_LOCAL[0]}\""
+\"${REPO_DOC_SERVER_LOCAL[0]}\" \"doc/server (local)\""
 
 
 
 #***************************[ros]*********************************************
 
 #***************************[ros-tools-pa]
-# 2020 06 19
+# 2021 02 18
 
 # parameter (TUC-ProAut)
 alias git_clone_ros_parameter="_repo_git_clone \
-  ${REPO_ROS_PROAUT_PARAMETER[*]}"
+  ${REPO_ROS_PROAUT_PARAMETER[*]} ros/parameter_pa"
 alias git_pull_ros_parameter="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\" ros/parameter_pa"
 alias git_push_ros_parameter="_repo_git_push \
-  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\" ros/parameter_pa"
 alias git_status_ros_parameter="_repo_git_st \
-  \"${REPO_ROS_PROAUT_PARAMETER[0]}\""
+  \"${REPO_ROS_PROAUT_PARAMETER[0]}\" ros/parameter_pa"
 
 # pcdfilter (TUC-ProAut)
 alias git_clone_ros_pcdfilter="_repo_git_clone \
-  ${REPO_ROS_PROAUT_PCDFILTER[*]}"
+  ${REPO_ROS_PROAUT_PCDFILTER[*]} ros/pcdfilter_pa"
 alias git_pull_ros_pcdfilter="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
+  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\" ros/pcdfilter_pa"
 alias git_push_ros_pcdfilter="_repo_git_push \
-  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
+  \"${REPO_ROS_PROAUT_PCDFILTER[0]}\" ros/pcdfilter_pa"
 alias git_status_ros_pcdfilter="_repo_git_st \
   \"${REPO_ROS_PROAUT_PCDFILTER[0]}\""
 
 # octomap (TUC-ProAut)
 alias git_clone_ros_octomap="_repo_git_clone \
-  ${REPO_ROS_PROAUT_OCTOMAP[*]}"
+  ${REPO_ROS_PROAUT_OCTOMAP[*]} ros/octomap_pa"
 alias git_pull_ros_octomap="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\" ros/octomap_pa"
 alias git_push_ros_octomap="_repo_git_push \
-  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\" ros/octomap_pa"
 alias git_status_ros_octomap="_repo_git_st \
-  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\""
+  \"${REPO_ROS_PROAUT_OCTOMAP[0]}\" ros/octomap_pa"
 
 # nearfield map (TUC-ProAut)
 alias git_clone_ros_nearfieldmap="_repo_git_clone \
-  ${REPO_ROS_PROAUT_NEARFIELDMAP[*]}"
+  ${REPO_ROS_PROAUT_NEARFIELDMAP[*]} ros/nearfieldmap_pa"
 alias git_pull_ros_nearfieldmap="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\" ros/nearfieldmap_pa"
 alias git_push_ros_nearfieldmap="_repo_git_push \
-  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\" ros/nearfieldmap_pa"
 alias git_status_ros_nearfieldmap="_repo_git_st \
-  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\""
+  \"${REPO_ROS_PROAUT_NEARFIELDMAP[0]}\" ros/nearfieldmap_pa"
 
 # odometry (TUC-ProAut) -- deprecated
 alias git_status_ros_odometry="_repo_git_st \
-  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\""
+  \"${REPO_ROS_PROAUT_ODOMETRY[0]}\" ros/odometry_pa"
 
 
 #***************************[ros-sensors-pa]
-# 2018 06 19
+# 2021 02 18
 
 # radar (TUC-ProAut)
 alias git_clone_ros_radar="_repo_git_clone \
-  ${REPO_ROS_PROAUT_RADAR[*]}"
+  ${REPO_ROS_PROAUT_RADAR[*]} ros/radar_pa"
 alias git_pull_ros_radar="_repo_git_pull \
-  \"${REPO_ROS_PROAUT_RADAR[0]}\""
+  \"${REPO_ROS_PROAUT_RADAR[0]}\" ros/radar_pa"
 alias git_push_ros_radar="_repo_git_push \
-  \"${REPO_ROS_PROAUT_RADAR[0]}\""
+  \"${REPO_ROS_PROAUT_RADAR[0]}\" ros/radar_pa"
 alias git_status_ros_radar="_repo_git_st \
-  \"${REPO_ROS_PROAUT_RADAR[0]}\""
+  \"${REPO_ROS_PROAUT_RADAR[0]}\" ros/radar_pa"
 
 
 
