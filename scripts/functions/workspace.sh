@@ -88,17 +88,27 @@ function repo_workspace_status() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME [<workspace>]"
+        echo "$FUNCNAME [--no-filter] [<workspace>]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0-1 parameters"
+        echo "$FUNCNAME has 1 option and needs 0-1 parameters"
+        echo "    [--no-filter] gives full output (disables filter)"
         echo "    [#1:]workspace (default ${REPO_PATH_WORKSPACE})"
         echo "Searches the whole workspace for non-nested git or svn"
         echo "repositories and prints their status."
 
         return
+    fi
+
+    # check option '--no-filter'
+    if [ "$1" == "--no-filter" ]; then
+        shift
+    else
+        $FUNCNAME "--no-filter" "$@" | \
+          _repo_filter_git_grep | _repo_filter_git_awk
+        return $?
     fi
 
     # check parameter
@@ -151,17 +161,27 @@ function repo_workspace_update() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME [<workspace>]"
+        echo "$FUNCNAME [--no-filter] [<workspace>]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0-1 parameters"
+        echo "$FUNCNAME has 1 option and needs 0-1 parameters"
+        echo "    [--no-filter] gives full output (disables filter)"
         echo "    [#1:]workspace (default ${REPO_PATH_WORKSPACE})"
         echo "Searches the whole workspace for git or svn repositories and"
         echo "updates/pulls them."
 
         return
+    fi
+
+
+    # check option '--no-filter'
+    if [ "$1" == "--no-filter" ]; then
+        shift
+    else
+        $FUNCNAME "--no-filter" "$@" | _repo_filter_git_grep
+        return $?
     fi
 
     # check parameter
