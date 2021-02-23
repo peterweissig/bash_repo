@@ -667,7 +667,7 @@ function repo_status_all() {
     git_status_ros_radar
 
 
-    repo_additional_dirs_status
+    repo_additional_dirs_status --no-filter
 }
 
 #***************************[clone]

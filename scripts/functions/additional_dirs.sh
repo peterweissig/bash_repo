@@ -115,21 +115,24 @@ function repo_additional_dirs_status() {
     # print help
     if [ "$1" == "-h" ]; then
         echo "$FUNCNAME"
-        echo "$FUNCNAME [--filter]"
+        echo "$FUNCNAME [--no-filter]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
         echo "$FUNCNAME has 1 option and needs no parameters"
-        echo "    [--filter] simplifies the output"
+        echo "    [--no-filter] gives full output (disables filter)"
         echo "Calls \"git status\" on all locally versioned directories."
 
         return
     fi
 
-    # check option '--filter'
-    if [ "$1" == "--filter" ]; then
-        $FUNCNAME | _repo_filter_git_grep | _repo_filter_git_awk
+    # check option '--no-filter'
+    if [ "$1" == "--no-filter" ]; then
+        shift
+    else
+        $FUNCNAME "--no-filter" "$@" | \
+          _repo_filter_git_grep | _repo_filter_git_awk
         return $?
     fi
 
