@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #***************************[local repos]*************************************
-# 2020 12 27
 
+# 2020 12 27
 function _repo_additional_dirs_load() {
 
     # print help
@@ -44,6 +44,7 @@ function _repo_additional_dirs_load() {
     done
 }
 
+# 2020 12 27
 function repo_additional_dirs_add() {
 
     # print help
@@ -108,6 +109,7 @@ function repo_additional_dirs_add() {
     REPO_ADDITIONAL_DIRS_GIT+=("$path")
 }
 
+# 2021 02 23
 function repo_additional_dirs_status() {
 
     # print help
@@ -132,6 +134,7 @@ function repo_additional_dirs_status() {
 
     # check status of additional dirs
     for i in "${!REPO_ADDITIONAL_DIRS_GIT[@]}"; do
-        _repo_git_st "${REPO_ADDITIONAL_DIRS_GIT[$i]}"
+        _repo_git_st "${REPO_ADDITIONAL_DIRS_GIT[$i]}" \
+          "${REPO_ADDITIONAL_DIRS_GIT[$i]}"
     done
 }
