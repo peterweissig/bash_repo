@@ -472,21 +472,28 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2020 10 11
+# 2021 02 23
 
 function repo_pull_all() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
+        echo "$FUNCNAME [--filter]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0 parameters"
-        echo "Executes \"git pull\" on all avaiable repositories."
+        echo "$FUNCNAME has 1 option and needs no parameters"
+        echo "    [--filter] simplifies the output"
+        echo "Executes \"git pull\" on all available repositories."
 
         return
+    fi
+
+    # check option '--filter'
+    if [ "$1" == "--filter" ]; then
+        $FUNCNAME | _repo_filter_git_grep
+        return $?
     fi
 
     # check parameter
@@ -560,21 +567,29 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2020 10 11
+# 2021 02 23
 
 function repo_status_all() {
 
+
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
+        echo "$FUNCNAME [--filter]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0 parameters"
-        echo "Executes \"git status\" on all avaiable repositories."
+        echo "$FUNCNAME has 1 option and needs no parameters"
+        echo "    [--filter] simplifies the output"
+        echo "Executes \"git status\" on all available repositories."
 
         return
+    fi
+
+    # check option '--filter'
+    if [ "$1" == "--filter" ]; then
+        $FUNCNAME | _repo_filter_git_grep | _repo_filter_git_awk
+        return $?
     fi
 
     # check parameter

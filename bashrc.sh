@@ -74,12 +74,13 @@ fi
 
 
 #***************************[source]******************************************
-# 2021 02 02
+# 2021 02 23
 
 . ${REPO_PATH}scripts/functions/additional_dirs.sh
 . ${REPO_PATH}scripts/functions/diff.sh
 . ${REPO_PATH}scripts/functions/git.sh
 . ${REPO_PATH}scripts/functions/svn.sh
+. ${REPO_PATH}scripts/functions/filter.sh
 . ${REPO_PATH}scripts/functions/workspace.sh
 . ${REPO_PATH}scripts/help.sh
 . ${REPO_PATH}scripts/help_overview.sh
