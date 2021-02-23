@@ -83,12 +83,12 @@ function repo_workspace_check() {
     done
 }
 
-# 2021 01 09
+# 2021 02 23
 function repo_workspace_status() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
+        echo "$FUNCNAME [<workspace>]"
 
         return
     fi
@@ -135,23 +135,23 @@ function repo_workspace_status() {
         if [ "$repo" == "" ]; then continue; fi
 
         repo="$(dirname "${repo}")/"
-        _repo_git_st "$repo"
+        _repo_git_st "$repo" "$repo"
     done
     for i in ${!svn_repos[@]}; do
         repo="${svn_repos[$i]}"
         if [ "$repo" == "" ]; then continue; fi
 
         repo="$(dirname "${repo}")/"
-        _repo_svn_st "$repo/"
+        _repo_svn_st "$repo" "$repo"
     done
 }
 
-# 2021 01 09
+# 2021 02 23
 function repo_workspace_update() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
+        echo "$FUNCNAME [<workspace>]"
 
         return
     fi
@@ -162,6 +162,22 @@ function repo_workspace_update() {
         echo "updates/pulls them."
 
         return
+    fi
+
+    # check parameter
+    if [ $# -gt 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+
+    param_workspace="$1"
+    if [ "$param_workspace" == "" ]; then
+        param_workspace="${REPO_PATH_WORKSPACE}"
+    fi
+    if [ ! -d "$param_workspace" ]; then
+        echo "Workspace \"$param_workspace\" does not exist."
+        return -2
     fi
 
     # find all repos
@@ -181,12 +197,14 @@ function repo_workspace_update() {
         repo="${git_repos[$i]}"
         if [ "$repo" == "" ]; then continue; fi
 
-        _repo_git_pull "$(dirname "$repo")/"
+        repo="$(dirname "${repo}")/"
+        _repo_git_pull "$repo" "$repo"
     done
     for i in ${!svn_repos[@]}; do
         repo="${svn_repos[$i]}"
         if [ "$repo" == "" ]; then continue; fi
 
-        _repo_svn_up "$(dirname "$repo")/"
+        repo="$(dirname "${repo}")/"
+        _repo_svn_up "$repo" "$repo"
     done
 }
