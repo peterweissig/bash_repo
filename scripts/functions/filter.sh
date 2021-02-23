@@ -35,6 +35,7 @@ function _repo_filter_git_grep() {
 
     # update filter
     filter+="|Already up-to-date."
+    filter+="|Bereits aktuell."
 
     # call grep
     grep --line-buffered -E -v "($filter)" -
