@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[all]*********************************************
-# 2021 01 07
+# 2021 03 12
 
 function repo_help_all() {
 
@@ -48,6 +48,7 @@ function repo_help_all() {
     echo "git"
     echo -n "  "; git_config_set_ssh -h
     echo -n "  "; git_diff -h
+    echo -n "  "; git_log -h
     echo -n "  "; _repo_git_clone -h
     echo -n "  "; _repo_git_pull -h
     echo -n "  "; _repo_git_pull_release -h
@@ -82,7 +83,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2021 01 07
+# 2021 03 12
 
 function repo_help() {
 
@@ -98,6 +99,7 @@ function repo_help() {
     echo "version control"
     echo -n "  "; svn_diff -h
     echo -n "  "; git_diff -h
+    echo -n "  "; git_log -h
     echo -n "  "; git_config_set_ssh -h
     echo ""
     echo "general repository functions"

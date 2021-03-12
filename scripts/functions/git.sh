@@ -423,3 +423,43 @@ function git_config_set_ssh() {
     fi
 
 }
+
+
+
+#***************************[git_log]*****************************************
+
+# 2021 03 12
+function git_log() {
+
+    # print help
+    if [ "$1" == "-h" ]; then
+        echo "$FUNCNAME [<base-branch>]"
+
+        return
+    fi
+    if [ "$1" == "--help" ]; then
+        echo "$FUNCNAME needs 0-1 parameters"
+        echo "    [#1:] name of base branch (e.g. master)"
+        echo "Calls git log with a nicer formatting."
+        echo "If a base branch is given, only the difference is shown."
+
+        return
+    fi
+
+    # check parameter
+    if [ $# -gt 1 ]; then
+        echo "$FUNCNAME: Parameter Error."
+        $FUNCNAME --help
+        return -1
+    fi
+    param_branch=""
+    if [ $# -gt 0 ]; then
+        param_branch="$1.."
+    fi
+
+    # script based on https://stackoverflow.com/questions/13965391
+    #   (how-do-i-see-the-commit-differences-between-branches-in-git)
+    COLORS="'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'"
+    git log --graph --abbrev-commit --date=relative \
+      --pretty=format:"$COLORS"  $param_branch
+}
