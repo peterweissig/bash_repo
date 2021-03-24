@@ -49,13 +49,13 @@ fi
 
 
 #***************************[paths and files]*********************************
-# 2021 02 02
+# 2021 03 24
 
 # current path
 export REPO_PATH="$(realpath "$(dirname "${BASH_SOURCE}")" )/"
 
 # load (alternative) data paths
-. ${REPO_PATH}scripts/functions/bash_data.sh
+source "${REPO_PATH}scripts/functions/bash_data.sh"
 _repo_bash_data_dirs_load
 
 # load and check data dir
@@ -74,21 +74,22 @@ fi
 
 
 #***************************[source]******************************************
-# 2021 02 23
+# 2021 03 24
 
-. ${REPO_PATH}scripts/functions/additional_dirs.sh
-. ${REPO_PATH}scripts/functions/diff.sh
-. ${REPO_PATH}scripts/functions/git.sh
-. ${REPO_PATH}scripts/functions/svn.sh
-. ${REPO_PATH}scripts/functions/filter.sh
-. ${REPO_PATH}scripts/functions/workspace.sh
-. ${REPO_PATH}scripts/help.sh
-. ${REPO_PATH}scripts/help_overview.sh
+source "${REPO_PATH}scripts/functions/additional_dirs.sh"
+source "${REPO_PATH}scripts/functions/diff.sh"
+source "${REPO_PATH}scripts/functions/git.sh"
+source "${REPO_PATH}scripts/functions/svn.sh"
+source "${REPO_PATH}scripts/functions/filter.sh"
+source "${REPO_PATH}scripts/functions/workspace.sh"
+source "${REPO_PATH}scripts/help.sh"
+source "${REPO_PATH}scripts/help_overview.sh"
 
-. ${REPO_PATH}scripts/list_other.sh
-. ${REPO_PATH}scripts/list.sh
-. ${REPO_PATH}scripts/alias.sh
+source "${REPO_PATH}scripts/list_other.sh"
+source "${REPO_PATH}scripts/list.sh"
+source "${REPO_PATH}scripts/alias.sh"
 
-. ${REPO_PATH}scripts/backward.sh
+source "${REPO_PATH}scripts/backward.sh"
+
 
 _repo_additional_dirs_load
