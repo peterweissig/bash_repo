@@ -297,39 +297,16 @@ export REPO_HARDWARE_DIMMER=("${REPO_HARDWARE_PATH}dimmer/" \
   "${REPO_ROOT_GITHUB_PETER}project_dimmer.git")
 
 #***************************[projects/c++]
-# 2018 03 01
+# 2022 02 18
 
 # paths
 if [ "$REPO_CPP_PATH" == "" ]; then
     export REPO_CPP_PATH="${REPO_PROJECTS_PATH}c++/"
 fi
-if [ "$REPO_CPP_SRC_PATH" == "" ]; then
-    export REPO_CPP_SRC_PATH="${REPO_CPP_PATH}src/"
-fi
-
-# main (peter)
-export REPO_CPP_MAIN=("${REPO_CPP_PATH}" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_main.git")
-
-# basic (peter)
-export REPO_CPP_BASIC=("${REPO_CPP_SRC_PATH}basic/" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_basic.git")
-
-# comport (peter)
-export REPO_CPP_COMPORT=("${REPO_CPP_SRC_PATH}comport/" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_comport.git")
-
-# file (peter)
-export REPO_CPP_FILE=("${REPO_CPP_SRC_PATH}file/" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_file.git")
 
 # avr-downloader (peter)
-export REPO_CPP_DOWNLOADER=("${REPO_CPP_SRC_PATH}avr_downloader/" \
+export REPO_CPP_AVR_DOWNLOADER=("${REPO_CPP_PATH}avr_downloader/" \
   "${REPO_ROOT_GITHUB_PETER}cpp_avr_downloader.git")
-
-# xbee-tool (peter)
-export REPO_CPP_XBEE=("${REPO_CPP_SRC_PATH}xbee_config/" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_xbee_config.git")
 
 
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2021 01 05
+# 2022 02 18
 
 function repo_help_overview() {
 
@@ -104,12 +104,7 @@ function repo_help_overview() {
     echo "          dmx_opa/        [git]/peterweissig/project_opa.git"
     echo "          dimmer/         [git]/peterweissig/project_dimmer.git"
     echo ""
-    echo "      c++/                [git]/peterweissig/cpp_main.git"
-    echo "        src/"
-    echo "          basic/          [git]/peterweissig/cpp_basic.git"
-    echo "          file/           [git]/peterweissig/cpp_file.git"
-    echo "          comport/        [git]/peterweissig/cpp_comport.git"
-    echo "          xbee_config/    [git]/peterweissig/cpp_xbee_config.git"
+    echo "      c++/"
     echo "          avr_downloader/ [git]/peterweissig/cpp_avr_downloader.git"
     echo ""
     echo "  ros/"
@@ -144,7 +139,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2020 10 11
+# 2022 02 18
 
 function repo_help_overview_roboag() {
 
@@ -216,13 +211,7 @@ function repo_help_overview_roboag() {
     echo "          dimmer/         [git]/peterweissig/project_dimmer.git"
     echo ""
     echo "  C++/"
-    echo "      Peter/              [git]/peterweissig/cpp_main.git"
-    echo "        src/"
-    echo "          basic/          [git]/peterweissig/cpp_basic.git"
-    echo "          file/           [git]/peterweissig/cpp_file.git"
-    echo "          comport/        [git]/peterweissig/cpp_comport.git"
-    echo "          xbee_config/    [git]/peterweissig/cpp_xbee_config.git"
-    echo "          avr_downloader/ [git]/peterweissig/cpp_avr_downloader.git"
+    echo "      avr_downloader/     [git]/peterweissig/cpp_avr_downloader.git"
     echo ""
     echo "  ROS/"
     echo "    ros-tools-pa/"

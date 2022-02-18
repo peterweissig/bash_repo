@@ -1,5 +1,26 @@
 #!/bin/bash
 
+#***************************[changed structure of c++ project]****************
+# 2022 02 18
+
+# check for cpp main project
+if [ -d "${REPO_CPP_PATH}.git" ]; then
+    echo "warning: Changed structure of cpp project repo on 18.02.2022!"
+    echo "  You should (re)move the files accordingly:"
+    if [ ! -d "${REPO_CPP_AVR_DOWNLOADER}" ]; then
+        echo "    $ git_clone_cpp_avr_downloader"
+    fi
+    files=".gitignore LICENSE.md Makefile"
+    for file in $files; do
+        if [ -f "${REPO_CPP_PATH}${file}" ]; then
+            echo "    $ rm \"${REPO_CPP_PATH}${file}\""
+        fi
+    done
+    echo "    $ rm -rf \"${REPO_CPP_PATH}.git\""
+fi
+
+
+
 #***************************[fixed structure of doc]**************************
 # 2021 01 05
 

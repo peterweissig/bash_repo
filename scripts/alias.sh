@@ -353,43 +353,15 @@ alias git_status_hardware_dimmer="_repo_git_st \
   \"${REPO_HARDWARE_DIMMER[0]}\" peter/dimmer"
 
 #***************************[projects/c++]
-# 2021 02 18
-
-# all
-alias git_pull_cpp="if [ -d \"${REPO_CPP_MAIN[0]}\" ]; then \
-  bash -c 'cd \"${REPO_CPP_MAIN[0]}\" && make update'; fi"
-alias git_status_cpp="if [ -d \"${REPO_CPP_MAIN[0]}\" ]; then \
-  bash -c 'cd \"${REPO_CPP_MAIN[0]}\" && make status'; fi"
-
-# main (peter)
-alias git_clone_cpp_main="_repo_git_clone ${REPO_CPP_MAIN[*]}"
-alias git_pull_cpp_main="_repo_git_pull \"${REPO_CPP_MAIN[0]}\""
-alias git_status_cpp_main="_repo_git_st \"${REPO_CPP_MAIN[0]}\""
-
-# basic (peter)
-alias git_clone_cpp_basic="_repo_git_clone ${REPO_CPP_BASIC[*]}"
-alias git_pull_cpp_basic="_repo_git_pull \"${REPO_CPP_BASIC[0]}\""
-alias git_status_cpp_basic="_repo_git_st \"${REPO_CPP_BASIC[0]}\""
-
-# comport (peter)
-alias git_clone_cpp_comport="_repo_git_clone ${REPO_CPP_COMPORT[*]}"
-alias git_pull_cpp_comport="_repo_git_pull \"${REPO_CPP_COMPORT[0]}\""
-alias git_status_cpp_comport="_repo_git_st \"${REPO_CPP_COMPORT[0]}\""
-
-# file (peter)
-alias git_clone_cpp_file="_repo_git_clone ${REPO_CPP_FILE[*]}"
-alias git_pull_cpp_file="_repo_git_pull \"${REPO_CPP_FILE[0]}\""
-alias git_status_cpp_file="_repo_git_st \"${REPO_CPP_FILE[0]}\""
+# 2022 02 18
 
 # avr-downloader (peter)
-alias git_clone_cpp_downloader="_repo_git_clone ${REPO_CPP_DOWNLOADER[*]}"
-alias git_pull_cpp_downloader="_repo_git_pull \"${REPO_CPP_DOWNLOADER[0]}\""
-alias git_status_cpp_downloader="_repo_git_st \"${REPO_CPP_DOWNLOADER[0]}\""
-
-# xbee-tool (peter)
-alias git_clone_cpp_xbee="_repo_git_clone ${REPO_CPP_XBEE[*]}"
-alias git_pull_cpp_xbee="_repo_git_pull \"${REPO_CPP_XBEE[0]}\""
-alias git_status_cpp_xbee="_repo_git_st \"${REPO_CPP_XBEE[0]}\""
+alias git_clone_cpp_avr_downloader="_repo_git_clone \
+  ${REPO_CPP_AVR_DOWNLOADER[*]}"
+alias git_pull_cpp_avr_downloader="_repo_git_pull \
+  \"${REPO_CPP_AVR_DOWNLOADER[0]}\""
+alias git_status_cpp_avr_downloader="_repo_git_st \
+  \"${REPO_CPP_AVR_DOWNLOADER[0]}\""
 
 
 
@@ -472,7 +444,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2021 02 23
+# 2022 02 18
 
 function repo_pull_all() {
 
@@ -554,7 +526,7 @@ function repo_pull_all() {
     git_pull_hardware_dmx_opa
     git_pull_hardware_dimmer
 
-    git_pull_cpp
+    git_pull_cpp_avr_downloader
 
 
     git_pull_doc_server_online
@@ -569,7 +541,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2021 02 23
+# 2022 02 18
 
 function repo_status_all() {
 
@@ -652,7 +624,7 @@ function repo_status_all() {
     git_status_hardware_dmx_opa
     git_status_hardware_dimmer
 
-    git_status_cpp
+    git_status_cpp_avr_downloader
 
 
     git_status_doc_server_online
@@ -856,7 +828,7 @@ function repo_clone_ros() {
     git_clone_ros_radar
 }
 
-# 2020 06 19
+# 2022 02 18
 function repo_clone_all() {
 
     # print help
@@ -905,10 +877,5 @@ function repo_clone_all() {
 
     git_clone_bash_master_server
 
-    git_clone_cpp_main
-    git_clone_cpp_basic
-    git_clone_cpp_file
-    git_clone_cpp_comport
-    git_clone_cpp_downloader
-    git_clone_cpp_xbee
+    git_clone_cpp_avr_downloader
 }

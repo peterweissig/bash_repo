@@ -15,7 +15,7 @@
 
 
 #***************************[check for roboag structure]**********************
-# 2021 01 05
+# 2022 02 18
 
 if [ "$REPO_MODE" == "roboag" ]; then
 
@@ -82,8 +82,8 @@ if [ "$REPO_MODE" == "roboag" ]; then
 
     # c++
     if [ "$REPO_CPP_PATH" == "" ]; then
-        export REPO_CPP_PATH="${REPO_PATH_WORKSPACE}C++/Peter/"
-            # avr_downloader and xbee_tool
+        export REPO_CPP_PATH="${REPO_PATH_WORKSPACE}C++/"
+            # avr_downloader
     fi
 
     # ros
