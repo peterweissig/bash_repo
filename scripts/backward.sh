@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[changed structure of c++ project]****************
-# 2022 02 18
+# 2022 02 19
 
 # check for cpp main project
 if [ -d "${REPO_CPP_PATH}.git" ]; then
@@ -17,6 +17,19 @@ if [ -d "${REPO_CPP_PATH}.git" ]; then
         fi
     done
     echo "    $ rm -rf \"${REPO_CPP_PATH}.git\""
+fi
+
+# check for cpp main project
+if [ "$REPO_MODE" == "roboag" ]; then
+    temp_path="${REPO_CPP_PATH}C++/Peter/"
+    if [ -d "$temp_path" ]; then
+        echo "warning: Changed structure of cpp project repo on 18.02.2022!"
+        echo "  You should (re)move the files accordingly:"
+        if [ ! -d "${REPO_CPP_AVR_DOWNLOADER}" ]; then
+            echo "    $ git_clone_cpp_avr_downloader"
+        fi
+        echo "    $ rm -rf \"${temp_path}\""
+    fi
 fi
 
 
