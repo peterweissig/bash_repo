@@ -21,7 +21,7 @@ fi
 
 # check for cpp main project
 if [ "$REPO_MODE" == "roboag" ]; then
-    temp_path="${REPO_CPP_PATH}C++/Peter/"
+    temp_path="${REPO_CPP_PATH}Peter/"
     if [ -d "$temp_path" ]; then
         echo "warning: Changed structure of cpp project repo on 18.02.2022!"
         echo "  You should (re)move the files accordingly:"
