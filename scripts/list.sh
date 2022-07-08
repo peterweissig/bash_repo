@@ -8,13 +8,15 @@
 
 
 #***************************[server]******************************************
-# 2018 02 16
+# 2022 07 07
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
 export REPO_ROOT_GITHUB_FABIAN="https://github.com/fabiangeissler/"
 
 export REPO_ROOT_GITHUB_ROBOAG="https://github.com/RoboAG/"
 export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
+
+export REPO_ROOT_GITHUB_ROBERTA="https://github.com/OpenRoberta/"
 
 export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
@@ -71,13 +73,16 @@ export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
 
 
 #***************************[roboag]******************************************
-# 2020 09 27
+# 2022 07 07
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
     export REPO_ROBOAG_PATH="${REPO_PATH_WORKSPACE}roboag/"
 fi
 
+if [ "$REPO_ROBOAG_ROBERTA_PATH" == "" ]; then
+    export REPO_ROBOAG_ROBERTA_PATH="${REPO_ROBOAG_PATH}roberta/"
+fi
 if [ "$REPO_ROBOAG_DOC_PATH" == "" ]; then
     export REPO_ROBOAG_DOC_PATH="${REPO_ROBOAG_PATH}doc/"
 fi
@@ -98,6 +103,19 @@ export REPO_ROBOAG_LIB=("${REPO_ROBOAG_PATH}library/" \
 # pololu (extern)
 export REPO_ROBOAG_POLOLU=("${REPO_ROBOAG_PATH}pololu/" \
   "https://github.com/pololu/libpololu-avr.git")
+
+#***************************[roboag/roberta]
+# 2022 07 07
+
+# connector (open-roberta)
+export REPO_ROBOAG_ROBERTA_CONNECTOR=( \
+  "${REPO_ROBOAG_ROBERTA_PATH}connector/" \
+  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-connector.git")
+
+# server (open-roberta)
+export REPO_ROBOAG_ROBERTA_SERVER=( \
+  "${REPO_ROBOAG_ROBERTA_PATH}server/" \
+  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-lab.git")
 
 #***************************[roboag/doc]
 # 2020 09 27

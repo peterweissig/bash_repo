@@ -88,6 +88,25 @@ alias git_clone_roboag_pololu="_repo_git_clone ${REPO_ROBOAG_POLOLU[*]}"
 alias git_pull_roboag_pololu="_repo_git_pull \"${REPO_ROBOAG_POLOLU[0]}\""
 alias git_status_roboag_pololu="_repo_git_st \"${REPO_ROBOAG_POLOLU[0]}\""
 
+#***************************[roboag/roberta]
+# 2022 07 07
+
+# connector (open-roberta)
+alias git_clone_roboag_roberta_connector="_repo_git_clone \
+  ${REPO_ROBOAG_ROBERTA_CONNECTOR[*]} roberta/connector"
+alias git_pull_roboag_roberta_connector="_repo_git_pull \
+  \"${REPO_ROBOAG_ROBERTA_CONNECTOR[0]}\" roberta/connector"
+alias git_status_roboag_roberta_connector="_repo_git_st \
+  \"${REPO_ROBOAG_ROBERTA_CONNECTOR[0]}\" roberta/connector"
+
+# server (open-roberta)
+alias git_clone_roboag_roberta_server="_repo_git_clone \
+  ${REPO_ROBOAG_ROBERTA_SERVER[*]} roberta/server"
+alias git_pull_roboag_roberta_server="_repo_git_pull \
+  \"${REPO_ROBOAG_ROBERTA_SERVER[0]}\" roberta/server"
+alias git_status_roboag_roberta_server="_repo_git_st \
+  \"${REPO_ROBOAG_ROBERTA_SERVER[0]}\" roberta/server"
+
 #***************************[roboag/doc]
 # 2021 02 18
 
@@ -541,7 +560,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2022 02 18
+# 2022 07 07
 
 function repo_status_all() {
 
@@ -590,6 +609,9 @@ function repo_status_all() {
     git_status_roboag_lib
     git_status_roboag_doc_robolib
     git_status_roboag_pololu
+
+    git_status_roboag_roberta_connector
+    git_status_roboag_roberta_server
 
     git_status_roboag_eagle_config
     git_status_roboag_eagle_keplerboard
@@ -676,7 +698,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
-# 2020 06 27
+# 2022 07 07
 function repo_clone_roboag() {
 
     # print help
@@ -706,6 +728,9 @@ function repo_clone_roboag() {
     git_clone_roboag_lib
     git_clone_roboag_doc_robolib
     git_clone_roboag_pololu
+
+    git_clone_roboag_roberta_connector
+    git_clone_roboag_roberta_server
 
     git_clone_roboag_eagle_config
     git_clone_roboag_eagle_keplerboard

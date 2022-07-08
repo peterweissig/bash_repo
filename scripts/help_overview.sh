@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2022 02 18
+# 2022 07 07
 
 function repo_help_overview() {
 
@@ -51,6 +51,10 @@ function repo_help_overview() {
     echo "  roboag/"
     echo "      lib/                [git]/RoboAG/avr_robolib.git"
     echo "      pololu/             [git]/pololu/libpololu-avr"
+    echo ""
+    echo "      roberta/"
+    echo "          connector/      [git]/OpenRoberta/openroberta-connector.git"
+    echo "          server/         [git]/OpenRoberta/openroberta-lab.git"
     echo ""
     echo "      doc/"
     echo "          install/        [git]/RoboAG/doc_install.git"
@@ -139,7 +143,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2022 02 18
+# 2022 07 07
 
 function repo_help_overview_roboag() {
 
@@ -174,6 +178,10 @@ function repo_help_overview_roboag() {
     echo "  WinAVR/"
     echo "      robolib/            [git]/RoboAG/avr_robolib.git"
     echo "      pololu/             [git]/pololu/libpololu-avr"
+    echo ""
+    echo "      roberta/"
+    echo "          connector/      [git]/OpenRoberta/openroberta-connector.git"
+    echo "          server/         [git]/OpenRoberta/openroberta-lab.git"
     echo ""
     echo "      RoboSAX/"
     echo "          spielfeld/      [git]/RoboSAX/avr_spielfeld.git"

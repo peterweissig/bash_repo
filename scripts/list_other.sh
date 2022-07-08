@@ -24,6 +24,7 @@ if [ "$REPO_MODE" == "roboag" ]; then
         export REPO_ROBOAG_PATH="${REPO_PATH_WORKSPACE}WinAVR/"
             # robolib
             # pololu
+            # roberta/...
 
         if [ "$REPO_ROBOSAX_AVR_PATH" == "" ]; then
             export REPO_ROBOSAX_AVR_PATH="${REPO_ROBOAG_PATH}RoboSAX/"
