@@ -463,7 +463,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2022 02 18
+# 2023 01 28
 
 function repo_pull_all() {
 
@@ -508,8 +508,10 @@ function repo_pull_all() {
 
 
     git_pull_roboag_lib
-    git_pull_roboag_doc_robolib
     git_pull_roboag_pololu
+
+    git_pull_roboag_doc_robolib
+    git_pull_roboag_doc_install
 
     git_pull_roboag_eagle_config
     git_pull_roboag_eagle_keplerboard
@@ -560,7 +562,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2022 07 07
+# 2023 01 28
 
 function repo_status_all() {
 
@@ -607,8 +609,10 @@ function repo_status_all() {
 
 
     git_status_roboag_lib
-    git_status_roboag_doc_robolib
     git_status_roboag_pololu
+
+    git_status_roboag_doc_robolib
+    git_status_roboag_doc_install
 
     git_status_roboag_roberta_connector
     git_status_roboag_roberta_server
