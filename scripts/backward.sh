@@ -56,19 +56,19 @@ fi
 #***************************[removed doc/ from bash master roboag]************
 # 2020 10 11
 
-if [ -e "$REPO_BASH_MASTER_ROBOAG" ]; then
-    temp="$(cd "$REPO_BASH_MASTER_ROBOAG" && \
-      git show --no-patch --pretty=%at)"
-
-    # check if last commit was before the rebase
-    if [ "$temp" != "" ] && [ "$temp" -lt "1601208582" ]; then
-        echo -n "warning: images were removed from bash master roboag "
-        echo "on 27.09.2020!"
-        echo "  You should update the repository accordingly:"
-        echo "    $ cd \"$REPO_BASH_MASTER_ROBOAG\""
-        echo "    $ git fetch && git reset --quiet --hard @{upstream}"
-    fi
-fi
+#if [ -e "$REPO_BASH_MASTER_ROBOAG" ]; then
+#    temp="$(cd "$REPO_BASH_MASTER_ROBOAG" && \
+#      git show --no-patch --pretty=%at)"
+#
+#    # check if last commit was before the rebase
+#    if [ "$temp" != "" ] && [ "$temp" -lt "1601208582" ]; then
+#        echo -n "warning: images were removed from bash master roboag "
+#        echo "on 27.09.2020!"
+#        echo "  You should update the repository accordingly:"
+#        echo "    $ cd \"$REPO_BASH_MASTER_ROBOAG\""
+#        echo "    $ git fetch && git reset --quiet --hard @{upstream}"
+#    fi
+#fi
 
 
 
