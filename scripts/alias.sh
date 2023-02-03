@@ -463,7 +463,7 @@ alias git_status_ros_radar="_repo_git_st \
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2023 01 28
+# 2023 02 03
 
 function repo_pull_all() {
 
@@ -509,6 +509,9 @@ function repo_pull_all() {
 
     git_pull_roboag_lib
     git_pull_roboag_pololu
+
+    git_pull_roboag_roberta_connector
+    git_pull_roboag_roberta_server
 
     git_pull_roboag_doc_robolib
     git_pull_roboag_doc_install
