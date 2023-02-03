@@ -107,6 +107,25 @@ alias git_pull_roboag_roberta_server="_repo_git_pull \
 alias git_status_roboag_roberta_server="_repo_git_st \
   \"${REPO_ROBOAG_ROBERTA_SERVER[0]}\" roberta/server"
 
+#***************************[roboag/mblock]
+# 2023 02 03
+
+# arduino (mblock)
+alias git_clone_roboag_mblock_arduino="_repo_git_clone \
+  ${REPO_ROBOAG_MBLOCK_ARDUINO[*]} mblock/arduino"
+alias git_pull_roboag_mblock_arduino="_repo_git_pull \
+  \"${REPO_ROBOAG_MBLOCK_ARDUINO[0]}\" mblock/arduino"
+alias git_status_roboag_mblock_arduino="_repo_git_st \
+  \"${REPO_ROBOAG_MBLOCK_ARDUINO[0]}\" mblock/arduino"
+
+# mbot (mblock)
+alias git_clone_roboag_mblock_mbot="_repo_git_clone \
+  ${REPO_ROBOAG_MBLOCK_MBOT[*]} mblock/mbot"
+alias git_pull_roboag_mblock_mbot="_repo_git_pull \
+  \"${REPO_ROBOAG_MBLOCK_MBOT[0]}\" mblock/mbot"
+alias git_status_roboag_mblock_mbot="_repo_git_st \
+  \"${REPO_ROBOAG_MBLOCK_MBOT[0]}\" mblock/mbot"
+
 #***************************[roboag/doc]
 # 2021 02 18
 
@@ -512,6 +531,8 @@ function repo_pull_all() {
 
     git_pull_roboag_roberta_connector
     git_pull_roboag_roberta_server
+    git_pull_roboag_mblock_arduino
+    git_pull_roboag_mblock_mbot
 
     git_pull_roboag_doc_robolib
     git_pull_roboag_doc_install
@@ -565,7 +586,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2023 01 28
+# 2023 02 03
 
 function repo_status_all() {
 
@@ -619,6 +640,8 @@ function repo_status_all() {
 
     git_status_roboag_roberta_connector
     git_status_roboag_roberta_server
+    git_status_roboag_mblock_arduino
+    git_status_roboag_mblock_mbot
 
     git_status_roboag_eagle_config
     git_status_roboag_eagle_keplerboard
@@ -705,7 +728,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
-# 2022 07 07
+# 2023 02 03
 function repo_clone_roboag() {
 
     # print help
@@ -738,6 +761,8 @@ function repo_clone_roboag() {
 
     git_clone_roboag_roberta_connector
     git_clone_roboag_roberta_server
+    git_clone_roboag_mblock_arduino
+    git_clone_roboag_mblock_mbot
 
     git_clone_roboag_eagle_config
     git_clone_roboag_eagle_keplerboard

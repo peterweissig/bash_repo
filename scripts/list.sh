@@ -8,7 +8,7 @@
 
 
 #***************************[server]******************************************
-# 2022 07 07
+# 2023 02 03
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
 export REPO_ROOT_GITHUB_FABIAN="https://github.com/fabiangeissler/"
@@ -17,6 +17,7 @@ export REPO_ROOT_GITHUB_ROBOAG="https://github.com/RoboAG/"
 export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
 
 export REPO_ROOT_GITHUB_ROBERTA="https://github.com/OpenRoberta/"
+export REPO_ROOT_GITHUB_MBLOCK="https://github.com/Makeblock-official/"
 
 export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
@@ -73,7 +74,7 @@ export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
 
 
 #***************************[roboag]******************************************
-# 2022 07 07
+# 2023 02 03
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
@@ -82,6 +83,9 @@ fi
 
 if [ "$REPO_ROBOAG_ROBERTA_PATH" == "" ]; then
     export REPO_ROBOAG_ROBERTA_PATH="${REPO_ROBOAG_PATH}roberta/"
+fi
+if [ "$REPO_ROBOAG_MBLOCK_PATH" == "" ]; then
+    export REPO_ROBOAG_MBLOCK_PATH="${REPO_ROBOAG_PATH}mblock/"
 fi
 if [ "$REPO_ROBOAG_DOC_PATH" == "" ]; then
     export REPO_ROBOAG_DOC_PATH="${REPO_ROBOAG_PATH}doc/"
@@ -116,6 +120,19 @@ export REPO_ROBOAG_ROBERTA_CONNECTOR=( \
 export REPO_ROBOAG_ROBERTA_SERVER=( \
   "${REPO_ROBOAG_ROBERTA_PATH}server/" \
   "${REPO_ROOT_GITHUB_ROBERTA}openroberta-lab.git")
+
+#***************************[roboag/mblock]
+# 2022 07 07
+
+# arduino (mblock)
+export REPO_ROBOAG_MBLOCK_ARDUINO=( \
+  "${REPO_ROBOAG_MBLOCK_PATH}arduino/" \
+  "${REPO_ROOT_GITHUB_MBLOCK}makeblock-libraries.git")
+
+# mbot (mblock)
+export REPO_ROBOAG_MBLOCK_MBOT=( \
+  "${REPO_ROBOAG_MBLOCK_PATH}mbot/" \
+  "${REPO_ROOT_GITHUB_MBLOCK}mBot.git")
 
 #***************************[roboag/doc]
 # 2020 09 27

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2022 07 07
+# 2023 02 03
 
 function repo_help_overview() {
 
@@ -55,6 +55,10 @@ function repo_help_overview() {
     echo "      roberta/"
     echo "          connector/      [git]/OpenRoberta/openroberta-connector.git"
     echo "          server/         [git]/OpenRoberta/openroberta-lab.git"
+    echo ""
+    echo "      mblock/"
+    echo "          arduino/        [git]/Makeblock-official/Makeblock-Libraries.git"
+    echo "          mbot/           [git]/Makeblock-official/mBot.git"
     echo ""
     echo "      doc/"
     echo "          install/        [git]/RoboAG/doc_install.git"
@@ -143,7 +147,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2022 07 07
+# 2023 02 03
 
 function repo_help_overview_roboag() {
 
@@ -182,6 +186,10 @@ function repo_help_overview_roboag() {
     echo "      roberta/"
     echo "          connector/      [git]/OpenRoberta/openroberta-connector.git"
     echo "          server/         [git]/OpenRoberta/openroberta-lab.git"
+    echo ""
+    echo "      mblock/"
+    echo "          arduino/        [git]/Makeblock-official/Makeblock-Libraries.git"
+    echo "          mbot/           [git]/Makeblock-official/mBot.git"
     echo ""
     echo "      RoboSAX/"
     echo "          spielfeld/      [git]/RoboSAX/avr_spielfeld.git"
