@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[all]*********************************************
-# 2021 03 12
+# 2023 11 18
 
 function repo_help_all() {
 
@@ -65,7 +65,7 @@ function repo_help_all() {
     echo -n "    "; repo_clone_peter -h
     echo -n "    "; repo_clone_ros -h
     echo ""
-    echo "specific repository functions (alias)"
+    echo "specific repository functions"
     echo -n "  "; echo "git_clone_..."
     echo -n "  "; echo "git_pull_..."
     echo -n "  "; echo "git_status_..."
