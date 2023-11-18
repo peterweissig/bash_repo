@@ -49,27 +49,39 @@ function _repo_git_clone() {
 
 
 #***************************[_repo_git_pull]**********************************
-# 2020 01 28
+# 2023 11 18
+function _repo_git_pull_release() {
+    _repo_git_pull_ "$1" "$2" release
+}
 
+function _repo_git_pull_quiet() {
+    _repo_git_pull "$1" "$2" quiet
+}
+
+# 2023 11 18
 function _repo_git_pull() {
 
     # print help
     if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME <local_path> [<disp_name>]"
+        echo "$FUNCNAME <local_path> [<disp_name>] [<mode>]"
 
         return
     fi
     if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 1-2 parameters"
+        echo "$FUNCNAME needs 1-3 parameters"
         echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
         echo "    [#2:]displayed name of repository"
+        echo "    [#3:]mode of pulling"
+        echo "         \"\"         just 'git pull --tags' (default)"
+        echo "         \"quiet\"    prune, but skip statistics & tags"
+        echo "         \"release\"  always force quiet reset"
         echo "Executes \"git pull\" on the given git-repository."
 
         return
     fi
 
     # check parameter
-    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+    if [ $# -lt 1 ] || [ $# -gt 3 ]; then
         echo "$FUNCNAME: Parameter Error."
         $FUNCNAME --help
         return -1
@@ -77,10 +89,17 @@ function _repo_git_pull() {
 
     # load parameters
     PARAM_PATH="$1"
-    if [ $# -lt 2 ]; then
+    REPO_NAME="$2"
+    if [ "$REPO_NAME" == "" ]; then
         REPO_NAME="$(basename "$PARAM_PATH")"
-    else
-        REPO_NAME="$2"
+    fi
+    PARAM_MODE="$3"
+    if [ "$PARAM_MODE" != "" ] &&
+       [ "$PARAM_MODE" != "quiet" ] &&
+       [ "$PARAM_MODE" != "release" ]; then
+        echo "$FUNCNAME: Parameter Error - mode \"$PARAM_MODE\" unknown."
+        $FUNCNAME --help
+        return -2
     fi
 
     # check local path
@@ -89,61 +108,24 @@ function _repo_git_pull() {
     fi
 
     # display repo name
-    echo "###g $REPO_NAME ###"
+    REPO_NAME_HINT=""
+    if [ "$PARAM_MODE" != "" ]; then
+        REPO_NAME_HINT=" (${PARAM_MODE}!)"
+    fi
+    echo "###g ${REPO_NAME}${REPO_NAME_HINT} ###"
 
     # git pull
-    (cd "$PARAM_PATH" && git pull --tags)
-}
-
-
-
-#***************************[_repo_git_pull_release]**************************
-# 2020 01 28
-
-function _repo_git_pull_release() {
-
-    # print help
-    if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME <local_path> [<disp_name>]"
-
-        return
-    fi
-    if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 1-2 parameters"
-        echo "     #1: locale path (e.g. /home/egon/workspace/repo)"
-        echo "    [#2:]displayed name of repository"
-        echo -n "Executes \"git fetch\" and \"git rebase --skip\" on the"
-        echo "given git-repository."
-
-        return
-    fi
-
-    # check parameter
-    if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-        echo "$FUNCNAME: Parameter Error."
-        $FUNCNAME --help
-        return -1
-    fi
-
-    # load parameters
-    PARAM_PATH="$1"
-    if [ $# -lt 2 ]; then
-        REPO_NAME="$(basename "$PARAM_PATH")"
+    if [ "$PARAM_MODE" == "quiet" ]; then
+        (cd "$PARAM_PATH" && git pull --no-stat --prune)
+    elif [ "$PARAM_MODE" == "release" ]; then
+        (cd "$PARAM_PATH" && \
+         git fetch && git reset --quiet --hard @{upstream})
     else
-        REPO_NAME="$2"
+        (cd "$PARAM_PATH" && git pull --tags)
     fi
-
-    # check local path
-    if [ ! -d "$PARAM_PATH" ] || [ ! -d "${PARAM_PATH}/.git" ]; then
-        return
-    fi
-
-    # display repo name
-    echo "###g $REPO_NAME (release!) ###"
-
-    # git pull
-    (cd "$PARAM_PATH" && git fetch && git reset --quiet --hard @{upstream})
 }
+
+
 
 #***************************[_repo_git_push]**********************************
 # 2020 01 28
