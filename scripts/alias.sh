@@ -104,11 +104,11 @@ function git_status_roboag_roberta_connector() {
 
 # server (open-roberta)
 function git_clone_roboag_roberta_server() {
-    _repo_git_clone ${REPO_ROBOAG_ROBERTA_SERVER[*]}  roberta/server; }
-function git_pull_roboag_roberta_server() {
-    _repo_git_pull "${REPO_ROBOAG_ROBERTA_SERVER[0]}" roberta/server; }
+    _repo_git_clone       ${REPO_ROBOAG_ROBERTA_SERVER[*]}  roberta/server; }
+function git_pull_roboag_roberta_server() { # QUIET!
+    _repo_git_pull_quiet "${REPO_ROBOAG_ROBERTA_SERVER[0]}" roberta/server; }
 function git_status_roboag_roberta_server() {
-    _repo_git_st   "${REPO_ROBOAG_ROBERTA_SERVER[0]}" roberta/server; }
+    _repo_git_st         "${REPO_ROBOAG_ROBERTA_SERVER[0]}" roberta/server; }
 
 #***************************[roboag/mblock]
 # 2023 11 18
@@ -135,18 +135,18 @@ function git_status_roboag_mblock_mbot() {
 # robolib as release-repo (roboag)
 function git_clone_roboag_doc_robolib() {
     _repo_git_clone         ${REPO_ROBOAG_DOC_ROBOLIB[*]}  doc/robolib; }
-function git_pull_roboag_doc_robolib() {
+function git_pull_roboag_doc_robolib() { # RELEASE!
     _repo_git_pull_release "${REPO_ROBOAG_DOC_ROBOLIB[0]}" doc/robolib; }
 function git_status_roboag_doc_robolib() {
     _repo_git_st           "${REPO_ROBOAG_DOC_ROBOLIB[0]}" doc/robolib; }
 
 # install (roboag)
 function git_clone_roboag_doc_install() {
-    _repo_git_clone         ${REPO_ROBOAG_DOC_INSTALL[*]}  doc/install; }
+    _repo_git_clone  ${REPO_ROBOAG_DOC_INSTALL[*]}  doc/install; }
 function git_pull_roboag_doc_install() {
-    _repo_git_pull_release "${REPO_ROBOAG_DOC_INSTALL[0]}" doc/install; }
+    _repo_git_pull  "${REPO_ROBOAG_DOC_INSTALL[0]}" doc/install; }
 function git_status_roboag_doc_install() {
-    _repo_git_st           "${REPO_ROBOAG_DOC_INSTALL[0]}" doc/install; }
+    _repo_git_st    "${REPO_ROBOAG_DOC_INSTALL[0]}" doc/install; }
 
 #***************************[roboag/eagle]
 # 2023 11 18
@@ -247,7 +247,7 @@ function git_status_roboag_php_filebrowser() {
 # punkte as release-repo (robosax)
 function git_clone_robosax_doc_punkte() {
     _repo_git_clone         ${REPO_ROBOSAX_DOC_PUNKTE[*]}  doc/punkte; }
-function git_pull_robosax_doc_punkte() {
+function git_pull_robosax_doc_punkte() { # RELEASE!
     _repo_git_pull_release "${REPO_ROBOSAX_DOC_PUNKTE[0]}" doc/punkte; }
 function git_status_robosax_doc_punkte() {
     _repo_git_st           "${REPO_ROBOSAX_DOC_PUNKTE[0]}" doc/punkte; }
