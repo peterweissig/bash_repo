@@ -46,6 +46,8 @@ function _repo_git_clone() {
     git clone "$PARAM_SERVER" "$PARAM_PATH"
 }
 
+
+
 #***************************[_repo_git_pull]**********************************
 # 2020 01 28
 
@@ -92,6 +94,8 @@ function _repo_git_pull() {
     # git pull
     (cd "$PARAM_PATH" && git pull --tags)
 }
+
+
 
 #***************************[_repo_git_pull_release]**************************
 # 2020 01 28
@@ -195,6 +199,8 @@ function _repo_git_push() {
     (cd "$PARAM_PATH" && git push --tags)
 }
 
+
+
 #***************************[_repo_git_st]************************************
 # 2020 01 28
 
@@ -243,6 +249,8 @@ function _repo_git_st() {
     (cd "$1" && git status --untracked-files)
 }
 
+
+
 #***************************[git_diff]****************************************
 # 2019 08 23
 
@@ -284,68 +292,7 @@ function git_diff() {
     fi
 }
 
-# 2018 09 10 old source code (instead of using _repo_diff):
-#     if [ $# -lt 1 ]; then
-#         local_path="."
-#     else
-#         local_path="$1"
-#     fi
-#
-#     # check local path
-#     error_temp="$(cd "$local_path" && \
-#       git config --list --local  2>&1 > /dev/null)"
-#     if [ "$error_temp" != "" ] ; then
-#         echo "$FUNCNAME: Directory is not a git-repository."
-#
-#         return -2
-#     fi
-#
-#     # check for changes
-#     info_temp="$(cd "$local_path" && git status --short 2>&1)"
-#     if [ "$info_temp" != "" ] ; then
-#         echo "$FUNCNAME: There are uncommitted changes."
-#         echo ""
-#         (cd "$local_path" && git status)
-#
-#         return -3
-#     fi
-#         # check for errors
-#         if [ $? -ne 0 ]; then
-#             echo "$FUNCNAME: Stopping because of an error."
-#             return -1;
-#         fi
-#
-#     # create temp path
-#     dir_temp=~/temp/git_diff/
-#     if [ -e "$dir_temp" ]; then
-#         echo "Remove old compare data"
-#         rm -rf "$dir_temp"
-#     fi
-#     mkdir -p "$dir_temp"
-#         # check for errors
-#         if [ $? -ne 0 ]; then
-#             echo "$FUNCNAME: Stopping because of an error."
-#             return -1;
-#         fi
-#
-#     # copy data
-#     cp --recursive "$local_path"  "$dir_temp"
-#         # check for errors
-#         if [ $? -ne 0 ]; then
-#             echo "$FUNCNAME: Stopping because of an error."
-#             return -1;
-#         fi
-#
-#     # update to an older version
-#     (cd "$local_path" && git checkout HEAD^)
-#         # check for errors
-#         if [ $? -ne 0 ]; then
-#             echo "$FUNCNAME: Stopping because of an error."
-#             return -1;
-#         fi
-#
-#     # compare versions
-#     meld  "$local_path" "$dir_temp"
+
 
 #***************************[git_config_set_ssh]******************************
 # 2019 08 21
