@@ -8,7 +8,7 @@
 
 
 #***************************[server]******************************************
-# 2023 02 03
+# 2023 11 20
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
 export REPO_ROOT_GITHUB_FABIAN="https://github.com/fabiangeissler/"
@@ -18,8 +18,6 @@ export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
 
 export REPO_ROOT_GITHUB_ROBERTA="https://github.com/OpenRoberta/"
 export REPO_ROOT_GITHUB_MBLOCK="https://github.com/Makeblock-official/"
-
-export REPO_ROOT_GITHUB_PROAUT="https://github.com/TUC-ProAut/"
 
 
 
@@ -365,64 +363,3 @@ export REPO_DOC_SERVER_ONLINE=( \
 export REPO_DOC_SERVER_LOCAL=( \
   "${REPO_DOC_SERVER_PATH}local/" \
   "${REPO_ROOT_GITHUB_PETER}doc_server_local.git")
-
-
-
-#***************************[ros]*********************************************
-# 2018 03 01
-
-# paths
-if [ "$REPO_ROS_PATH" == "" ]; then
-    export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ros/"
-fi
-
-#***************************[ros-tools-pa]
-# 2020 06 19
-
-# paths
-if [ "$REPO_ROS_TOOLS_PATH" == "" ]; then
-    export REPO_ROS_TOOLS_PATH="${REPO_ROS_PATH}ros-tools-pa/"
-fi
-export REPO_ROS_TOOLS_SRC_PATH="${REPO_ROS_TOOLS_PATH}src/"
-
-# parameter (TUC-ProAut)
-export REPO_ROS_PROAUT_PARAMETER=( \
-  "${REPO_ROS_TOOLS_SRC_PATH}parameter_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_parameter.git")
-
-# pcdfilter (TUC-ProAut)
-export REPO_ROS_PROAUT_PCDFILTER=( \
-  "${REPO_ROS_TOOLS_SRC_PATH}pcdfilter_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_pcdfilter.git")
-
-# octomap (TUC-ProAut)
-export REPO_ROS_PROAUT_OCTOMAP=( \
-  "${REPO_ROS_TOOLS_SRC_PATH}octomap_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_octomap.git")
-
-# nearfield map (TUC-ProAut)
-export REPO_ROS_PROAUT_NEARFIELDMAP=( \
-  "${REPO_ROS_TOOLS_SRC_PATH}nearfield_map_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_nearfield_map.git")
-
-# odometry (TUC-ProAut) -- deprecated
-export REPO_ROS_PROAUT_ODOMETRY=( \
-  "${REPO_ROS_TOOLS_SRC_PATH}odometry_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_odometry.git")
-
-
-
-#***************************[ros-sensors-pa]
-# 2018 06 19
-
-# paths
-if [ "$REPO_ROS_SENSORS_PATH" == "" ]; then
-    export REPO_ROS_SENSORS_PATH="${REPO_ROS_PATH}ros-sensors-pa/"
-fi
-export REPO_ROS_SENSORS_SRC_PATH="${REPO_ROS_SENSORS_PATH}src/"
-
-# radar (TUC-ProAut)
-export REPO_ROS_PROAUT_RADAR=( \
-  "${REPO_ROS_SENSORS_SRC_PATH}radar_pa/" \
-  "${REPO_ROOT_GITHUB_PROAUT}ros_radar.git")
-

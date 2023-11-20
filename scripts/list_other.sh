@@ -15,7 +15,7 @@
 
 
 #***************************[check for roboag structure]**********************
-# 2022 02 18
+# 2023 11 18
 
 if [ "$REPO_MODE" == "roboag" ]; then
 
@@ -86,18 +86,6 @@ if [ "$REPO_MODE" == "roboag" ]; then
     if [ "$REPO_CPP_PATH" == "" ]; then
         export REPO_CPP_PATH="${REPO_PATH_WORKSPACE}C++/"
             # avr_downloader
-    fi
-
-    # ros
-    if [ "$REPO_ROS_PATH" == "" ]; then
-        export REPO_ROS_PATH="${REPO_PATH_WORKSPACE}ROS/"
-            # ros-tools-pa
-                # parameter
-                # pcdfilter
-                # octomap
-                # nearfield_map
-            # ros-sensors-pa
-                # radar
     fi
 
     # php

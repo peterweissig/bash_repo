@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[all]*********************************************
-# 2023 11 18
+# 2023 11 20
 
 function repo_help_all() {
 
@@ -63,7 +63,6 @@ function repo_help_all() {
     echo -n "    "; repo_clone_roboag -h
     echo -n "    "; repo_clone_robosax -h
     echo -n "    "; repo_clone_peter -h
-    echo -n "    "; repo_clone_ros -h
     echo ""
     echo "specific repository functions"
     echo -n "  "; echo "git_clone_..."
@@ -83,7 +82,7 @@ function repo_help_all() {
 }
 
 #***************************[help]********************************************
-# 2021 03 12
+# 2023 11 20
 
 function repo_help() {
 
@@ -110,7 +109,6 @@ function repo_help() {
     echo -n "    "; repo_clone_roboag -h
     echo -n "    "; repo_clone_robosax -h
     echo -n "    "; repo_clone_peter -h
-    echo -n "    "; repo_clone_ros -h
     echo ""
     echo "workspace"
     echo -n "  "; repo_workspace_status -h

@@ -427,61 +427,6 @@ function git_status_doc_server_local() {
 
 
 
-#***************************[ros]*********************************************
-
-#***************************[ros-tools-pa]
-# 2023 11 18
-
-# parameter (TUC-ProAut)
-function git_clone_ros_parameter() {
-    _repo_git_clone ${REPO_ROS_PROAUT_PARAMETER[*]}  ros/parameter_pa; }
-function git_pull_ros_parameter() {
-    _repo_git_pull "${REPO_ROS_PROAUT_PARAMETER[0]}" ros/parameter_pa; }
-function git_status_ros_parameter() {
-    _repo_git_st   "${REPO_ROS_PROAUT_PARAMETER[0]}" ros/parameter_pa; }
-
-# pcdfilter (TUC-ProAut)
-function git_clone_ros_pcdfilter() {
-    _repo_git_clone ${REPO_ROS_PROAUT_PCDFILTER[*]}  ros/pcdfilter_pa; }
-function git_pull_ros_pcdfilter() {
-    _repo_git_pull "${REPO_ROS_PROAUT_PCDFILTER[0]}" ros/pcdfilter_pa; }
-function git_status_ros_pcdfilter() {
-    _repo_git_st   "${REPO_ROS_PROAUT_PCDFILTER[0]}" ros/pcdfilter_pa; }
-
-# octomap (TUC-ProAut)
-function git_clone_ros_octomap() {
-    _repo_git_clone ${REPO_ROS_PROAUT_OCTOMAP[*]}  ros/octomap_pa; }
-function git_pull_ros_octomap() {
-    _repo_git_pull "${REPO_ROS_PROAUT_OCTOMAP[0]}" ros/octomap_pa; }
-function git_status_ros_octomap() {
-    _repo_git_st   "${REPO_ROS_PROAUT_OCTOMAP[0]}" ros/octomap_pa; }
-
-# nearfield map (TUC-ProAut)
-function git_clone_ros_nearfieldmap() {
-    _repo_git_clone ${REPO_ROS_PROAUT_NEARFIELDMAP[*]}  ros/nearfieldmap_pa; }
-function git_pull_ros_nearfieldmap() {
-    _repo_git_pull "${REPO_ROS_PROAUT_NEARFIELDMAP[0]}" ros/nearfieldmap_pa; }
-function git_status_ros_nearfieldmap() {
-    _repo_git_st   "${REPO_ROS_PROAUT_NEARFIELDMAP[0]}" ros/nearfieldmap_pa; }
-
-# odometry (TUC-ProAut) -- deprecated
-function git_status_ros_odometry() {
-    _repo_git_st   "${REPO_ROS_PROAUT_ODOMETRY[0]}" ros/odometry_pa; }
-
-
-#***************************[ros-sensors-pa]
-# 2023 11 18
-
-# radar (TUC-ProAut)
-function git_clone_ros_radar() {
-    _repo_git_clone ${REPO_ROS_PROAUT_RADAR[*]}  ros/radar_pa; }
-function git_pull_ros_radar() {
-    _repo_git_pull "${REPO_ROS_PROAUT_RADAR[0]}" ros/radar_pa; }
-function git_status_ros_radar() {
-    _repo_git_st   "${REPO_ROS_PROAUT_RADAR[0]}" ros/radar_pa; }
-
-
-
 #***************************[git global]**************************************
 
 #***************************[pull]

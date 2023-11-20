@@ -1,5 +1,20 @@
 #!/bin/bash
 
+#***************************[removed proaut ros]******************************
+# 2023 11 20
+
+temp_path="${REPO_PATH_WORKSPACE}ros/"
+    if [ ! -d "$temp_path" ]; then
+        temp_path="/opt/roboag/repos/ros/"
+    fi
+if [ -d "$temp_path" ]; then
+    echo "warning: Removed ROS repos from list on 20.11.2023!"
+    echo "  You should (re)move the repos accordingly:"
+    echo "    $ rm -rf \"${temp_path}\""
+fi
+
+
+
 #***************************[changed structure of c++ project]****************
 # 2022 02 19
 
@@ -155,22 +170,6 @@ if [ -d "$temp_path" ]; then
     echo ""
     echo "  Please rename the folder:"
     echo "      $ mv \"$temp_path\" \"$REPO_ROBOAG_PATH\""
-fi
-
-
-
-#***************************[removed repo odometry]***************************
-# 2020 06 19
-
-if [ "$REPO_ROS_PROAUT_ODOMETRY" != "" ] && \
-  [ -d "$REPO_ROS_PROAUT_ODOMETRY" ]; then
-
-    echo "warning: Repo odometry_pa was removed on 18.06.2020!"
-    echo "  It was always empty and will never be used."
-    echo "  You should manually remove the files:"
-    echo "    $ git_status_ros_odometry"
-    echo "    $ rm -rf \"${REPO_ROS_PROAUT_ODOMETRY}\""
-    echo ""
 fi
 
 

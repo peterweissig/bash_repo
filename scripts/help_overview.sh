@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2023 02 03
+# 2023 11 20
 
 function repo_help_overview() {
 
@@ -115,18 +115,6 @@ function repo_help_overview() {
     echo "      c++/"
     echo "          avr_downloader/ [git]/peterweissig/cpp_avr_downloader.git"
     echo ""
-    echo "  ros/"
-    echo "    ros-tools-pa/"
-    echo "      src/"
-    echo "        parameter_pa/     [git]/TUC-ProAut/ros_parameter.git"
-    echo "        pcdfilter_pa/     [git]/TUC-ProAut/ros_pcdfilter.git"
-    echo "        octomap_pa/       [git]/TUC-ProAut/ros_octomap.git"
-    echo "        nearfield_map_pa/ [git]/TUC-ProAut/ros_nearfield_map.git"
-    echo ""
-    echo "    ros-sensors-pa/"
-    echo "      src/"
-    echo "        radar_pa/         [git]/TUC-ProAut/ros_radar.git"
-    echo ""
     echo ""
     echo "specific commands"
     echo "  git_clone_xyz   ... copies/downloads  specified repository (xyz)"
@@ -147,7 +135,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2023 02 03
+# 2023 11 20
 
 function repo_help_overview_roboag() {
 
@@ -228,18 +216,6 @@ function repo_help_overview_roboag() {
     echo ""
     echo "  C++/"
     echo "      avr_downloader/     [git]/peterweissig/cpp_avr_downloader.git"
-    echo ""
-    echo "  ROS/"
-    echo "    ros-tools-pa/"
-    echo "      src/"
-    echo "        parameter_pa/     [git]/TUC-ProAut/ros_parameter.git"
-    echo "        pcdfilter_pa/     [git]/TUC-ProAut/ros_pcdfilter.git"
-    echo "        octomap_pa/       [git]/TUC-ProAut/ros_octomap.git"
-    echo "        nearfield_map_pa/ [git]/TUC-ProAut/ros_nearfield_map.git"
-    echo ""
-    echo "    ros-sensors-pa/"
-    echo "      src/"
-    echo "        radar_pa/         [git]/TUC-ProAut/ros_radar.git"
     echo ""
     echo "  PHP/"
     echo "      filebrowser/        [git]/RoboAG/php_filebrowser.git"
