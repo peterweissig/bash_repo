@@ -1,8 +1,26 @@
 #!/bin/bash
 
+#***************************[main wrapper]************************************
+# 2023 11 20
+
+function repo_migration_check() {
+    _repo_migration_check_2018_11_roboag
+    _repo_migration_check_2019_12_doc_imscp
+    _repo_migration_check_2020_09_doc_punkte
+    _repo_migration_check_2020_09_doc_robolib
+    _repo_migration_check_2020_09_roboag
+    _repo_migration_check_2020_09_robosax
+    _repo_migration_check_2021_05_doc_punkte
+    _repo_migration_check_2022_02_cpp_main_project
+    _repo_migration_check_2023_11_ros
+}
+
+
+
 #***************************[removed proaut ros]******************************
 # 2023 11 20
 
+function _repo_migration_check_2023_11_ros() {
 temp_path="${REPO_PATH_WORKSPACE}ros/"
     if [ ! -d "$temp_path" ]; then
         temp_path="/opt/roboag/repos/ros/"
@@ -12,12 +30,14 @@ if [ -d "$temp_path" ]; then
     echo "  You should (re)move the repos accordingly:"
     echo "    $ rm -rf \"${temp_path}\""
 fi
+}
 
 
 
 #***************************[changed structure of c++ project]****************
 # 2022 02 19
 
+function _repo_migration_check_2022_02_cpp_main_project() {
 # check for cpp main project
 if [ -d "${REPO_CPP_PATH}.git" ]; then
     echo "warning: Changed structure of cpp project repo on 18.02.2022!"
@@ -46,13 +66,14 @@ if [ "$REPO_MODE" == "roboag" ]; then
         echo "    $ rm -rf \"${temp_path}\""
     fi
 fi
+}
 
 
 
 #***************************[fixed structure of doc]**************************
 # 2021 01 05
 
-# check for robolib
+function _repo_migration_check_2021_05_doc_punkte() {
 temp_path="${REPO_PATH_WORKSPACE}robosax/doc/punkte/"
 if [ -d "$temp_path" ] && \
   [ "${REPO_DOC_PATH}" == "${REPO_ROBOAG_DOC_PATH}" ]; then
@@ -65,13 +86,14 @@ if [ -d "$temp_path" ] && \
     echo "    $ rmdir \"$(dirname "$temp_path")\""
     echo "    $ rmdir \"$(dirname "$(dirname "$temp_path")")\""
 fi
+}
 
 
 
 #***************************[changed structure of doc]************************
 # 2020 09 27
 
-# check for robolib
+function _repo_migration_check_2020_09_doc_robolib() {
 temp_path="${REPO_DOC_PATH}robolib/"
 if [ -d "$temp_path" ] && \
   [ "${REPO_DOC_PATH}" != "${REPO_ROBOAG_DOC_PATH}" ]; then
@@ -80,8 +102,9 @@ if [ -d "$temp_path" ] && \
     echo "    $ mkdir -p \"$REPO_ROBOAG_DOC_PATH\""
     echo "    $ mv \"$temp_path\" \"$REPO_ROBOAG_DOC_ROBOLIB\""
 fi
+}
 
-# check for punkte
+function _repo_migration_check_2020_09_doc_punkte() {
 temp_path="${REPO_DOC_PATH}punkte/"
 if [ -d "$temp_path" ]; then
     echo "warning: Folder structure of doc/ changed on 27.09.2020!"
@@ -89,13 +112,14 @@ if [ -d "$temp_path" ]; then
     echo "    $ mkdir -p \"$REPO_ROBOSAX_DOC_PATH\""
     echo "    $ mv \"$temp_path\" \"$REPO_ROBOSAX_DOC_PUNKTE\""
 fi
+}
 
 
 
 #***************************[changed structure of robo]***********************
 # 2020 09 16
 
-# check for robosax
+function _repo_migration_check_2020_09_robosax() {
 temp_path="${REPO_PATH_WORKSPACE}robo/robosax/"
 if [ ! -d "$temp_path" ]; then
     temp_path="${REPO_ROBOAG_PATH}robosax/"
@@ -114,8 +138,9 @@ if [ -d "$temp_path" ]; then
     echo "    or simply"
     echo "      $ repo_clone_robosax"
 fi
+}
 
-# check for roboag (internal - 1)
+function _repo_migration_check_2020_09_roboag() {
 temp_path="${REPO_PATH_WORKSPACE}robo/roboag/filebrowser_php"
 if [ ! -d "$temp_path" ]; then
     temp_path="${REPO_ROBOAG_PATH}roboag/filebrowser_php"
@@ -130,7 +155,7 @@ if [ -d "$temp_path" ]; then
     echo "    $ mv \"$temp_path\" \"${temp}filebrowser\""
 fi
 
-# check for roboag (internal - 2)
+
 temp_path="${REPO_PATH_WORKSPACE}robo/roboag/"
 if [ ! -d "$temp_path" ]; then
     temp_path="${REPO_ROBOAG_PATH}roboag/"
@@ -143,7 +168,7 @@ if [ -d "$temp_path" ]; then
     echo "      $ mv \"$temp_path\" \"$temp\""
 fi
 
-# check for roboag (name)
+
 temp_path="${REPO_PATH_WORKSPACE}robo/"
 if [ -d "$temp_path" ]; then
     echo "warning: Folder of roboag was renamed on 16.09.2020!"
@@ -152,13 +177,14 @@ if [ -d "$temp_path" ]; then
     echo "  Please rename the folder:"
     echo "      $ mv \"$temp_path\" \"$REPO_ROBOAG_PATH\""
 fi
+}
 
 
 
 #***************************[renaming doc/imscp-server]***********************
 # 2019 12 23
 
-# path
+function _repo_migration_check_2019_12_doc_imscp() {
 temp_imscp_server_old="${REPO_DOC_SERVER_PATH}imscp/"
 if [ "$REPO_DOC_SERVER_PATH" != "" ] && [ -d "$temp_imscp_server_old" ]; then
 
@@ -170,13 +196,13 @@ if [ "$REPO_DOC_SERVER_PATH" != "" ] && [ -d "$temp_imscp_server_old" ]; then
 fi
 
 export REPO_DOC_SERVER_IMSCP=("${REPO_DOC_SERVER_ONLINE[@]}")
-
+}
 
 
 #***************************[adding bash/master]******************************
 # 2018 11 30
 
-# path
+function _repo_migration_check_2018_11_roboag() {
 temp_roboag_old="${REPO_BASH_PATH}roboag/"
 if [ "$REPO_BASH_PATH" != "" ] && [ -d "$temp_roboag_old" ]; then
 
@@ -191,3 +217,4 @@ if [ "$REPO_BASH_PATH" != "" ] && [ -d "$temp_roboag_old" ]; then
 fi
 
 export REPO_BASH_ROBOAG=("${REPO_BASH_MASTER_ROBOAG[@]}")
+}

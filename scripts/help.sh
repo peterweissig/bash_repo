@@ -58,6 +58,7 @@ function repo_help_all() {
     echo "general repository functions"
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
+    echo -n "    repo_migration_check #no help"
     echo -n "  "; repo_clone_all -h
     echo -n "    "; repo_clone_bash -h
     echo -n "    "; repo_clone_roboag -h
@@ -104,6 +105,7 @@ function repo_help() {
     echo "general repository functions"
     echo -n "  "; repo_pull_all -h
     echo -n "  "; repo_status_all -h
+    echo -n "    repo_migration_check #no help"
     echo -n "  "; repo_clone_all -h
     echo -n "    "; repo_clone_bash -h
     echo -n "    "; repo_clone_roboag -h
