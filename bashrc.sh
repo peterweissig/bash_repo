@@ -74,7 +74,7 @@ fi
 
 
 #***************************[source]******************************************
-# 2021 03 24
+# 2023 11 30
 
 source "${REPO_PATH}scripts/functions/additional_dirs.sh"
 source "${REPO_PATH}scripts/functions/diff.sh"
@@ -85,7 +85,7 @@ source "${REPO_PATH}scripts/functions/workspace.sh"
 source "${REPO_PATH}scripts/help.sh"
 source "${REPO_PATH}scripts/help_overview.sh"
 
-source "${REPO_PATH}scripts/list_other.sh"
+source "${REPO_PATH}scripts/list_roboag.sh"
 source "${REPO_PATH}scripts/list.sh"
 source "${REPO_PATH}scripts/alias.sh"
 
