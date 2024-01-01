@@ -430,7 +430,7 @@ function git_status_doc_server_local() {
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2023 02 03
+# 2024 01 01
 
 function repo_pull_all() {
 
@@ -524,17 +524,10 @@ function repo_pull_all() {
 
     git_pull_doc_server_online
     git_pull_doc_server_local
-
-
-    git_pull_ros_parameter
-    git_pull_ros_pcdfilter
-    git_pull_ros_octomap
-    git_pull_ros_nearfieldmap
-    git_pull_ros_radar
 }
 
 #***************************[status]
-# 2023 02 03
+# 2024 01 01
 
 function repo_status_all() {
 
@@ -629,14 +622,6 @@ function repo_status_all() {
 
     git_status_doc_server_online
     git_status_doc_server_local
-
-
-    git_status_ros_parameter
-    git_status_ros_pcdfilter
-    git_status_ros_octomap
-    git_status_ros_nearfieldmap
-    git_status_ros_odometry
-    git_status_ros_radar
 
 
     repo_additional_dirs_status --no-filter
@@ -766,7 +751,7 @@ function repo_clone_robosax() {
     git_clone_robosax_php_web_frame
 }
 
-# 2020 06 19
+# 2024 01 01
 function repo_clone_peter() {
 
     # print help
@@ -777,7 +762,7 @@ function repo_clone_peter() {
     fi
     if [ "$1" == "--help" ]; then
         echo "$FUNCNAME needs 0-1 parameters"
-        echo "Clones all repositories containing ROS data."
+        echo "Clones all repositories of Peter."
 
         return
     fi
@@ -801,39 +786,7 @@ function repo_clone_peter() {
     git_clone_doc_server_local
 }
 
-# 2020 06 19
-function repo_clone_ros() {
-
-    # print help
-    if [ "$1" == "-h" ]; then
-        echo "$FUNCNAME"
-
-        return
-    fi
-    if [ "$1" == "--help" ]; then
-        echo "$FUNCNAME needs 0-1 parameters"
-        echo "Clones all repositories containing ROS data."
-
-        return
-    fi
-
-    # check parameter
-    if [ $# -gt 0 ]; then
-        echo "$FUNCNAME: Parameter Error."
-        $FUNCNAME --help
-        return -1
-    fi
-
-    # clone all
-    git_clone_ros_parameter
-    git_clone_ros_pcdfilter
-    git_clone_ros_octomap
-    git_clone_ros_nearfieldmap
-
-    git_clone_ros_radar
-}
-
-# 2022 02 18
+# 2024 01 01
 function repo_clone_all() {
 
     # print help
@@ -878,7 +831,6 @@ function repo_clone_all() {
     repo_clone_roboag
     repo_clone_robosax
     repo_clone_peter
-    repo_clone_ros
 
     git_clone_bash_master_server
 

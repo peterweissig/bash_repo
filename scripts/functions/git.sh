@@ -49,9 +49,9 @@ function _repo_git_clone() {
 
 
 #***************************[_repo_git_pull]**********************************
-# 2023 11 18
+# 2024 01 01
 function _repo_git_pull_release() {
-    _repo_git_pull_ "$1" "$2" release
+    _repo_git_pull "$1" "$2" release
 }
 
 function _repo_git_pull_quiet() {
