@@ -8,7 +8,7 @@
 
 
 #***************************[server]******************************************
-# 2023 11 20
+# 2024 01 26
 
 export REPO_ROOT_GITHUB_PETER="https://github.com/peterweissig/"
 export REPO_ROOT_GITHUB_FABIAN="https://github.com/fabiangeissler/"
@@ -17,6 +17,7 @@ export REPO_ROOT_GITHUB_ROBOAG="https://github.com/RoboAG/"
 export REPO_ROOT_GITHUB_ROBOSAX="https://github.com/RoboSAX/"
 
 export REPO_ROOT_GITHUB_ROBERTA="https://github.com/OpenRoberta/"
+export REPO_ROOT_GITHUB_ADAFRUIT="https://github.com/Adafruit/"
 export REPO_ROOT_GITHUB_MBLOCK="https://github.com/Makeblock-official/"
 
 
@@ -132,11 +133,20 @@ _repo_add "${REPO_ROBOAG_MBLOCK_PATH}arduino/" \
   "${REPO_ROOT_GITHUB_MBLOCK}makeblock-libraries.git" \
   "roboag_mblock_arduino" "mblock/arduino"
 
-
 # mbot (mblock)
 _repo_add "${REPO_ROBOAG_MBLOCK_PATH}mbot/" \
   "${REPO_ROOT_GITHUB_MBLOCK}mBot.git" \
   "roboag_mblock_mbot" "mblock/mbot"
+
+# BusIO (adafruit)
+_repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/busio/" \
+  "${REPO_ROOT_GITHUB_ADAFRUIT}Adafruit_BusIO.git" \
+  "roboag_adafruit_busio" "adafruit/busio"
+
+# Sensor TCS34725 (adafruit)
+_repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/color_sensor" \
+  "${REPO_ROOT_GITHUB_ADAFRUIT}Adafruit_TCS34725.git" \
+  "roboag_adafruit_color_sensor" "adafruit/color_sensor"
 
 #***************************[roboag/doc]
 # 2024 01 26

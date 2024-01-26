@@ -3,7 +3,7 @@
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2024 01 01
+# 2024 01 26
 
 function repo_pull_all() {
 
@@ -54,6 +54,8 @@ function repo_pull_all() {
     git_pull_roboag_roberta_server
     git_pull_roboag_mblock_arduino
     git_pull_roboag_mblock_mbot
+    git_pull_roboag_adafruit_busio
+    git_pull_roboag_adafruit_color_sensor
 
     git_pull_roboag_doc_robolib
     git_pull_roboag_doc_install
@@ -100,7 +102,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2024 01 01
+# 2024 01 26
 
 function repo_status_all() {
 
@@ -156,6 +158,8 @@ function repo_status_all() {
     git_status_roboag_roberta_server
     git_status_roboag_mblock_arduino
     git_status_roboag_mblock_mbot
+    git_status_roboag_adafruit_busio
+    git_status_roboag_adafruit_color_sensor
 
     git_status_roboag_eagle_config
     git_status_roboag_eagle_keplerboard
@@ -234,7 +238,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
-# 2023 02 03
+# 2024 01 26
 function repo_clone_roboag() {
 
     # print help
@@ -269,6 +273,8 @@ function repo_clone_roboag() {
     git_clone_roboag_roberta_server
     git_clone_roboag_mblock_arduino
     git_clone_roboag_mblock_mbot
+    git_clone_roboag_adafruit_busio
+    git_clone_roboag_adafruit_color_sensor
 
     git_clone_roboag_eagle_config
     git_clone_roboag_eagle_keplerboard

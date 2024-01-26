@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2023 11 20
+# 2024 01 26
 
 function repo_help_overview() {
 
@@ -59,6 +59,9 @@ function repo_help_overview() {
     echo "      mblock/"
     echo "          arduino/        [git]/Makeblock-official/Makeblock-Libraries.git"
     echo "          mbot/           [git]/Makeblock-official/mBot.git"
+    echo "          sensors/"
+    echo "              busio/      [git]/adafruit/Adafruit_BusIO.git"
+    echo "              color_sensor/ [git]/adafruit/Adafruit_TCS34725.git"
     echo ""
     echo "      doc/"
     echo "          install/        [git]/RoboAG/doc_install.git"
@@ -135,7 +138,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2023 11 20
+# 2024 01 26
 
 function repo_help_overview_roboag() {
 
@@ -178,6 +181,9 @@ function repo_help_overview_roboag() {
     echo "      mblock/"
     echo "          arduino/        [git]/Makeblock-official/Makeblock-Libraries.git"
     echo "          mbot/           [git]/Makeblock-official/mBot.git"
+    echo "          sensors/"
+    echo "              busio/      [git]/adafruit/Adafruit_BusIO.git"
+    echo "              color_sensor/ [git]/adafruit/Adafruit_TCS34725.git"
     echo ""
     echo "      RoboSAX/"
     echo "          spielfeld/      [git]/RoboSAX/avr_spielfeld.git"
