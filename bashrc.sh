@@ -74,11 +74,12 @@ fi
 
 
 #***************************[source]******************************************
-# 2023 11 30
+# 2024 01 25
 
 source "${REPO_PATH}scripts/functions/additional_dirs.sh"
 source "${REPO_PATH}scripts/functions/diff.sh"
 source "${REPO_PATH}scripts/functions/git.sh"
+source "${REPO_PATH}scripts/functions/repo.sh"
 source "${REPO_PATH}scripts/functions/svn.sh"
 source "${REPO_PATH}scripts/functions/filter.sh"
 source "${REPO_PATH}scripts/functions/workspace.sh"

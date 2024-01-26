@@ -22,7 +22,7 @@ export REPO_ROOT_GITHUB_MBLOCK="https://github.com/Makeblock-official/"
 
 
 #***************************[bash]********************************************
-# 2018 11 30
+# 2024 01 25
 
 # path
 if [ "$REPO_BASH_PATH" == "" ]; then
@@ -30,27 +30,27 @@ if [ "$REPO_BASH_PATH" == "" ]; then
 fi
 
 # repositories functions (peter)
-export REPO_BASH_REPO=("${REPO_BASH_PATH}repo/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_repo.git")
+_repo_add "${REPO_BASH_PATH}repo/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_repo.git"
 
 # config functions (peter)
-export REPO_BASH_CONFIG=("${REPO_BASH_PATH}config/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_config.git")
+_repo_add "${REPO_BASH_PATH}config/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_config.git"
 
 # network functions (peter)
-export REPO_BASH_NETWORK=("${REPO_BASH_PATH}network/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_network.git")
+_repo_add "${REPO_BASH_PATH}network/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_network.git"
 
 # multimedia functions (peter)
-export REPO_BASH_MULTIMEDIA=("${REPO_BASH_PATH}multimedia/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_multimedia.git")
+_repo_add "${REPO_BASH_PATH}multimedia/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_multimedia.git"
 
 # file functions (peter)
-export REPO_BASH_FILE=("${REPO_BASH_PATH}file/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_file.git")
+_repo_add "${REPO_BASH_PATH}file/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_file.git"
 
 #***************************[bash/master]
-# 2019 12 01
+# 2024 01 26
 
 # path
 if [ "$REPO_BASH_MASTER_PATH" == "" ]; then
@@ -58,21 +58,24 @@ if [ "$REPO_BASH_MASTER_PATH" == "" ]; then
 fi
 
 # master simple (peter)
-export REPO_BASH_MASTER_BASHONLY=("${REPO_BASH_MASTER_PATH}bash_only/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_master_simple.git")
+_repo_add "${REPO_BASH_MASTER_PATH}bash_only/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_master_simple.git" \
+  "bash_master_simple" "master/simple"
 
 # master server (peter)
-export REPO_BASH_MASTER_SERVER=("${REPO_BASH_MASTER_PATH}server/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_master_server.git")
+_repo_add "${REPO_BASH_MASTER_PATH}server/" \
+  "${REPO_ROOT_GITHUB_PETER}bash_master_server.git" \
+  "bash_master_server" "master/server"
 
 # roboag (roboag)
-export REPO_BASH_MASTER_ROBOAG=("${REPO_BASH_MASTER_PATH}roboag/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}bash_roboag.git")
+_repo_add "${REPO_BASH_MASTER_PATH}roboag/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}bash_roboag.git" \
+  "bash_roboag" "master/roboag"
 
 
 
 #***************************[roboag]******************************************
-# 2023 02 03
+# 2024 01 26
 
 # path
 if [ "$REPO_ROBOAG_PATH" == "" ]; then
@@ -99,103 +102,113 @@ if [ "$REPO_ROBOAG_PHP_PATH" == "" ]; then
 fi
 
 # robolib (roboag)
-export REPO_ROBOAG_LIB=("${REPO_ROBOAG_PATH}library/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}avr_robolib.git")
+_repo_add "${REPO_ROBOAG_PATH}library/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}avr_robolib.git" \
+  "roboag_lib" "robolib"
 
 # pololu (extern)
-export REPO_ROBOAG_POLOLU=("${REPO_ROBOAG_PATH}pololu/" \
-  "https://github.com/pololu/libpololu-avr.git")
+_repo_add "${REPO_ROBOAG_PATH}pololu/" \
+  "https://github.com/pololu/libpololu-avr.git" \
+  "roboag_pololu" "robo/pololu"
 
 #***************************[roboag/roberta]
-# 2022 07 07
+# 2024 01 26
 
 # connector (open-roberta)
-export REPO_ROBOAG_ROBERTA_CONNECTOR=( \
-  "${REPO_ROBOAG_ROBERTA_PATH}connector/" \
-  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-connector.git")
+_repo_add "${REPO_ROBOAG_ROBERTA_PATH}connector/" \
+  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-connector.git" \
+  "roboag_roberta_connector" "roberta/connector"
 
 # server (open-roberta)
-export REPO_ROBOAG_ROBERTA_SERVER=( \
-  "${REPO_ROBOAG_ROBERTA_PATH}server/" \
-  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-lab.git")
+_repo_add "${REPO_ROBOAG_ROBERTA_PATH}server/" \
+  "${REPO_ROOT_GITHUB_ROBERTA}openroberta-lab.git" \
+  "roboag_roberta_server" "roberta/server"
 
 #***************************[roboag/mblock]
-# 2022 07 07
+# 2024 01 26
 
 # arduino (mblock)
-export REPO_ROBOAG_MBLOCK_ARDUINO=( \
-  "${REPO_ROBOAG_MBLOCK_PATH}arduino/" \
-  "${REPO_ROOT_GITHUB_MBLOCK}makeblock-libraries.git")
+_repo_add "${REPO_ROBOAG_MBLOCK_PATH}arduino/" \
+  "${REPO_ROOT_GITHUB_MBLOCK}makeblock-libraries.git" \
+  "roboag_mblock_arduino" "mblock/arduino"
+
 
 # mbot (mblock)
-export REPO_ROBOAG_MBLOCK_MBOT=( \
-  "${REPO_ROBOAG_MBLOCK_PATH}mbot/" \
-  "${REPO_ROOT_GITHUB_MBLOCK}mBot.git")
+_repo_add "${REPO_ROBOAG_MBLOCK_PATH}mbot/" \
+  "${REPO_ROOT_GITHUB_MBLOCK}mBot.git" \
+  "roboag_mblock_mbot" "mblock/mbot"
 
 #***************************[roboag/doc]
-# 2020 09 27
+# 2024 01 26
 
 # robolib (roboag)
-export REPO_ROBOAG_DOC_ROBOLIB=( \
-  "${REPO_ROBOAG_DOC_PATH}robolib/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git")
+_repo_add "${REPO_ROBOAG_DOC_PATH}robolib/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git" \
+  "roboag_doc_robolib" "doc/robolib"
 
 # install (roboag)
-export REPO_ROBOAG_DOC_INSTALL=( \
-  "${REPO_ROBOAG_DOC_PATH}install/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}doc_install.git")
+_repo_add "${REPO_ROBOAG_DOC_PATH}install/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}doc_install.git" \
+  "roboag_doc_install" "doc/install_roboag"
 
 #***************************[roboag/eagle]
-# 2020 09 16
+# 2024 01 26
 
 # config (roboag)
-export REPO_ROBOAG_EAGLE_CONFIG=("${REPO_ROBOAG_EAGLE_PATH}config/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_config.git")
+_repo_add "${REPO_ROBOAG_EAGLE_PATH}config/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_config.git" \
+  "roboag_eagle_config" "eagle/config"
 
 # keplerboard (roboag)
-export REPO_ROBOAG_EAGLE_KEPLERBOARD=("${REPO_ROBOAG_EAGLE_PATH}keplerboard/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_keplerboard.git")
+_repo_add "${REPO_ROBOAG_EAGLE_PATH}keplerboard/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_keplerboard.git" \
+  "roboag_eagle_keplerboard" "eagle/keplerboard"
 
 # xbee (roboag)
-export REPO_ROBOAG_EAGLE_XBEE=("${REPO_ROBOAG_EAGLE_PATH}xbee/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_xbee.git")
+_repo_add "${REPO_ROBOAG_EAGLE_PATH}xbee/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_xbee.git" \
+  "roboag_eagle_xbee" "eagle/xbee"
 
 # logic (roboag)
-export REPO_ROBOAG_EAGLE_LOGIC=("${REPO_ROBOAG_EAGLE_PATH}logic/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_logic.git")
+_repo_add "${REPO_ROBOAG_EAGLE_PATH}logic/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_logic.git" \
+  "roboag_eagle_logic" "eagle/logic"
 
 # voltage monitor (roboag)
-export REPO_ROBOAG_EAGLE_VTGMON=("${REPO_ROBOAG_EAGLE_PATH}vtgMon/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git")
+_repo_add "${REPO_ROBOAG_EAGLE_PATH}vtgMon/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}eagle_voltageMonitoring.git" \
+  "roboag_eagle_vtgMon" "eagle/vtgMon"
 
 #***************************[roboag/projects]
-# 2020 09 16
+# 2024 01 26
 
 # display (roboag)
-export REPO_ROBOAG_PROJECTS_DISPLAY=( \
-  "${REPO_ROBOAG_PROJECTS_PATH}rotierendes_display/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}projekt_display.git")
+_repo_add "${REPO_ROBOAG_PROJECTS_PATH}rotierendes_display/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_display.git" \
+  "roboag_projects_display" "projects/display"
 
 # gluecksrad (roboag)
-export REPO_ROBOAG_PROJECTS_GLUECKSRAD=( \
-  "${REPO_ROBOAG_PROJECTS_PATH}gluecksrad/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}projekt_gluecksrad.git")
+_repo_add "${REPO_ROBOAG_PROJECTS_PATH}gluecksrad/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_gluecksrad.git" \
+  "roboag_projects_gluecksrad" "projects/glücksrad"
 
 # 3pi modification (roboag)
-export REPO_ROBOAG_PROJECTS_3PI=("${REPO_ROBOAG_PROJECTS_PATH}3pi/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}projekt_3pi.git")
+_repo_add "${REPO_ROBOAG_PROJECTS_PATH}3pi/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_3pi.git" \
+  "roboag_projects_3pi" "projects/3pi"
 
 # roboter (roboag)
-export REPO_ROBOAG_PROJECTS_ROBOTER=("${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}projekt_roboter.git")
+_repo_add "${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_roboter.git" \
+  "roboag_projects_roboter" "projects/roboter"
 
 #***************************[roboag/php]
-# 2020 09 16
+# 2024 01 26
 
 # filebrowser (roboag)
-export REPO_ROBOAG_PHP_FILEBROWSER=( \
-  "${REPO_ROBOAG_PHP_PATH}filebrowser/" \
-  "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git")
+_repo_add "${REPO_ROBOAG_PHP_PATH}filebrowser/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git" \
+  "roboag_php_filebrowser"
 
 
 
@@ -224,64 +237,73 @@ if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
 fi
 
 #***************************[robosax/doc]
-# 2020 09 27
+# 2024 01 25
 
 # punkte (robosax)
-export REPO_ROBOSAX_DOC_PUNKTE=( \
-  "${REPO_ROBOSAX_DOC_PATH}punkte/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git")
+_repo_add "${REPO_ROBOSAX_DOC_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git" \
+  "robosax_doc_punkte" "doc/punkte"
 
 #***************************[robosax/eagle]
-# 2020 09 16
+# 2024 01 26
 
 # spielfeld circuit (robosax)
-export REPO_ROBOSAX_EAGLE_SPIELFELD=( \
-  "${REPO_ROBOSAX_EAGLE_PATH}spielfeld/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_spielfeld.git")
+_repo_add "${REPO_ROBOSAX_EAGLE_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_spielfeld.git" \
+  "robosax_eagle_spielfeld" "eagle/spielfeld"
 
 # licht-tht circuit (robosax)
-export REPO_ROBOSAX_EAGLE_LICHT=("${REPO_ROBOSAX_EAGLE_PATH}licht/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git")
+_repo_add "${REPO_ROBOSAX_EAGLE_PATH}licht/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_licht.git" \
+  "robosax_eagle_licht" "eagle/licht"
 
 # anzeige circuit (robosax)
-export REPO_ROBOSAX_EAGLE_ANZEIGE=("${REPO_ROBOSAX_EAGLE_PATH}anzeige/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git")
+_repo_add "${REPO_ROBOSAX_EAGLE_PATH}anzeige/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}eagle_anzeige.git" \
+  "robosax_eagle_anzeige" "eagle/anzeige"
 
 #***************************[robosax/avr]
-# 2020 09 16
+# 2024 01 26
 
 # spielfeld software (robosax)
-export REPO_ROBOSAX_AVR_SPIELFELD=("${REPO_ROBOSAX_AVR_PATH}spielfeld/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}avr_spielfeld.git")
+_repo_add "${REPO_ROBOSAX_AVR_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}avr_spielfeld.git" \
+  "robosax_avr_spielfeld" "avr/spielfeld"
 
 # omnibot (robosax)
-export REPO_ROBOSAX_AVR_OMNIBOT=("${REPO_ROBOSAX_AVR_PATH}omnibot/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}avr_omnibot.git")
+_repo_add "${REPO_ROBOSAX_AVR_PATH}omnibot/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}avr_omnibot.git" \
+  "robosax_avr_omnibot" "avr/omnibot"
 
 #***************************[robosax/projects]
-# 2020 09 16
+# 2024 01 26
 
 # spielfeld drawings (robosax)
-export REPO_ROBOSAX_PROJECTS_SPIELFELD=("${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}cad_spielfeld.git")
+_repo_add "${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}cad_spielfeld.git" \
+  "robosax_projects_spielfeld" "projects/spielfeld"
 
 # led-box (fabian) - original repo is from fabian geissler
-export REPO_ROBOSAX_PROJECTS_LEDBOX=("${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
-  "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git")
-#  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git")
+_repo_add "${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
+  "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git" \
+  "robosax_projects_ledbox" "projects/ledbox"
+#  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git"
 
 #***************************[robosax/php]
-# 2020 09 16
+# 2024 01 26
 
 # punkte (robosax)
-export REPO_ROBOSAX_PHP_PUNKTE=("${REPO_ROBOSAX_PHP_PATH}punkte/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte.git")
-export REPO_ROBOSAX_PHP_PUNKTE_OLD=("${REPO_ROBOSAX_PHP_PATH}punkte_old/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old.git")
+_repo_add "${REPO_ROBOSAX_PHP_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte.git" \
+  "robosax_php_punkte" "php/punkte"
+_repo_add "${REPO_ROBOSAX_PHP_PATH}punkte_old/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_punkte_old.git" \
+  "robosax_php_punkte_old" "php/punkte_old"
 
 # webseite (robosax)
-export REPO_ROBOSAX_PHP_WEB_FRAME=("${REPO_ROBOSAX_PHP_PATH}web_frame/" \
-  "${REPO_ROOT_GITHUB_ROBOSAX}php_web.git")
+_repo_add "${REPO_ROBOSAX_PHP_PATH}web_frame/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}php_web.git" \
+  "robosax_php_web_frame" "php/web_frame"
 
 
 
@@ -294,7 +316,7 @@ if [ "$REPO_PROJECTS_PATH" == "" ]; then
 fi
 
 #***************************[projects/eagle]
-# 2018 03 01
+# 2024 01 26
 
 # path
 if [ "$REPO_PROJECTS_EAGLE_PATH" == "" ]; then
@@ -302,11 +324,12 @@ if [ "$REPO_PROJECTS_EAGLE_PATH" == "" ]; then
 fi
 
 # dmx-driver (peter)
-export REPO_EAGLE_DMX_DRIVER=("${REPO_PROJECTS_EAGLE_PATH}dmx_driver/" \
-  "${REPO_ROOT_GITHUB_PETER}eagle_dmx_driver.git")
+_repo_add "${REPO_PROJECTS_EAGLE_PATH}dmx_driver/" \
+  "${REPO_ROOT_GITHUB_PETER}eagle_dmx_driver.git" \
+  "eagle_dmx_driver" "eagle/dmx_driver"
 
 #***************************[projects/hardware]
-# 2020 04 19
+# 2024 01 26
 
 # path
 if [ "$REPO_HARDWARE_PATH" == "" ]; then
@@ -314,23 +337,27 @@ if [ "$REPO_HARDWARE_PATH" == "" ]; then
 fi
 
 # trailer (peter)
-export REPO_HARDWARE_TRAILER=("${REPO_HARDWARE_PATH}anhaenger/" \
-  "${REPO_ROOT_GITHUB_PETER}project_anhaenger.git")
+_repo_add "${REPO_HARDWARE_PATH}anhaenger/" \
+  "${REPO_ROOT_GITHUB_PETER}project_anhaenger.git" \
+  "hardware_trailer" "hardware/trailer"
 
 # audio system (peter)
-export REPO_HARDWARE_AUDIO_HOME=("${REPO_HARDWARE_PATH}audio_home/" \
-  "${REPO_ROOT_GITHUB_PETER}project_audio_home.git")
+_repo_add "${REPO_HARDWARE_PATH}audio_home/" \
+  "${REPO_ROOT_GITHUB_PETER}project_audio_home.git" \
+   "hardware_audio_home" "hardware/audio_home"
 
 # opa (peter)
-export REPO_HARDWARE_DMX_OPA=("${REPO_HARDWARE_PATH}dmx_opa/" \
-  "${REPO_ROOT_GITHUB_PETER}project_opa.git")
+_repo_add "${REPO_HARDWARE_PATH}dmx_opa/" \
+  "${REPO_ROOT_GITHUB_PETER}project_opa.git" \
+   "hardware_dmx_opa" "hardware/dmx_opa"
 
 # dimmer (peter)
-export REPO_HARDWARE_DIMMER=("${REPO_HARDWARE_PATH}dimmer/" \
-  "${REPO_ROOT_GITHUB_PETER}project_dimmer.git")
+_repo_add "${REPO_HARDWARE_PATH}dimmer/" \
+  "${REPO_ROOT_GITHUB_PETER}project_dimmer.git" \
+   "hardware_dimmer" "hardware/dimmer"
 
 #***************************[projects/c++]
-# 2022 02 18
+# 2024 01 26
 
 # paths
 if [ "$REPO_CPP_PATH" == "" ]; then
@@ -338,13 +365,14 @@ if [ "$REPO_CPP_PATH" == "" ]; then
 fi
 
 # avr-downloader (peter)
-export REPO_CPP_AVR_DOWNLOADER=("${REPO_CPP_PATH}avr_downloader/" \
-  "${REPO_ROOT_GITHUB_PETER}cpp_avr_downloader.git")
+_repo_add "${REPO_CPP_PATH}avr_downloader/" \
+  "${REPO_ROOT_GITHUB_PETER}cpp_avr_downloader.git" \
+  "cpp_avr_downloader"
 
 
 
 #***************************[doc]*********************************************
-# 2020 09 27
+# 2024 01 26
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
@@ -355,11 +383,11 @@ if [ "$REPO_DOC_SERVER_PATH" == "" ]; then
 fi
 
 # online-server (peter)
-export REPO_DOC_SERVER_ONLINE=( \
-  "${REPO_DOC_SERVER_PATH}online/" \
-  "${REPO_ROOT_GITHUB_PETER}doc_server_online.git")
+_repo_add "${REPO_DOC_SERVER_PATH}online/" \
+  "${REPO_ROOT_GITHUB_PETER}doc_server_online.git" \
+  "doc_server_online"
 
 # local server (peter)
-export REPO_DOC_SERVER_LOCAL=( \
-  "${REPO_DOC_SERVER_PATH}local/" \
-  "${REPO_ROOT_GITHUB_PETER}doc_server_local.git")
+_repo_add "${REPO_DOC_SERVER_PATH}local/" \
+  "${REPO_ROOT_GITHUB_PETER}doc_server_local.git" \
+  "doc_server_local"
