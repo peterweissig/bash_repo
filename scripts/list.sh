@@ -23,7 +23,7 @@ export REPO_ROOT_GITHUB_MBLOCK="https://github.com/Makeblock-official/"
 
 
 #***************************[bash]********************************************
-# 2024 01 25
+# 2024 01 26
 
 # path
 if [ "$REPO_BASH_PATH" == "" ]; then
@@ -32,23 +32,28 @@ fi
 
 # repositories functions (peter)
 _repo_add "${REPO_BASH_PATH}repo/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_repo.git"
+  "${REPO_ROOT_GITHUB_PETER}bash_repo.git" \
+  "bash_repo" "bash/repo"
 
 # config functions (peter)
 _repo_add "${REPO_BASH_PATH}config/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_config.git"
+  "${REPO_ROOT_GITHUB_PETER}bash_config.git" \
+  "bash_config" "bash/config"
 
 # network functions (peter)
 _repo_add "${REPO_BASH_PATH}network/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_network.git"
+  "${REPO_ROOT_GITHUB_PETER}bash_network.git" \
+  "bash_network" "bash/network"
 
 # multimedia functions (peter)
 _repo_add "${REPO_BASH_PATH}multimedia/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_multimedia.git"
+  "${REPO_ROOT_GITHUB_PETER}bash_multimedia.git" \
+  "bash_multimedia" "bash/multimedia"
 
 # file functions (peter)
 _repo_add "${REPO_BASH_PATH}file/" \
-  "${REPO_ROOT_GITHUB_PETER}bash_file.git"
+  "${REPO_ROOT_GITHUB_PETER}bash_file.git" \
+  "bash_file" "bash/file"
 
 #***************************[bash/master]
 # 2024 01 26
@@ -62,6 +67,7 @@ fi
 _repo_add "${REPO_BASH_MASTER_PATH}bash_only/" \
   "${REPO_ROOT_GITHUB_PETER}bash_master_simple.git" \
   "bash_master_simple" "master/simple"
+export REPO_BASH_MASTER_BASHONLY=(${REPO_BASH_MASTER_SIMPLE[*]})
 
 # master server (peter)
 _repo_add "${REPO_BASH_MASTER_PATH}server/" \
@@ -72,6 +78,7 @@ _repo_add "${REPO_BASH_MASTER_PATH}server/" \
 _repo_add "${REPO_BASH_MASTER_PATH}roboag/" \
   "${REPO_ROOT_GITHUB_ROBOAG}bash_roboag.git" \
   "bash_roboag" "master/roboag"
+export REPO_BASH_MASTER_ROBOAG=(${REPO_BASH_ROBOAG[*]})
 
 
 
@@ -121,7 +128,7 @@ _repo_add "${REPO_ROBOAG_ROBERTA_PATH}connector/" \
   "roboag_roberta_connector" "roberta/connector"
 
 # server (open-roberta)
-_repo_add "${REPO_ROBOAG_ROBERTA_PATH}server/" \
+_repo_add --quiet "${REPO_ROBOAG_ROBERTA_PATH}server/" \
   "${REPO_ROOT_GITHUB_ROBERTA}openroberta-lab.git" \
   "roboag_roberta_server" "roberta/server"
 
@@ -144,7 +151,7 @@ _repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/busio/" \
   "roboag_adafruit_busio" "adafruit/busio"
 
 # Sensor TCS34725 (adafruit)
-_repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/color_sensor" \
+_repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/color_sensor/" \
   "${REPO_ROOT_GITHUB_ADAFRUIT}Adafruit_TCS34725.git" \
   "roboag_adafruit_color_sensor" "adafruit/color_sensor"
 
@@ -152,7 +159,7 @@ _repo_add "${REPO_ROBOAG_MBLOCK_PATH}sensors/color_sensor" \
 # 2024 01 26
 
 # robolib (roboag)
-_repo_add "${REPO_ROBOAG_DOC_PATH}robolib/" \
+_repo_add --release "${REPO_ROBOAG_DOC_PATH}robolib/" \
   "${REPO_ROOT_GITHUB_ROBOAG}doc_robolib.git" \
   "roboag_doc_robolib" "doc/robolib"
 
@@ -218,7 +225,7 @@ _repo_add "${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
 # filebrowser (roboag)
 _repo_add "${REPO_ROBOAG_PHP_PATH}filebrowser/" \
   "${REPO_ROOT_GITHUB_ROBOAG}php_filebrowser.git" \
-  "roboag_php_filebrowser"
+  "roboag_php_filebrowser" "php/filebrowser"
 
 
 
@@ -250,7 +257,7 @@ fi
 # 2024 01 25
 
 # punkte (robosax)
-_repo_add "${REPO_ROBOSAX_DOC_PATH}punkte/" \
+_repo_add --release "${REPO_ROBOSAX_DOC_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git" \
   "robosax_doc_punkte" "doc/punkte"
 
@@ -377,7 +384,7 @@ fi
 # avr-downloader (peter)
 _repo_add "${REPO_CPP_PATH}avr_downloader/" \
   "${REPO_ROOT_GITHUB_PETER}cpp_avr_downloader.git" \
-  "cpp_avr_downloader"
+  "cpp_avr_downloader" "cpp/avr_downloader"
 
 
 
@@ -395,9 +402,10 @@ fi
 # online-server (peter)
 _repo_add "${REPO_DOC_SERVER_PATH}online/" \
   "${REPO_ROOT_GITHUB_PETER}doc_server_online.git" \
-  "doc_server_online"
+  "doc_server_online" "doc/server_online"
 
 # local server (peter)
 _repo_add "${REPO_DOC_SERVER_PATH}local/" \
   "${REPO_ROOT_GITHUB_PETER}doc_server_local.git" \
-  "doc_server_local"
+  "doc_server_local" "doc/server_local"
+

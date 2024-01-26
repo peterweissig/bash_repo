@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[repo function wrapper]**************************
-# 2024 01 25
+# 2024 01 26
 
 function _repo_add() {
 
@@ -49,7 +49,7 @@ function _repo_add() {
         while true; do
             if [ "$1" == "--quiet" ]; then
                 option_quiet=1
-                if [ option_release -eq 1 ]; then
+                if [ $option_release -eq 1 ]; then
                     echo "$FUNCNAME: Found options --quiet and --release"
                     return -2
                 fi
