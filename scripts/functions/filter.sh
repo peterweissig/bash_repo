@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[_repo_filter_git_grep]***************************
-# 2021 02 23
+# 2024 02 08
 
 function _repo_filter_git_grep() {
 
@@ -34,8 +34,8 @@ function _repo_filter_git_grep() {
     filter+="|nichts zu committen, Arbeitsverzeichnis unverändert"
 
     # update filter
-    filter+="|Already up-to-date."
-    filter+="|Bereits aktuell."
+    filter+="|Already up.to.date\."
+    filter+="|Bereits aktuell\."
 
     # call grep
     grep --line-buffered -E -v "($filter)" -
