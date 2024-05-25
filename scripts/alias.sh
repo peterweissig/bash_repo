@@ -3,7 +3,7 @@
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2024 01 26
+# 2024 04 25
 
 function repo_pull_all() {
 
@@ -70,6 +70,7 @@ function repo_pull_all() {
     git_pull_roboag_projects_gluecksrad
     git_pull_roboag_projects_3pi
     git_pull_roboag_projects_roboter
+    git_pull_roboag_projects_raspi_presenter
 
     git_pull_roboag_php_filebrowser
 
@@ -102,7 +103,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2024 01 26
+# 2024 04 25
 
 function repo_status_all() {
 
@@ -171,6 +172,8 @@ function repo_status_all() {
     git_status_roboag_projects_gluecksrad
     git_status_roboag_projects_3pi
     git_status_roboag_projects_roboter
+    git_status_roboag_projects_raspi_presenter
+
     git_status_roboag_php_filebrowser
 
 
@@ -238,7 +241,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
-# 2024 01 26
+# 2024 04 25
 function repo_clone_roboag() {
 
     # print help
@@ -286,6 +289,7 @@ function repo_clone_roboag() {
     git_clone_roboag_projects_gluecksrad
     git_clone_roboag_projects_3pi
     git_clone_roboag_projects_roboter
+    git_clone_roboag_projects_raspi_presenter
 
     git_clone_roboag_php_filebrowser
 }

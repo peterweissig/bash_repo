@@ -64,6 +64,7 @@ if [ "$REPO_MODE" == "roboag" ]; then
             # gluecksrad
             # 3pi
             # roboter
+            # raspi_presenter
 
         if [ "$REPO_ROBOSAX_PROJECT_PATH" == "" ]; then
             temp="${REPO_ROBOAG_PROJECTS_PATH}RoboSAX/"

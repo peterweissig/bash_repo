@@ -197,7 +197,7 @@ _repo_add "${REPO_ROBOAG_EAGLE_PATH}vtgMon/" \
   "roboag_eagle_vtgMon" "eagle/vtgMon"
 
 #***************************[roboag/projects]
-# 2024 01 26
+# 2024 05 25
 
 # display (roboag)
 _repo_add "${REPO_ROBOAG_PROJECTS_PATH}rotierendes_display/" \
@@ -218,6 +218,11 @@ _repo_add "${REPO_ROBOAG_PROJECTS_PATH}3pi/" \
 _repo_add "${REPO_ROBOAG_PROJECTS_PATH}roboter/" \
   "${REPO_ROOT_GITHUB_ROBOAG}projekt_roboter.git" \
   "roboag_projects_roboter" "projects/roboter"
+
+# rapi presenter (roboag)
+_repo_add "${REPO_ROBOAG_PROJECTS_PATH}raspi_presenter/" \
+  "${REPO_ROOT_GITHUB_ROBOAG}projekt_raspi_presenter.git" \
+  "roboag_projects_raspi_presenter" "projects/raspi_presenter"
 
 #***************************[roboag/php]
 # 2024 01 26
