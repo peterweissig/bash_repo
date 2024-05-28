@@ -3,7 +3,7 @@
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2024 04 25
+# 2024 05 28
 
 function repo_pull_all() {
 
@@ -80,8 +80,11 @@ function repo_pull_all() {
     git_pull_robosax_eagle_licht
     git_pull_robosax_avr_spielfeld
     git_pull_robosax_avr_omnibot
+
     git_pull_robosax_projects_spielfeld
     git_pull_robosax_projects_ledbox
+    git_pull_robosax_projects_punkte
+
     git_pull_robosax_php_punkte
     git_pull_robosax_php_punkte_old
     git_pull_robosax_doc_punkte
@@ -103,7 +106,7 @@ function repo_pull_all() {
 }
 
 #***************************[status]
-# 2024 04 25
+# 2024 05 28
 
 function repo_status_all() {
 
@@ -182,8 +185,11 @@ function repo_status_all() {
     git_status_robosax_eagle_anzeige
     git_status_robosax_avr_spielfeld
     git_status_robosax_avr_omnibot
+
     git_status_robosax_projects_spielfeld
     git_status_robosax_projects_ledbox
+    git_status_robosax_projects_punkte
+
     git_status_robosax_php_punkte
     git_status_robosax_php_punkte_old
     git_status_robosax_doc_punkte
@@ -241,7 +247,7 @@ function repo_clone_bash() {
     git_clone_bash_file
 }
 
-# 2024 04 25
+# 2024 05 25
 function repo_clone_roboag() {
 
     # print help
@@ -294,7 +300,7 @@ function repo_clone_roboag() {
     git_clone_roboag_php_filebrowser
 }
 
-# 2020 06 27
+# 2024 05 28
 function repo_clone_robosax() {
 
     # print help
@@ -327,6 +333,7 @@ function repo_clone_robosax() {
 
     git_clone_robosax_projects_spielfeld
     git_clone_robosax_projects_ledbox
+    git_clone_robosax_projects_punkte
 
     git_clone_robosax_php_punkte
     git_clone_robosax_doc_punkte

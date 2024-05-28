@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2024 05 25
+# 2024 05 28
 
 function repo_help_overview() {
 
@@ -100,6 +100,7 @@ function repo_help_overview() {
     echo "      projects/"
     echo "          spielfeld/      [git]/RoboSAX/cad_spielfeld.git"
     echo "          ledbox/         [git]/fabiangeissler/robosax-ledbox.git"
+    echo "          punkte/         [git]/RoboSAX/projekt_punkte.git"
     echo ""
     echo "      php/"
     echo "          punkte/         [git]/RoboSAX/php_punkte.git"
@@ -139,7 +140,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2024 05 25
+# 2024 05 28
 
 function repo_help_overview_roboag() {
 
@@ -215,6 +216,7 @@ function repo_help_overview_roboag() {
     echo "      RoboSAX/"
     echo "          spielfeld/      [git]/RoboSAX/cad_spielfeld.git"
     echo "          ledbox/         [git]/fabiangeissler/robosax-ledbox.git"
+    echo "          punkte/         [git]/RoboSAX/projekt_punkte.git"
     echo ""
     echo "      Peter/"
     echo "          trailer/        [git]/peterweissig/project_anhaenger.git"

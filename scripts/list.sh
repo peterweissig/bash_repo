@@ -261,7 +261,7 @@ fi
 #***************************[robosax/doc]
 # 2024 01 25
 
-# punkte (robosax)
+# punkte php (robosax)
 _repo_add --release "${REPO_ROBOSAX_DOC_PATH}punkte/" \
   "${REPO_ROOT_GITHUB_ROBOSAX}doc_punkte.git" \
   "robosax_doc_punkte" "doc/punkte"
@@ -298,7 +298,7 @@ _repo_add "${REPO_ROBOSAX_AVR_PATH}omnibot/" \
   "robosax_avr_omnibot" "avr/omnibot"
 
 #***************************[robosax/projects]
-# 2024 01 26
+# 2024 05 28
 
 # spielfeld drawings (robosax)
 _repo_add "${REPO_ROBOSAX_PROJECT_PATH}spielfeld/" \
@@ -310,6 +310,11 @@ _repo_add "${REPO_ROBOSAX_PROJECT_PATH}ledbox/" \
   "${REPO_ROOT_GITHUB_FABIAN}robosax-ledbox.git" \
   "robosax_projects_ledbox" "projects/ledbox"
 #  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_ledbox.git"
+
+# punkte tabellen (robosax)
+_repo_add "${REPO_ROBOSAX_PROJECT_PATH}punkte/" \
+  "${REPO_ROOT_GITHUB_ROBOSAX}projekt_punkte.git" \
+  "robosax_projects_punkte" "projects/punkte"
 
 #***************************[robosax/php]
 # 2024 01 26

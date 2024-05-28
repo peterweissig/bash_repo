@@ -71,6 +71,7 @@ if [ "$REPO_MODE" == "roboag" ]; then
             export REPO_ROBOSAX_PROJECT_PATH="$temp"
                 # spielfeld
                 # ledbox
+                # punkte tabelle
         fi
 
         if [ "$REPO_HARDWARE_PATH" == "" ]; then
@@ -97,9 +98,9 @@ if [ "$REPO_MODE" == "roboag" ]; then
 
         if [ "$REPO_ROBOSAX_PHP_PATH" == "" ]; then
             export REPO_ROBOSAX_PHP_PATH="${temp}"
-                # Punkte RoboSAX
-                # Punkte RoboSAX (old version)
-                # Web Frame
+                # punkte roboSAX
+                # punkte roboSAX (old version)
+                # web frame
         fi
     fi
 
@@ -117,7 +118,7 @@ if [ "$REPO_MODE" == "roboag" ]; then
 
         if [ "$REPO_ROBOSAX_DOC_PATH" == "" ]; then
             export REPO_ROBOSAX_DOC_PATH="${REPO_DOC_PATH}RoboSAX/"
-                # punkte
+                # punkte (php)
         fi
     fi
 fi
