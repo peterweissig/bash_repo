@@ -3,7 +3,7 @@
 #***************************[git global]**************************************
 
 #***************************[pull]
-# 2024 05 28
+# 2025 12 23
 
 function repo_pull_all() {
 
@@ -99,14 +99,10 @@ function repo_pull_all() {
     git_pull_hardware_dimmer
 
     git_pull_cpp_avr_downloader
-
-
-    git_pull_doc_server_online
-    git_pull_doc_server_local
 }
 
 #***************************[status]
-# 2024 05 28
+# 2025 12 23
 
 function repo_status_all() {
 
@@ -204,10 +200,6 @@ function repo_status_all() {
     git_status_hardware_dimmer
 
     git_status_cpp_avr_downloader
-
-
-    git_status_doc_server_online
-    git_status_doc_server_local
 
 
     repo_additional_dirs_status --no-filter
@@ -341,7 +333,7 @@ function repo_clone_robosax() {
     git_clone_robosax_php_web_frame
 }
 
-# 2024 01 01
+# 2025 12 23
 function repo_clone_peter() {
 
     # print help
@@ -371,9 +363,6 @@ function repo_clone_peter() {
     git_clone_hardware_audio_home
     git_clone_hardware_dmx_opa
     git_clone_hardware_dimmer
-
-    git_clone_doc_server_online
-    git_clone_doc_server_local
 }
 
 # 2024 01 01

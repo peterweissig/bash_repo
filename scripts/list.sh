@@ -399,23 +399,9 @@ _repo_add "${REPO_CPP_PATH}avr_downloader/" \
 
 
 #***************************[doc]*********************************************
-# 2024 01 26
+# 2025 12 23
 
 # paths
 if [ "$REPO_DOC_PATH" == "" ]; then
     export REPO_DOC_PATH="${REPO_PATH_WORKSPACE}doc/"
 fi
-if [ "$REPO_DOC_SERVER_PATH" == "" ]; then
-    export REPO_DOC_SERVER_PATH="${REPO_DOC_PATH}server/"
-fi
-
-# online-server (peter)
-_repo_add "${REPO_DOC_SERVER_PATH}online/" \
-  "${REPO_ROOT_GITHUB_PETER}doc_server_online.git" \
-  "doc_server_online" "doc/server_online"
-
-# local server (peter)
-_repo_add "${REPO_DOC_SERVER_PATH}local/" \
-  "${REPO_ROOT_GITHUB_PETER}doc_server_local.git" \
-  "doc_server_local" "doc/server_local"
-

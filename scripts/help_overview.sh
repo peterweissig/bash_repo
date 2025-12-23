@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[overview]****************************************
-# 2024 05 28
+# 2025 12 23
 
 function repo_help_overview() {
 
@@ -42,11 +42,6 @@ function repo_help_overview() {
     echo "          bash_only/      [git]/peterweissig/bash_master_simple.git"
     echo "          server/         [git]/peterweissig/bash_master_server.git"
     echo "          roboag/         [git]/RoboAG/bash_roboag.git"
-    echo ""
-    echo "  doc/"
-    echo "      server/"
-    echo "          online/         [git]/peterweissig/doc_server_online.git"
-    echo "          local/          [git]/peterweissig/doc_server_local.git"
     echo ""
     echo "  roboag/"
     echo "      lib/                [git]/RoboAG/avr_robolib.git"
@@ -140,7 +135,7 @@ function repo_help_overview() {
 
 
 #***************************[roboag]******************************************
-# 2024 05 28
+# 2025 12 23
 
 function repo_help_overview_roboag() {
 
@@ -241,11 +236,6 @@ function repo_help_overview_roboag() {
     echo ""
     echo "      RoboSAX/"
     echo "          punkte/         [git]/RoboSAX/doc_punkte.git (release!)"
-    echo ""
-    echo "      server/"
-    echo "          online/         [git]/peterweissig/doc_server_online.git"
-    echo "          local/          [git]/peterweissig/doc_server_local.git"
-    echo ""
     echo ""
     echo "  bash/"
     echo "      repo/               [git]/peterweissig/bash_repo.git"

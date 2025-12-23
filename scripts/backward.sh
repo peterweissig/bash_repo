@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #***************************[main wrapper]************************************
-# 2023 11 20
+# 2025 12 23
 
 function repo_migration_check() {
     _repo_migration_check_2018_11_roboag
@@ -13,6 +13,33 @@ function repo_migration_check() {
     _repo_migration_check_2021_05_doc_punkte
     _repo_migration_check_2022_02_cpp_main_project
     _repo_migration_check_2023_11_ros
+    _repo_migration_check_2025_12_doc
+}
+
+
+
+#***************************[removed server doc]******************************
+# 2025 12 23
+
+function _repo_migration_check_2025_12_doc() {
+    temp_path="${REPO_DOC_PATH}server/"
+    if [ -d "$temp_path" ]; then
+        echo "warning: Removed server doc repos on 23.12.2025!"
+        echo "  You should remove the repos accordingly:"
+        echo "    $ rm -rf \"${temp_path}\""
+    fi
+    temp_path="${REPO_DOC_PATH}doc_server_local/"
+    if [ -d "$temp_path" ]; then
+        echo "warning: Removed local server doc repo on 23.12.2025!"
+        echo "  You should remove the repo accordingly:"
+        echo "    $ rm -rf \"${temp_path}\""
+    fi
+    temp_path="${REPO_DOC_PATH}doc_server_online/"
+    if [ -d "$temp_path" ]; then
+        echo "warning: Removed online server doc repo on 23.12.2025!"
+        echo "  You should remove the repo accordingly:"
+        echo "    $ rm -rf \"${temp_path}\""
+    fi
 }
 
 
